@@ -1,8 +1,8 @@
 # Weekly Claude Code Skills Trend Radar — Agent Instructions
 
 Run this end-to-end, unattended. Produce one outcome: the Artifact at
-{{ARTIFACT_URL}} is redeployed with this week's data. No other output is
-needed.
+https://claude.ai/code/artifact/7d96599d-0031-4fad-a517-c6523aaffbef is
+redeployed with this week's data. No other output is needed.
 
 ## 1. Collect
 
@@ -31,7 +31,8 @@ and add its name to a `skipped` list — do not stop the run.
 
 ## 3. Diff against last week
 
-- Call the Artifact "read" action on {{ARTIFACT_URL}}.
+- Call the Artifact "read" action on
+  https://claude.ai/code/artifact/7d96599d-0031-4fad-a517-c6523aaffbef.
 - Parse the JSON out of the `<script type="application/json" id="trend-data">` tag in the returned HTML. It is an array of up to 8 weekly snapshots, newest last; each snapshot is `{ "week": "YYYY-MM-DD", "items": [{ "url", "name", "stars", "rank" }, ...] }`.
 - If the read fails (first-ever run) or the script tag is missing, treat history as empty — every item this week is `NEW`.
 - For each item in this week's top list, compare against the most recent prior snapshot by URL:
@@ -49,7 +50,9 @@ Rebuild the Artifact HTML:
 - A table: rank, name (linked to source), one-line description, category, stars, movement badge (↑N / ↓N / NEW / =).
 - Footer: last-updated date (UTC) and, if any, `Skipped sources this week: <list>`.
 - Embed the updated (≤8-entry) history array as `<script type="application/json" id="trend-data">...</script>`.
-- Call the Artifact "publish" action with `url: {{ARTIFACT_URL}}` (after the very first run, when the URL is first minted, this placeholder won't exist yet — see Task 2) so it redeploys the same page instead of creating a new one.
+- Call the Artifact "publish" action with
+  `url: https://claude.ai/code/artifact/7d96599d-0031-4fad-a517-c6523aaffbef`
+  so it redeploys the same page instead of creating a new one.
 
 ## Output
 
