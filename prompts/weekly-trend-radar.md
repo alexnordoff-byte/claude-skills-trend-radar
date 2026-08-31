@@ -1,8 +1,11 @@
 # Weekly Claude Code Skills Trend Radar — Agent Instructions
 
-Run this end-to-end, unattended. Produce one outcome: the Artifact at
-https://claude.ai/code/artifact/7d96599d-0031-4fad-a517-c6523aaffbef is
-redeployed with this week's data. No other output is needed.
+Run this end-to-end, unattended. Produce one outcome: a commit pushed to
+this repository that updates `index.html` and `data/history.json` with this
+week's data. GitHub Pages serves `index.html`; the push is the publish.
+
+The page is written **in Russian** — see step 4. These instructions stay in
+English; the output does not.
 
 ## 1. Collect
 
@@ -14,7 +17,7 @@ per repository). Fields used here:
 - `id` — stable skill identifier, e.g. `vercel-labs/skills/find-skills`
 - `name` — the skill's own name
 - `repo` — owner/repo it lives in
-- `description` — the skill's own description
+- `description` — the skill's own description (English)
 - `installs` — integer, cumulative installs (this is the ranking metric)
 - `stars` — integer, GitHub stars of the PARENT REPO (context only, never
   the ranking metric — a 20-skill monorepo reports the same star count on
@@ -22,20 +25,17 @@ per repository). Fields used here:
 - `installCommand` — the exact command a user runs to install it
 
 **This payload is ~18MB and has no pagination — query parameters like
-`?limit=` are ignored and always return the full array.** You must fetch
-and reduce it PROGRAMMATICALLY (shell + curl piped into a script, or any
-available code-execution tool). Do NOT try to read it through a
-summarizing fetch: the ranking depends on exact integers, and a summarized
-or truncated read will silently invent numbers.
-
-Reduce it in code to the ranked shortlist described in step 2, and print
-only that shortlist — never load the full array into your own context.
+`?limit=` are ignored and always return the full array.** Fetch and reduce
+it PROGRAMMATICALLY (`curl` into a file, then a Python or Node script). Do
+NOT try to read it through a summarizing fetch: the ranking depends on
+exact integers, and a summarized or truncated read will silently invent
+numbers. Print only the reduced shortlist — never load the full array into
+your own context.
 
 **If you cannot fetch and parse this endpoint exactly** — network blocked,
-no code execution available, malformed response — then STOP the run and
-publish nothing. Do not fall back to estimating, to GitHub star counts, or
-to a summarized read. A missed week is recoverable; a page full of
-fabricated numbers is worse than no update.
+malformed response — then STOP the run, commit nothing, and say why. Do not
+fall back to estimating or to GitHub star counts. A missed week is
+recoverable; a page full of fabricated numbers is worse than no update.
 
 ## 2. Rank
 
@@ -44,11 +44,12 @@ fabricated numbers is worse than no update.
   below. Being built as "an agent" or "an automation" does NOT by itself
   qualify anything — every Claude Code skill fits that description
   trivially, so it is not a useful filter on its own:
-  - **dev**: the skill's main use case is writing, running, or debugging
-    software — code generation, mini-app/CLI/API/SDK scaffolding, bot
-    construction, developer tooling.
-  - **video**: the skill's main use case is producing or editing video —
-    rendering, cutting, subtitling, transcript-to-video, video pipelines.
+  - **dev** (`разработка`): the skill's main use case is writing, running,
+    or debugging software — code generation, mini-app/CLI/API/SDK
+    scaffolding, bot construction, developer tooling.
+  - **video** (`видео`): the skill's main use case is producing or editing
+    video — rendering, cutting, subtitling, transcript-to-video, video
+    pipelines.
   - If the skill's main use case is something else — marketing, ads, SEO,
     note-taking, social-media content, finance, image-only generation,
     general productivity — drop it, even if it is packaged as an "agent"
@@ -64,90 +65,77 @@ fabricated numbers is worse than no update.
   If fewer than 15 qualify, publish what qualifies — never pad the list
   with items that failed the category test.
 - **Inflation flag:** compute `installs / stars` for each kept item. If the
-  ratio exceeds 10,000 (i.e. implausibly many installs for how few people
-  starred the repo), mark that row `⚠` in the output and add a one-line
-  footnote explaining the flag means the install count looks
-  machine-inflated. Do not drop the item — show it flagged and let the
-  reader judge. Items with `stars` of 0 get the flag automatically.
-- For each kept item, write one plain sentence describing what it does,
-  derived from its `description` — not a copy-paste of marketing copy.
+  ratio exceeds 10,000 (implausibly many installs for how few people
+  starred the repo), mark that row `⚠`. Items with `stars` of 0 get the
+  flag automatically. Do not drop flagged items — show them flagged and
+  let the reader judge.
 
 ## 3. Diff against last week
 
-- Call the Artifact "read" action on
-  https://claude.ai/code/artifact/7d96599d-0031-4fad-a517-c6523aaffbef.
-- If the read call itself fails (network error, timeout, non-2xx response)
-  — as opposed to succeeding with no `trend-data` tag — retry once. If it
-  still fails, STOP the run without publishing anything. A missed week is
-  recoverable; an overwritten history is not, since this page is the only
-  copy of the history.
-- If the read succeeds but the `<script type="application/json"
-  id="trend-data">` tag is missing (genuine first run, or the page was
-  manually cleared), treat history as empty — every item this week is
-  `NEW`.
-- Otherwise parse the JSON out of that tag. It is an array of up to 8
-  weekly snapshots, newest last. The current snapshot schema is:
+- Read `data/history.json` from the repository working copy. It is an array
+  of up to 8 weekly snapshots, newest last:
   `{ "week": "YYYY-MM-DD", "items": [{ "id", "name", "repo", "installs", "rank" }, ...] }`
-  Use the UTC calendar date of THIS run for this week's `"week"` field.
-- **Legacy-schema reset (one time only):** if the stored snapshots use the
-  old schema — items carrying `stars` and `url` but no `id` — they ranked
-  repositories by stars, which is not comparable to ranking skills by
-  installs. Discard that history entirely, start the array fresh with this
-  week's snapshot alone, mark every item `NEW`, and note once in the
-  footer that history was reset when the ranking metric changed. Do this
-  only while old-schema snapshots are present; once the history holds
-  `id`-keyed snapshots, never reset again.
+- If the file is missing or unparseable, STOP and commit nothing rather
+  than overwriting it — git has every previous version, and a corrupted
+  history is a real loss. Say what you found.
+- Use the UTC calendar date of THIS run as this week's `"week"` value. If
+  the newest stored snapshot already carries that same date (a re-run on
+  the same day), REPLACE it rather than appending a duplicate.
 - For each item in this week's top list, compare against the most recent
   prior snapshot **by `id`**:
-  - Not present before → `NEW`
-  - Rank improved (lower number) → `UP` with the rank delta
-  - Rank worsened → `DOWN` with the rank delta
+  - Not present before → `НОВОЕ`
+  - Rank improved (lower number) → `↑N` with the rank delta
+  - Rank worsened → `↓N` with the rank delta
   - Unchanged rank → `=`
 - Also compute each item's **install delta** versus that prior snapshot
-  (`installs` now minus `installs` then). This is the week's actual growth
-  signal — a skill can hold its rank while gaining 40,000 installs. Show
-  it alongside the rank movement. Items that are `NEW` have no delta.
-- Append this week's snapshot to the history array; if the array now has
-  more than 8 entries, drop the oldest.
+  (`installs` now minus `installs` then). A skill can hold its rank while
+  gaining 40,000 installs — that is the week's real growth signal. Items
+  that are `НОВОЕ` have no delta.
+- Append this week's snapshot; if the array then exceeds 8 entries, drop
+  the oldest.
 
-## 4. Publish
+## 4. Rebuild `index.html` (in Russian)
 
-Compute each row's movement badge and install delta from the history
-comparison you just did in step 3 — NEVER hardcode a movement value or
-leave a stub function that always returns the same label. Render badges
-and deltas as static text directly in each row's HTML, not via
-client-side JavaScript that re-derives them from the embedded JSON at
-page-load time — a page whose visible values depend on script logic
-staying correct is exactly how this silently drifts wrong over time.
+Keep the existing page's structure, design tokens, fonts, and CSS — edit
+the data, not the design. Preserve: the light/dark token blocks, the
+`<title>Тренд-радар скиллов Claude Code</title>`, the emoji favicon, the
+stat rail, the table, the notes block, and the copy-to-clipboard script.
 
-Rebuild the Artifact HTML:
-- Put `<title>Claude Code Skills Trend Radar</title>` as the very first
-  line of the file content (stable across redeploys — do not add any other
-  `<head>`-level tags of your own).
-- A table with these columns: rank, skill name (linked to its repo),
-  parent repo, one-line description, category, installs, weekly install
-  delta, stars (secondary context), movement badge, and the `⚠` inflation
-  flag where it applies.
-- Give each row a small click-to-copy control carrying that skill's
-  `installCommand`, so a skill can be installed straight from the page.
-- Footer: last-updated date (UTC); the inflation-flag footnote if any row
-  is flagged; the history-reset note if this run performed the one-time
-  legacy reset; and, if the run degraded in any way, what was skipped.
-- Embed the updated (≤8-entry) history array as
-  `<script type="application/json" id="trend-data">...</script>` — this is
-  data storage for next week's diff, kept separate from the static values
-  already rendered in the table.
-- Call the Artifact "publish" action with:
-  - `url: https://claude.ai/code/artifact/7d96599d-0031-4fad-a517-c6523aaffbef`
-    so it redeploys the same page instead of creating a new one.
-  - `favicon: 📡` on every publish call (keep identical every week — this
-    is a publish parameter, not page markup, do not try to encode it in
-    the HTML itself).
-  - If the publish call reports a version conflict, re-read the current
-    page, merge this week's snapshot onto that newer content, and publish
-    again. Never pass `force`.
+- **All prose is in Russian**: headings, the standfirst, column headers,
+  category chips (`разработка` / `видео`), badges (`НОВОЕ`), the notes.
+  Skill names, repo paths, and install commands stay verbatim in Latin.
+- Write each skill's one-sentence description **in Russian**, derived from
+  its English `description` — a plain explanation of what it does, not a
+  translation of marketing copy.
+- Update the eyebrow date and the stat rail counts (total, разработка,
+  видео, skills scanned, flagged).
+- Render movement badges and install deltas as **static text in each row**,
+  computed in step 3 — never hardcode a value, never leave a stub function,
+  and never re-derive them in client-side JavaScript at page load. A page
+  whose visible values depend on script logic staying correct is exactly
+  how this silently drifts wrong.
+- Update the notes block: the source line with the current date and skill
+  count, the per-repo cap note, the `⚠` explanation if any row is flagged,
+  and — only while it is still true — the note that everything reads
+  `НОВОЕ` because there is no comparable prior week. Delete that last note
+  once real movement exists.
+
+## 5. Commit and push
+
+```bash
+git add index.html data/history.json
+git commit -m "Weekly trend radar: <YYYY-MM-DD>"
+git push
+```
+
+The push is the publish — GitHub Pages redeploys within about a minute.
+Do not open a pull request; commit straight to the default branch.
+
+If the push is rejected because the remote moved ahead, `git pull --rebase`
+and push again. Never force-push: the history in this repo is the only copy
+of every prior weekly snapshot.
 
 ## Output
 
-Nothing further — the Artifact page is the deliverable. Do not send a chat
+Nothing further — the pushed commit is the deliverable. Do not send a chat
 message unless explicitly asked to summarize.

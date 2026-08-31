@@ -1,45 +1,66 @@
-# Claude Code Skills Trend Radar
+# Тренд-радар скиллов Claude Code
 
-Weekly-refreshed dashboard of the most popular Claude Code skills/plugins
-(dev + video production focus).
+Двадцать самых устанавливаемых скиллов Claude Code для разработки и
+видеопродакшена. Обновляется автоматически каждый вторник.
 
-- Live dashboard: https://claude.ai/code/artifact/7d96599d-0031-4fad-a517-c6523aaffbef
-- Design: [docs/superpowers/specs/2026-08-28-skills-trend-radar-design.md](docs/superpowers/specs/2026-08-28-skills-trend-radar-design.md)
-- Weekly agent prompt: [prompts/weekly-trend-radar.md](prompts/weekly-trend-radar.md)
-- Schedule: Tuesdays 09:00 UTC (12:00 Moscow) — schedule ID: trig_012LbsQmuACNR5KEs6wc53iU
+**Страница:** https://alexnordoff-byte.github.io/claude-skills-trend-radar/
 
-## Data source
+## Как это работает
 
-Ranking comes from `https://claudemarketplaces.com/api/skills` — one JSON
-array, ~23,700 skills, with a real `installs` count per individual skill.
-Installs, not GitHub stars, are the ranking metric: a monorepo's star count
-is reported identically on every skill inside it, so it says nothing about
-any one of them (`zarazhangrui/frontend-slides`: 27,032 stars, 852
-installs).
+Раз в неделю облачный агент Claude Code:
 
-## Network access
+1. Скачивает `https://claudemarketplaces.com/api/skills` — около 23 700
+   скиллов, ~18 МБ JSON — и обрабатывает его скриптом, а не чтением.
+2. Ранжирует по **установкам**, а не по звёздам GitHub. Звёзды принадлежат
+   репозиторию целиком: в монорепо из двадцати скиллов у всех двадцати одно
+   и то же число, и про конкретный скилл оно не говорит ничего.
+   Показательно: `zarazhangrui/frontend-slides` — 27 032 звезды и 852
+   установки.
+3. Оставляет только две темы — разработка и видео — не больше двух скиллов
+   на репозиторий, и помечает `⚠` подозрительное соотношение установок к
+   звёздам (больше 10 000 к 1).
+4. Считает движение относительно прошлой недели, переписывает `index.html`,
+   дописывает `data/history.json` и делает коммит. Пуш и есть публикация —
+   GitHub Pages пересобирает страницу за минуту.
 
-The routine runs in a dedicated cloud environment
-(`env_01LyDxe5oZ1feDz6rvreAjK1`) with **Network access: Custom** and
-exactly two allowed domains:
+## Структура
+
+| Файл | Что это |
+|---|---|
+| `index.html` | Сама страница, её отдаёт GitHub Pages |
+| `data/history.json` | Снимки по неделям, до восьми последних |
+| `prompts/weekly-trend-radar.md` | Инструкция агента — то, что реально выполняется |
+| `docs/superpowers/specs/` | Проектное решение |
+| `docs/superpowers/plans/` | План реализации |
+
+История замеров живёт в git: каждый вторник — отдельный коммит. Даже если
+страница будет затёрта, любой прошлый срез восстанавливается из истории.
+
+## Эксплуатация
+
+Расписание: вторник, 09:00 UTC (12:00 МСК). ID рутины
+`trig_012LbsQmuACNR5KEs6wc53iU`.
+
+```
+RemoteTrigger action:"list_runs"   trigger_id:"trig_012LbsQmuACNR5KEs6wc53iU"
+RemoteTrigger action:"get_run_log" session_id:"<id из list_runs>"
+RemoteTrigger action:"run"         trigger_id:"trig_012LbsQmuACNR5KEs6wc53iU"
+```
+
+**Доступ в сеть.** Рутина работает в отдельном облачном окружении с
+уровнем **Custom**. Custom не дополняет базовый список доменов, а
+**заменяет** его целиком — убрав любой из нужных, ломаешь прогон.
+Разрешены должны быть как минимум:
 
 ```
 claudemarketplaces.com
-*.frame.claudeusercontent.com
+github.com
 ```
 
-The first is the data source; the second is how the Artifact is read and
-republished. **Custom replaces the Trusted allowlist rather than extending
-it** — dropping either domain breaks the run. Verified working end to end
-on 2026-08-31 (session `cse_01YEnDnbjrUtqW3mZ6VuyyFc`, 562s, published).
+**Зелёная галочка у прогона не значит, что данные обновились.** Если
+источник недоступен, агент по инструкции останавливается и ничего не
+коммитит — для системы это успешное завершение. Смотри дату в подвале
+страницы или последний коммит.
 
-If a run ever halts, its log names the blocked host explicitly.
-
-## Operating it
-
-- Check runs: `RemoteTrigger action:"list_runs" trigger_id:"trig_012LbsQmuACNR5KEs6wc53iU"`
-- Read one run's log: `RemoteTrigger action:"get_run_log" session_id:"<id>"`
-- Fire it manually: `RemoteTrigger action:"run" trigger_id:"trig_012LbsQmuACNR5KEs6wc53iU"`
-
-The repo copy of the prompt is documentation; the copy stored on the
-trigger is what actually runs. Change both together.
+Копия промпта в репозитории — документация; выполняется та, что сохранена
+в самой рутине. Менять нужно обе.

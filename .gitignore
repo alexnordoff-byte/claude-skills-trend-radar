@@ -1,0 +1,19 @@
+# secrets — never commit
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*_backup*
+*.db
+
+# agent scratch
+.superpowers/
+*.tmp
+scratch/
+
+# os / editor
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/

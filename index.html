@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Тренд-радар скиллов Claude Code</title>
+<meta name="description" content="Двадцать самых устанавливаемых скиллов Claude Code для разработки и видеопродакшена. Обновляется каждый вторник.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;450;600&display=swap">
+<style>
+:root{
+  --bg:#F5F7F7; --surface:#FFFFFF; --surface-2:#EDF1F1;
+  --ink:#141C20; --ink-2:#3D4C52; --muted:#68787E;
+  --line:#DCE3E4; --line-strong:#C4CFD1;
+  --signal:#0E7C7B; --signal-soft:#DCEFEE;
+  --video:#6B4FA0; --video-soft:#EBE5F5;
+  --warn:#96540A; --warn-soft:#F7EBD9;
+  --up:#0E7C7B; --up-soft:#DCEFEE;
+  --down:#A34438; --down-soft:#F8E7E4;
+  --same:#68787E; --same-soft:#EDF1F1;
+  --shadow:0 1px 2px rgba(20,28,32,.05),0 8px 24px -16px rgba(20,28,32,.28);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1417; --surface:#151E22; --surface-2:#1C282D;
+    --ink:#E7EDEE; --ink-2:#B6C4C8; --muted:#8A9BA1;
+    --line:#243239; --line-strong:#33454D;
+    --signal:#45B8B3; --signal-soft:#123033;
+    --video:#A88BDC; --video-soft:#241C36;
+    --warn:#E3A44A; --warn-soft:#33260F;
+    --up:#45B8B3; --up-soft:#123033;
+    --down:#E3897A; --down-soft:#331C17;
+    --same:#8A9BA1; --same-soft:#1C282D;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 28px -18px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1417; --surface:#151E22; --surface-2:#1C282D;
+  --ink:#E7EDEE; --ink-2:#B6C4C8; --muted:#8A9BA1;
+  --line:#243239; --line-strong:#33454D;
+  --signal:#45B8B3; --signal-soft:#123033;
+  --video:#A88BDC; --video-soft:#241C36;
+  --warn:#E3A44A; --warn-soft:#33260F;
+  --up:#45B8B3; --up-soft:#123033;
+  --down:#E3897A; --down-soft:#331C17;
+  --same:#8A9BA1; --same-soft:#1C282D;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 28px -18px rgba(0,0,0,.8);
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"IBM Plex Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:15px; line-height:1.55; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:44px 24px 72px;display:flex;flex-direction:column;gap:32px}
+
+.masthead{display:flex;flex-direction:column;gap:14px}
+.eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--signal);margin:0}
+h1{font-family:Archivo,"IBM Plex Sans",sans-serif;font-weight:700;font-size:clamp(28px,5vw,44px);letter-spacing:-.021em;line-height:1.06;text-wrap:balance;margin:0}
+.standfirst{margin:0;max-width:66ch;color:var(--ink-2);font-size:16px}
+.standfirst b{color:var(--ink);font-weight:600}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.stat{background:var(--surface);padding:14px 16px;display:flex;flex-direction:column;gap:3px}
+.stat dt{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0}
+.stat dd{margin:0;font-family:Archivo,sans-serif;font-weight:600;font-size:24px;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.stat dd.sm{font-size:19px}
+
+.tablecard{background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);overflow:hidden}
+.scroller{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:940px}
+thead th{position:sticky;top:0;background:var(--surface-2);font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);text-align:left;padding:11px 14px;border-bottom:1px solid var(--line-strong);white-space:nowrap}
+th.num,td.num{text-align:right}
+tbody tr{border-bottom:1px solid var(--line)}
+tbody tr:last-child{border-bottom:0}
+tbody tr:hover{background:var(--surface-2)}
+td{padding:13px 14px;vertical-align:top}
+
+.rank{font-family:"IBM Plex Mono",monospace;font-size:13px;font-variant-numeric:tabular-nums;color:var(--muted);width:46px;padding-top:15px}
+.rank.top{color:var(--signal);font-weight:600}
+.skill{min-width:206px}
+.skill a{font-weight:600;font-size:14.5px;color:var(--ink);text-decoration:none;border-bottom:1px solid transparent}
+.skill a:hover,.skill a:focus-visible{color:var(--signal);border-bottom-color:var(--signal)}
+.repo{display:block;font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--muted);margin-top:3px;word-break:break-word}
+.desc{color:var(--ink-2);font-size:13.5px;max-width:42ch;line-height:1.5}
+
+.chip{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;white-space:nowrap}
+.chip.dev{background:var(--signal-soft);color:var(--signal)}
+.chip.video{background:var(--video-soft);color:var(--video)}
+
+.installs{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;font-weight:600;font-size:15px;white-space:nowrap}
+.delta{display:block;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted);margin-top:3px;white-space:nowrap}
+.delta.pos{color:var(--up)}
+.stars{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;font-size:12.5px;color:var(--muted);white-space:nowrap}
+.ratio{display:block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--warn);margin-top:3px;white-space:nowrap}
+
+.badge{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.06em;padding:3px 8px;border-radius:4px;white-space:nowrap;background:var(--signal-soft);color:var(--signal)}
+.badge.up{background:var(--up-soft);color:var(--up)}
+.badge.down{background:var(--down-soft);color:var(--down)}
+.badge.same{background:var(--same-soft);color:var(--same)}
+.flag{display:inline-block;margin-left:6px;font-size:12px;color:var(--warn);cursor:help}
+
+.copy{font-family:"IBM Plex Mono",monospace;font-size:11px;padding:5px 10px;border:1px solid var(--line-strong);border-radius:6px;background:var(--surface);color:var(--ink-2);cursor:pointer;white-space:nowrap;transition:background .12s,color .12s,border-color .12s}
+.copy:hover{border-color:var(--signal);color:var(--signal)}
+.copy:focus-visible{outline:2px solid var(--signal);outline-offset:2px}
+.copy[data-done="1"]{background:var(--signal-soft);color:var(--signal);border-color:var(--signal)}
+
+.notes{display:flex;flex-direction:column;gap:11px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:20px}
+.notes p{margin:0;max-width:80ch}
+.notes b{color:var(--ink-2);font-weight:600}
+.notes code{font-family:"IBM Plex Mono",monospace;font-size:12px;background:var(--surface-2);padding:1px 5px;border-radius:4px}
+.notes a{color:var(--signal)}
+
+@media (max-width:640px){
+  .wrap{padding:30px 15px 56px;gap:26px}
+  .desc{max-width:34ch}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Замер за неделю · 31 августа 2026</p>
+    <h1>Тренд-радар скиллов Claude&nbsp;Code</h1>
+    <p class="standfirst">Двадцать самых устанавливаемых скиллов для <b>разработки</b> и <b>видеопродакшена</b>. Ранжирование по реальным установкам, а не по звёздам GitHub: звёзды принадлежат репозиторию целиком, и все скиллы внутри монорепо показывают одно и то же число — про конкретный скилл оно не говорит ничего.</p>
+  </header>
+
+  <dl class="stats">
+    <div class="stat"><dt>В списке</dt><dd>20</dd></div>
+    <div class="stat"><dt>Разработка</dt><dd>13</dd></div>
+    <div class="stat"><dt>Видео</dt><dd>7</dd></div>
+    <div class="stat"><dt>Просмотрено</dt><dd class="sm">23&nbsp;687</dd></div>
+    <div class="stat"><dt>С пометкой</dt><dd class="sm">3</dd></div>
+  </dl>
+
+  <div class="tablecard">
+    <div class="scroller">
+      <table>
+        <thead>
+          <tr>
+            <th>№</th>
+            <th>Скилл</th>
+            <th>Что делает</th>
+            <th>Тема</th>
+            <th class="num">Установок</th>
+            <th class="num">Звёзд</th>
+            <th>Движение</th>
+            <th>Установить</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td class="rank top">01</td>
+            <td class="skill"><a href="https://github.com/vercel-labs/skills">find-skills</a><span class="repo">vercel-labs/skills</span></td>
+            <td class="desc">Находит и ставит нужный скилл, когда ты описываешь задачу словами.</td>
+            <td><span class="chip dev">разработка</span></td>
+            <td class="num installs">3&nbsp;020&nbsp;072</td>
+            <td class="num stars">28&nbsp;187</td>
+            <td><span class="badge">НОВОЕ</span></td>
+            <td><button class="copy" data-cmd="npx skills add https://github.com/vercel-labs/skills --skill find-skills">копировать</button></td>
+          </tr>
+
+          <tr>
+            <td class="rank top">02</td>
+            <td class="skill"><a href="https://github.com/inference-sh/skills">ai-video-generation</a><span class="repo">inference-sh/skills</span></td>
+            <td class="desc">Генерирует видео через inference.sh: Veo, Seedance, Wan, Grok и ещё сорок с лишним моделей.</td>
+            <td><span class="chip video">видео</span></td>
+            <td class="num installs">1&nbsp;675&nbsp;869</td>
+            <td class="num stars">703</td>
+            <td><span class="badge">НОВОЕ</span></td>
+            <td><button class="copy" data-cmd="npx skills add https://github.com/inference-sh/skills --skill ai-video-generation">копировать</button></td>
+          </tr>
+
+          <tr>
+            <td class="rank top">03</td>
+            <td class="skill"><a href="https://github.com/inference-sh/skills">ai-avatar-video</a><span class="repo">inference-sh/skills</span></td>
+            <td class="desc">Делает говорящие головы и аватар-видео из командной строки inference.sh.</td>
+            <td><span class="chip video">видео</span></td>
+            <td class="num installs">1&nbsp;672&nbsp;086</td>
+            <td class="num stars">703</td>
+            <td><span class="badge">НОВОЕ</span></td>
+            <td><button class="copy" data-cmd="npx skills add https://github.com/inference-sh/skills --skill ai-avatar-video">копировать</button></td>
+          </tr>
+
+          <tr>
+            <td class="rank">04</td>
+            <td class="skill"><a href="https://github.com/anthropics/skills">frontend-design</a><span class="repo">anthropics/skills</span></td>
+            <td class="desc">Гайд Anthropic: как задать интерфейсу осмысленный визуальный курс вместо шаблонного.</td>
+            <td><span class="chip dev">разработка</span></td>
+            <td class="num installs">791&nbsp;993</td>
+            <td class="num stars">170&nbsp;188</td>
+            <td><span class="badge">НОВОЕ</span></td>
+            <td><button class="copy" data-cmd="npx skills add https://github.com/anthropics/skills --skill frontend-design">копировать</button></td>
+          </tr>
+
+          <tr>
+            <td class="rank">05</td>
+            <td class="skill"><a href="https://github.com/mattpocock/skills">improve-codebase-architecture</a><span class="repo">mattpocock/skills</span></td>
+            <td class="desc">Ищет в коде места, где архитектуру стоит углубить, и показывает их отчётом.</td>
+            <td><span class="chip dev">разработка</span></td>
+            <td class="num installs">735&nbsp;221</td>
+            <td class="num stars">221&nbsp;049</td>
+            <td><span class="badge">НОВОЕ</span></td>
+            <td><button class="copy" data-cmd="npx skills add https://github.com/mattpocock/skills --skill improve-codebase-architecture">копировать</button></td>
+          </tr>
+
+          <tr>
+            <td class="rank">06</td>
+            <td class="skill"><a href="https://github.com/mattpocock/skills">tdd</a><span class="repo">mattpocock/skills</span></td>
+            <td class="desc">Разработка через тесты: сначала падающий тест, потом код, который его чинит.</td>
+            <td><span class="chip dev">разработка</span></td>
+            <td class="num installs">709&nbsp;927</td>
+            <td class="num stars">221&nbsp;049</td>
+            <td><span class="badge">НОВОЕ</span></td>
+            <td><button class="copy" data-cmd="npx skills add https://github.com/mattpocock/skills --skill tdd">копировать</button></td>
+          </tr>
+
+          <tr>
+            <td class="rank">07</td>
+            <td class="skill"><a href="https://github.com/vercel-labs/agent-browser">agent-browser</a><span class="repo">vercel-labs/agent-browser</span></td>
+            <td class="desc">Браузерная автоматизация из командной строки, рассчитанная на агентов.</td>
+            <td><span class="chip dev">разработка</span></td>
+            <td class="num installs">626&nbsp;865</td>
+            <td class="num stars">40&nbsp;067</td>
+            <td><span class="badge">НОВОЕ</span></td>
+            <td><button class="copy" data-cmd="npx skills add https://github.com/vercel-labs/agent-browser --skill agent-browser">копировать</button></td>
+          </tr>
+
+          <tr>
+            <td class="rank">08</td>
+            <td class="skill"><a href="https://github.com/vercel-labs/agent-skills">web-design-guidelines</a><span class="repo">vercel-labs/agent-skills</span></td>
+            <td class="desc">Проверяет код интерфейса на соответствие Web Interface Guidelines.</td>
+            <td><span class="chip dev">разработка</span></td>
+            <td class="num installs">554&nbsp;194</td>
+            <td class="num stars">30&nbsp;153</td>
+            <td><span class="badge">НОВОЕ</span></td>
+            <td><button class="copy" data-cmd="npx skills add https://github.com/vercel-labs/agent-skills --skill web-design-guidelines">копировать</button></td>
+          </tr>
+
+          <tr>
+            <td class="rank">09</td>
+            <td class="skill"><a href="https://github.com/vercel-labs/agent-skills">vercel-react-best-practices</a><span class="repo">vercel-labs/agent-skills</span></td>
+            <td class="desc">Семьдесят правил производительности React и Next.js, отсортированных по отдаче.</td>
+            <td><span class="chip dev">разработка</span></td>
+            <td class="num installs">550&nbsp;100</td>
+            <td class="num stars">29&nbsp;000</td>
+            <td><span class="badge">НОВОЕ</span></td>
+            <td><button class="copy" data-cmd="npx skills add https://github.com/vercel-labs/agent-skills --skill vercel-react-best-practices">копировать</button></td>
+          </tr>
+
+          <tr>
+            <td class="rank">10</td>
+            <td class="skill"><a href="https://github.com/microsoft/azure-skills">microsoft-foundry</a><span class="repo">microsoft/azure-skills</span></td>
+            <td class="desc">Разворачивает и сопровождает агентов Azure Foundry через azd — от каркаса до продакшена.</td>
+            <td><span class="chip dev">разработка</span></td>
+            <td class="num installs">537&nbsp;643</td>
+            <td class="num stars">1&nbsp;389</td>
+            <td><span class="badge">НОВОЕ</span></td>
+            <td><button class="copy" data-cmd="npx skills add https://github.com/microsoft/azure-skills --skill microsoft-foundry">копировать</button></td>
+          </tr>
+
+          <tr>
+            <td class="rank">11</td>
+            <td class="skill"><a href="https://github.com/microsoft/azure-skills">azure-diagnostics</a><span class="repo">microsoft/azure-skills</span></td>
+            <td class="desc">Разбирает инциденты в проде Azure через AppLens, Azure Monitor и resource health.</td>
+            <td><span class="chip dev">разработка</span></td>
+            <td class="num installs">531&nbsp;581</td>
+            <td class="num stars">1&nbsp;389</td>
+            <td><span class="badge">НОВОЕ</span></td>
+            <td><button class="copy" data-cmd="npx skills add https://github.com/microsoft/azure-skills --skill azure-diagnostics">копировать</button></td>
+          </tr>
+
+          <tr>
+            <td class="rank">12</td>
+            <td class="skill"><a href="https://github.com/remotion-dev/skills">remotion-best-practices</a><span class="repo">remotion-dev/skills</span></td>
+            <td class="desc">Точка входа в скиллы Remotion — видео, собранное из React-компонентов кодом.</td>
+            <td><span class="chip video">видео</span></td>
+            <td class="num installs">484&nbsp;819</td>
+            <td class="num stars">4&nbsp;334</td>
+            <td><span class="badge">НОВОЕ</span></td>
+            <td><button class="copy" data-cmd="npx skills add https://github.com/remotion-dev/skills --skill remotion-best-practices">копировать</button></td>
+          </tr>
+
+          <tr>
+            <td class="rank">13</td>
+            <td class="skill"><a href="https://github.com/xixu-me/skills">github-actions-docs</a><span class="repo">xixu-me/skills</span></td>
+            <td class="desc">Помогает писать, объяснять, чинить и переносить workflow GitHub Actions.</td>
+            <td><span class="chip dev">разработка</span></td>
+            <td class="num installs">470&nbsp;260</td>
+            <td class="num stars">71</td>
+            <td><span class="badge">НОВОЕ</span></td>
+            <td><button class="copy" data-cmd="npx skills add https://github.com/xixu-me/skills --skill github-actions-docs">копировать</button></td>
+          </tr>
+
+          <tr>
+            <td class="rank">14</td>
+            <td class="skill"><a href="https://github.com/xixu-me/skills">skills-cli</a><span class="repo">xixu-me/skills</span></td>
+            <td class="desc">Управляет скиллами из терминала: поставить, обновить, снести, забэкапить, синхронизировать.</td>
+            <td><span class="chip dev">разработка</span></td>
+            <td class="num installs">464&nbsp;094</td>
+            <td class="num stars">71</td>
+            <td><span class="badge">НОВОЕ</span></td>
+            <td><button class="copy" data-cmd="npx skills add https://github.com/xixu-me/skills --skill skills-cli">копировать</button></td>
+          </tr>
+
+          <tr>
+            <td class="rank">15</td>
+            <td class="skill"><a href="https://github.com/heygen-com/hyperframes">hyperframes-cli</a><span class="repo">heygen-com/hyperframes</span></td>
+            <td class="desc">Командная строка HeyGen для сборки и рендера видео-композиций HyperFrames.</td>
+            <td><span class="chip video">видео</span></td>
+            <td class="num installs">406&nbsp;625</td>
+            <td class="num stars">41&nbsp;489</td>
+            <td><span class="badge">НОВОЕ</span></td>
+            <td><button class="copy" data-cmd="npx skills add https://github.com/heygen-com/hyperframes --skill hyperframes-cli">копировать</button></td>
+          </tr>
+
+          <tr>
+            <td class="rank">16</td>
+            <td class="skill"><a href="https://github.com/runcomfy-com/skills">image-to-video</a><span class="repo">runcomfy-com/skills</span><span class="flag" title="Число установок похоже на накрутку">⚠</span></td>
+            <td class="desc">Оживляет статичную картинку на RunComfy, сам подбирая подходящую модель.</td>
+            <td><span class="chip video">видео</span></td>
+            <td class="num installs">403&nbsp;822</td>
+            <td class="num stars">12<span class="ratio">33&nbsp;652× на звезду</span></td>
+            <td><span class="badge">НОВОЕ</span></td>
+            <td><button class="copy" data-cmd="npx skills add https://github.com/runcomfy-com/skills --skill image-to-video">копировать</button></td>
+          </tr>
+
+          <tr>
+            <td class="rank">17</td>
+            <td class="skill"><a href="https://github.com/runcomfy-com/skills">video-edit</a><span class="repo">runcomfy-com/skills</span><span class="flag" title="Число установок похоже на накрутку">⚠</span></td>
+            <td class="desc">Монтирует готовое видео на RunComfy через роутер моделей.</td>
+            <td><span class="chip video">видео</span></td>
+            <td class="num installs">403&nbsp;785</td>
+            <td class="num stars">12<span class="ratio">33&nbsp;649× на звезду</span></td>
+            <td><span class="badge">НОВОЕ</span></td>
+            <td><button class="copy" data-cmd="npx skills add https://github.com/runcomfy-com/skills --skill video-edit">копировать</button></td>
+          </tr>
+
+          <tr>
+            <td class="rank">18</td>
+            <td class="skill"><a href="https://github.com/heygen-com/hyperframes">hyperframes</a><span class="repo">heygen-com/hyperframes</span></td>
+            <td class="desc">Входной скилл HeyGen для создания, правки и рендера видео HyperFrames.</td>
+            <td><span class="chip video">видео</span></td>
+            <td class="num installs">394&nbsp;105</td>
+            <td class="num stars">41&nbsp;489</td>
+            <td><span class="badge">НОВОЕ</span></td>
+            <td><button class="copy" data-cmd="npx skills add https://github.com/heygen-com/hyperframes --skill hyperframes">копировать</button></td>
+          </tr>
+
+          <tr>
+            <td class="rank">19</td>
+            <td class="skill"><a href="https://github.com/leonxlnx/taste-skill">design-taste-frontend</a><span class="repo">leonxlnx/taste-skill</span></td>
+            <td class="desc">Фронтенд-скилл с характером для лендингов и редизайнов — против генеричного результата.</td>
+            <td><span class="chip dev">разработка</span></td>
+            <td class="num installs">373&nbsp;988</td>
+            <td class="num stars">77&nbsp;614</td>
+            <td><span class="badge">НОВОЕ</span></td>
+            <td><button class="copy" data-cmd="npx skills add https://github.com/leonxlnx/taste-skill --skill design-taste-frontend">копировать</button></td>
+          </tr>
+
+          <tr>
+            <td class="rank">20</td>
+            <td class="skill"><a href="https://github.com/agentspace-so/skills">agentspace</a><span class="repo">agentspace-so/skills</span><span class="flag" title="Число установок похоже на накрутку">⚠</span></td>
+            <td class="desc">Показывает с любого устройства, чем агент занят прямо сейчас: логи, код, результаты.</td>
+            <td><span class="chip dev">разработка</span></td>
+            <td class="num installs">369&nbsp;039</td>
+            <td class="num stars">12<span class="ratio">30&nbsp;753× на звезду</span></td>
+            <td><span class="badge">НОВОЕ</span></td>
+            <td><button class="copy" data-cmd="npx skills add https://github.com/agentspace-so/skills --skill agentspace">копировать</button></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="notes">
+    <p><b>Источник.</b> <a href="https://claudemarketplaces.com/">claudemarketplaces.com</a>, 23&nbsp;687 скиллов, срез от 31 августа 2026. Ранжирование по накопленным установкам. Звёзды показаны только для контекста и принадлежат <i>родительскому репозиторию</i>: в монорепо из двадцати скиллов у всех двадцати будет одно и то же число.</p>
+    <p><b>Не больше двух на репозиторий.</b> Без ограничения доска забивается паком одного автора — у <code>microsoft/azure-skills</code> около двадцати пяти скиллов, стоящих в паре тысяч установок друг от друга. Каждый репозиторий даёт максимум две строки, чтобы список оставался радаром, а не внутренней кухней одного монорепо.</p>
+    <p><b>⚠ значит, что число установок похоже на накрутку</b> — больше десяти тысяч установок на одну звезду. У всех трёх помеченных строк репозиторий с двенадцатью звёздами и сотнями тысяч установок. Они показаны, а не спрятаны: суди сам.</p>
+    <p><b>Везде «новое».</b> История началась с этого замера — прошлые снимки ранжировали репозитории по звёздам, а это несопоставимо с ранжированием скиллов по установкам. Стрелки движения и прирост за неделю появятся со следующего вторника.</p>
+    <p>Обновляется автоматически каждый вторник в 12:00 по Москве. Исходники и вся история замеров — <a href="https://github.com/alexnordoff-byte/claude-skills-trend-radar">на GitHub</a>.</p>
+  </div>
+
+</div>
+
+<script>
+document.querySelectorAll(".copy").forEach(function(btn){
+  btn.addEventListener("click", function(){
+    var cmd = btn.getAttribute("data-cmd");
+    var done = function(){
+      btn.textContent = "скопировано";
+      btn.setAttribute("data-done","1");
+      setTimeout(function(){ btn.textContent = "копировать"; btn.removeAttribute("data-done"); }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(cmd).then(done).catch(function(){ fallback(cmd, done); });
+    } else {
+      fallback(cmd, done);
+    }
+  });
+});
+function fallback(text, cb){
+  try{
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly","");
+    ta.style.position = "absolute";
+    ta.style.left = "-9999px";
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand("copy");
+    document.body.removeChild(ta);
+    cb();
+  }catch(e){}
+}
+</script>
+
+</body>
+</html>
