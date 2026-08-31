@@ -6,56 +6,141 @@ redeployed with this week's data. No other output is needed.
 
 ## 1. Collect
 
-Query these sources. If a source fails or returns nothing usable, skip it
-and add its name to a `skipped` list — do not stop the run.
+Single source of truth: `https://claudemarketplaces.com/api/skills`
 
-- GitHub Search API (no auth needed, public search):
-  - `https://api.github.com/search/repositories?q=topic:claude-code-skill&sort=stars&order=desc&per_page=50`
-  - `https://api.github.com/search/repositories?q=topic:claude-skill&sort=stars&order=desc&per_page=50`
-  - `https://api.github.com/search/repositories?q=topic:claude-code-plugin&sort=stars&order=desc&per_page=50`
-  - `https://api.github.com/search/code?q=filename:SKILL.md&per_page=50` (use to discover repos not caught by topics; resolve each hit to its parent repo for star count)
-- Official Anthropic skills/plugin marketplace: WebSearch `"Anthropic Claude Code skills marketplace"` / `"Claude Code plugin marketplace"` to find the current listing page (URL may change over time), then WebFetch it.
-- Aggregator/directory sites: WebSearch `"claude code skills directory"`, `"claude skills marketplace"`, `"awesome claude code skills"`. WebFetch any that expose a list with star/download-style counts.
-- Buzz signal (annotation only, not part of ranking): WebSearch `"claude code skill" reddit OR "hacker news" OR twitter` over the last 7 days; if a skill from the ranked list is mentioned, tag it `buzzing` in the output — do not use this to rank or to include items otherwise absent from GitHub/marketplace data.
+It returns a JSON array of ~23,000+ objects, one per individual skill (not
+per repository). Fields used here:
+
+- `id` — stable skill identifier, e.g. `vercel-labs/skills/find-skills`
+- `name` — the skill's own name
+- `repo` — owner/repo it lives in
+- `description` — the skill's own description
+- `installs` — integer, cumulative installs (this is the ranking metric)
+- `stars` — integer, GitHub stars of the PARENT REPO (context only, never
+  the ranking metric — a 20-skill monorepo reports the same star count on
+  all 20 of its skills, so stars say nothing about an individual skill)
+- `installCommand` — the exact command a user runs to install it
+
+**This payload is ~18MB and has no pagination — query parameters like
+`?limit=` are ignored and always return the full array.** You must fetch
+and reduce it PROGRAMMATICALLY (shell + curl piped into a script, or any
+available code-execution tool). Do NOT try to read it through a
+summarizing fetch: the ranking depends on exact integers, and a summarized
+or truncated read will silently invent numbers.
+
+Reduce it in code to the ranked shortlist described in step 2, and print
+only that shortlist — never load the full array into your own context.
+
+**If you cannot fetch and parse this endpoint exactly** — network blocked,
+no code execution available, malformed response — then STOP the run and
+publish nothing. Do not fall back to estimating, to GitHub star counts, or
+to a summarized read. A missed week is recoverable; a page full of
+fabricated numbers is worse than no update.
 
 ## 2. Rank
 
-- Dedupe by canonical repo/listing URL.
-- Keep only items whose PRIMARY purpose is one of the two categories below. Being built as "an agent" or "an automation" does NOT by itself qualify anything — every Claude Code skill fits that description trivially, so it is not a useful filter on its own:
-  - **dev**: the skill's main use case is writing, running, or debugging software — code generation, mini-app/CLI/API/SDK scaffolding, bot construction, developer tooling.
-  - **video**: the skill's main use case is producing or editing video — rendering, cutting, subtitling, transcript-to-video, video pipelines.
-  - If the item's main use case is something else — marketing, ads, SEO, note-taking, social-media content, finance, image-only generation, general productivity, etc. — drop it, even if it happens to be packaged as an "agent" or "automation" skill.
-- Rank by GitHub star count only. Do not mix in a marketplace/aggregator's download count on the same sorted list — those are a different unit. If a source only exposes downloads (no GitHub star-equivalent), skip it for ranking purposes rather than interleaving it.
-- Take the top 15-20 that pass the category filter. If fewer than 15 qualify, publish what qualifies — do not pad the list with items that failed the category test.
-- For each kept item, write one plain sentence describing what it does, derived from its README/description — not a copy-paste of marketing copy.
+- Rank by `installs`, descending. This is the only ranking metric.
+- Keep only skills whose PRIMARY purpose is one of the two categories
+  below. Being built as "an agent" or "an automation" does NOT by itself
+  qualify anything — every Claude Code skill fits that description
+  trivially, so it is not a useful filter on its own:
+  - **dev**: the skill's main use case is writing, running, or debugging
+    software — code generation, mini-app/CLI/API/SDK scaffolding, bot
+    construction, developer tooling.
+  - **video**: the skill's main use case is producing or editing video —
+    rendering, cutting, subtitling, transcript-to-video, video pipelines.
+  - If the skill's main use case is something else — marketing, ads, SEO,
+    note-taking, social-media content, finance, image-only generation,
+    general productivity — drop it, even if it is packaged as an "agent"
+    or "automation" skill.
+- Judge the category from `name` + `description`. Do not keep an item
+  merely because a keyword appears somewhere in its text.
+- Take the top 15-20 that pass the category filter. If fewer than 15
+  qualify, publish what qualifies — never pad the list with items that
+  failed the category test.
+- **Inflation flag:** compute `installs / stars` for each kept item. If the
+  ratio exceeds 10,000 (i.e. implausibly many installs for how few people
+  starred the repo), mark that row `⚠` in the output and add a one-line
+  footnote explaining the flag means the install count looks
+  machine-inflated. Do not drop the item — show it flagged and let the
+  reader judge. Items with `stars` of 0 get the flag automatically.
+- For each kept item, write one plain sentence describing what it does,
+  derived from its `description` — not a copy-paste of marketing copy.
 
 ## 3. Diff against last week
 
 - Call the Artifact "read" action on
   https://claude.ai/code/artifact/7d96599d-0031-4fad-a517-c6523aaffbef.
-- If the read call itself fails (network error, timeout, non-2xx response) — as opposed to succeeding with no `trend-data` tag — retry once. If it still fails, STOP the run without publishing anything. A missed week is recoverable; an overwritten history is not, since this page is the only copy of the history.
-- If the read succeeds but the `<script type="application/json" id="trend-data">` tag is missing (this is the genuine first-ever run, or the page was manually cleared), treat history as empty — every item this week is `NEW`.
-- Otherwise, parse the JSON out of that tag. It is an array of up to 8 weekly snapshots, newest last; each snapshot is `{ "week": "YYYY-MM-DD", "items": [{ "url", "name", "stars", "rank" }, ...] }`. Use the UTC calendar date of THIS run for this week's `"week"` field.
-- For each item in this week's top list, compare against the most recent prior snapshot by URL:
+- If the read call itself fails (network error, timeout, non-2xx response)
+  — as opposed to succeeding with no `trend-data` tag — retry once. If it
+  still fails, STOP the run without publishing anything. A missed week is
+  recoverable; an overwritten history is not, since this page is the only
+  copy of the history.
+- If the read succeeds but the `<script type="application/json"
+  id="trend-data">` tag is missing (genuine first run, or the page was
+  manually cleared), treat history as empty — every item this week is
+  `NEW`.
+- Otherwise parse the JSON out of that tag. It is an array of up to 8
+  weekly snapshots, newest last. The current snapshot schema is:
+  `{ "week": "YYYY-MM-DD", "items": [{ "id", "name", "repo", "installs", "rank" }, ...] }`
+  Use the UTC calendar date of THIS run for this week's `"week"` field.
+- **Legacy-schema reset (one time only):** if the stored snapshots use the
+  old schema — items carrying `stars` and `url` but no `id` — they ranked
+  repositories by stars, which is not comparable to ranking skills by
+  installs. Discard that history entirely, start the array fresh with this
+  week's snapshot alone, mark every item `NEW`, and note once in the
+  footer that history was reset when the ranking metric changed. Do this
+  only while old-schema snapshots are present; once the history holds
+  `id`-keyed snapshots, never reset again.
+- For each item in this week's top list, compare against the most recent
+  prior snapshot **by `id`**:
   - Not present before → `NEW`
   - Rank improved (lower number) → `UP` with the rank delta
   - Rank worsened → `DOWN` with the rank delta
-  - Unchanged → `=`
-- Append this week's snapshot to the history array; if the array now has more than 8 entries, drop the oldest.
+  - Unchanged rank → `=`
+- Also compute each item's **install delta** versus that prior snapshot
+  (`installs` now minus `installs` then). This is the week's actual growth
+  signal — a skill can hold its rank while gaining 40,000 installs. Show
+  it alongside the rank movement. Items that are `NEW` have no delta.
+- Append this week's snapshot to the history array; if the array now has
+  more than 8 entries, drop the oldest.
 
 ## 4. Publish
 
-Compute each row's movement badge from the history comparison you just did in step 3 — NEVER hardcode a movement value or leave a stub function that always returns the same label. Render each badge (↑N / ↓N / NEW / =) as static text directly in that row's HTML, not via client-side JavaScript that re-derives it from the embedded JSON at page-load time — a page whose visible badges depend on script logic staying correct is exactly how this silently drifts wrong over time.
+Compute each row's movement badge and install delta from the history
+comparison you just did in step 3 — NEVER hardcode a movement value or
+leave a stub function that always returns the same label. Render badges
+and deltas as static text directly in each row's HTML, not via
+client-side JavaScript that re-derives them from the embedded JSON at
+page-load time — a page whose visible values depend on script logic
+staying correct is exactly how this silently drifts wrong over time.
 
 Rebuild the Artifact HTML:
-- Put `<title>Claude Code Skills Trend Radar</title>` as the very first line of the file content (stable across redeploys — do not add any other `<head>`-level tags of your own).
-- A table: rank, name (linked to source), one-line description, category, stars, movement badge (the static value computed above).
-- Footer: last-updated date (UTC) and, if any, `Skipped sources this week: <list>`.
-- Embed the updated (≤8-entry) history array as `<script type="application/json" id="trend-data">...</script>` — this is data storage for next week's diff, kept separate from the static badges already rendered in the table.
+- Put `<title>Claude Code Skills Trend Radar</title>` as the very first
+  line of the file content (stable across redeploys — do not add any other
+  `<head>`-level tags of your own).
+- A table with these columns: rank, skill name (linked to its repo),
+  parent repo, one-line description, category, installs, weekly install
+  delta, stars (secondary context), movement badge, and the `⚠` inflation
+  flag where it applies.
+- Give each row a small click-to-copy control carrying that skill's
+  `installCommand`, so a skill can be installed straight from the page.
+- Footer: last-updated date (UTC); the inflation-flag footnote if any row
+  is flagged; the history-reset note if this run performed the one-time
+  legacy reset; and, if the run degraded in any way, what was skipped.
+- Embed the updated (≤8-entry) history array as
+  `<script type="application/json" id="trend-data">...</script>` — this is
+  data storage for next week's diff, kept separate from the static values
+  already rendered in the table.
 - Call the Artifact "publish" action with:
-  - `url: https://claude.ai/code/artifact/7d96599d-0031-4fad-a517-c6523aaffbef` so it redeploys the same page instead of creating a new one.
-  - `favicon: 📡` on every publish call (keep identical every week — this is a publish parameter, not page markup, do not try to encode it in the HTML itself).
-  - If the publish call reports a version conflict, re-read the current page, merge this week's snapshot onto that newer content, and publish again. Never pass `force`.
+  - `url: https://claude.ai/code/artifact/7d96599d-0031-4fad-a517-c6523aaffbef`
+    so it redeploys the same page instead of creating a new one.
+  - `favicon: 📡` on every publish call (keep identical every week — this
+    is a publish parameter, not page markup, do not try to encode it in
+    the HTML itself).
+  - If the publish call reports a version conflict, re-read the current
+    page, merge this week's snapshot onto that newer content, and publish
+    again. Never pass `force`.
 
 ## Output
 
