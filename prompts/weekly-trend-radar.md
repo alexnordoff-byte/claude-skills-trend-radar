@@ -55,9 +55,14 @@ fabricated numbers is worse than no update.
     or "automation" skill.
 - Judge the category from `name` + `description`. Do not keep an item
   merely because a keyword appears somewhere in its text.
-- Take the top 15-20 that pass the category filter. If fewer than 15
-  qualify, publish what qualifies — never pad the list with items that
-  failed the category test.
+- **At most 2 skills per parent repo.** Keep that repo's two
+  highest-install qualifying skills and drop the rest. Without this the
+  board fills with a single publisher's pack — `microsoft/azure-skills`
+  alone ships ~25 skills sitting within a few thousand installs of each
+  other, and `mattpocock/skills` and `larksuite/cli` do the same.
+- Take the top 15-20 that pass the category filter and the per-repo cap.
+  If fewer than 15 qualify, publish what qualifies — never pad the list
+  with items that failed the category test.
 - **Inflation flag:** compute `installs / stars` for each kept item. If the
   ratio exceeds 10,000 (i.e. implausibly many installs for how few people
   starred the repo), mark that row `⚠` in the output and add a one-line
