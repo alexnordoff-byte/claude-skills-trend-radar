@@ -17,14 +17,23 @@ is reported identically on every skill inside it, so it says nothing about
 any one of them (`zarazhangrui/frontend-slides`: 27,032 stars, 852
 installs).
 
-## Known blocker
+## Network access
 
-The scheduled cloud run **cannot reach that API** — its sandbox egress
-proxy returns `403 CONNECT tunnel failed` for `claudemarketplaces.com`.
-The prompt deliberately halts without publishing in that case rather than
-fall back to guesses, so the routine currently no-ops every Tuesday. Fix:
-allow that host through the environment's egress policy
-(`env_01BeP82Ak6pwS2nemdeCptif`). Until then the page is refreshed by hand.
+The routine runs in a dedicated cloud environment
+(`env_01LyDxe5oZ1feDz6rvreAjK1`) with **Network access: Custom** and
+exactly two allowed domains:
+
+```
+claudemarketplaces.com
+*.frame.claudeusercontent.com
+```
+
+The first is the data source; the second is how the Artifact is read and
+republished. **Custom replaces the Trusted allowlist rather than extending
+it** — dropping either domain breaks the run. Verified working end to end
+on 2026-08-31 (session `cse_01YEnDnbjrUtqW3mZ6VuyyFc`, 562s, published).
+
+If a run ever halts, its log names the blocked host explicitly.
 
 ## Operating it
 
