@@ -122,14 +122,26 @@ stat rail, the table, the notes block, and the copy-to-clipboard script.
 
 ## 5. Commit and push
 
+**Publish to `master` and nothing else.** GitHub Pages serves this site
+from `master`, so a commit on any other branch changes nothing a reader can
+see. The routine may drop you on a generated branch such as
+`claude/<something>` — check first and move if so:
+
+```bash
+git rev-parse --abbrev-ref HEAD          # if this is not "master":
+git stash && git checkout master && git stash pop
+```
+
+Then:
+
 ```bash
 git add index.html data/history.json
 git commit -m "Weekly trend radar: <YYYY-MM-DD>"
-git push
+git push origin master
 ```
 
 The push is the publish — GitHub Pages redeploys within about a minute.
-Do not open a pull request; commit straight to the default branch.
+Do not open a pull request; commit straight to `master`.
 
 If the push is rejected because the remote moved ahead, `git pull --rebase`
 and push again. Never force-push: the history in this repo is the only copy
