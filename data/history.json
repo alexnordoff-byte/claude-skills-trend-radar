@@ -433,5 +433,150 @@
         "rank": 20
       }
     ]
+  },
+  {
+    "week": "2026-09-15",
+    "items": [
+      {
+        "id": "vercel-labs/skills/find-skills",
+        "name": "find-skills",
+        "repo": "vercel-labs/skills",
+        "installs": 3020072,
+        "rank": 1
+      },
+      {
+        "id": "inference-sh/skills/ai-video-generation",
+        "name": "ai-video-generation",
+        "repo": "inference-sh/skills",
+        "installs": 1675869,
+        "rank": 2
+      },
+      {
+        "id": "inference-sh/skills/ai-avatar-video",
+        "name": "ai-avatar-video",
+        "repo": "inference-sh/skills",
+        "installs": 1672086,
+        "rank": 3
+      },
+      {
+        "id": "anthropics/skills/frontend-design",
+        "name": "frontend-design",
+        "repo": "anthropics/skills",
+        "installs": 791993,
+        "rank": 4
+      },
+      {
+        "id": "mattpocock/skills/improve-codebase-architecture",
+        "name": "improve-codebase-architecture",
+        "repo": "mattpocock/skills",
+        "installs": 735221,
+        "rank": 5
+      },
+      {
+        "id": "mattpocock/skills/tdd",
+        "name": "tdd",
+        "repo": "mattpocock/skills",
+        "installs": 709927,
+        "rank": 6
+      },
+      {
+        "id": "vercel-labs/agent-browser/agent-browser",
+        "name": "agent-browser",
+        "repo": "vercel-labs/agent-browser",
+        "installs": 626865,
+        "rank": 7
+      },
+      {
+        "id": "vercel-labs/agent-skills/web-design-guidelines",
+        "name": "web-design-guidelines",
+        "repo": "vercel-labs/agent-skills",
+        "installs": 554194,
+        "rank": 8
+      },
+      {
+        "id": "vercel-labs/agent-skills/vercel-react-best-practices",
+        "name": "vercel-react-best-practices",
+        "repo": "vercel-labs/agent-skills",
+        "installs": 550100,
+        "rank": 9
+      },
+      {
+        "id": "microsoft/azure-skills/microsoft-foundry",
+        "name": "microsoft-foundry",
+        "repo": "microsoft/azure-skills",
+        "installs": 537643,
+        "rank": 10
+      },
+      {
+        "id": "microsoft/azure-skills/azure-diagnostics",
+        "name": "azure-diagnostics",
+        "repo": "microsoft/azure-skills",
+        "installs": 531581,
+        "rank": 11
+      },
+      {
+        "id": "remotion-dev/skills/remotion-best-practices",
+        "name": "remotion-best-practices",
+        "repo": "remotion-dev/skills",
+        "installs": 484819,
+        "rank": 12
+      },
+      {
+        "id": "xixu-me/skills/github-actions-docs",
+        "name": "github-actions-docs",
+        "repo": "xixu-me/skills",
+        "installs": 470260,
+        "rank": 13
+      },
+      {
+        "id": "xixu-me/skills/skills-cli",
+        "name": "skills-cli",
+        "repo": "xixu-me/skills",
+        "installs": 464094,
+        "rank": 14
+      },
+      {
+        "id": "heygen-com/hyperframes/hyperframes-cli",
+        "name": "hyperframes-cli",
+        "repo": "heygen-com/hyperframes",
+        "installs": 406625,
+        "rank": 15
+      },
+      {
+        "id": "runcomfy-com/skills/image-to-video",
+        "name": "image-to-video",
+        "repo": "runcomfy-com/skills",
+        "installs": 403822,
+        "rank": 16
+      },
+      {
+        "id": "runcomfy-com/skills/video-edit",
+        "name": "video-edit",
+        "repo": "runcomfy-com/skills",
+        "installs": 403785,
+        "rank": 17
+      },
+      {
+        "id": "heygen-com/hyperframes/hyperframes",
+        "name": "hyperframes",
+        "repo": "heygen-com/hyperframes",
+        "installs": 394105,
+        "rank": 18
+      },
+      {
+        "id": "leonxlnx/taste-skill/design-taste-frontend",
+        "name": "design-taste-frontend",
+        "repo": "leonxlnx/taste-skill",
+        "installs": 373988,
+        "rank": 19
+      },
+      {
+        "id": "agentspace-so/skills/agentspace",
+        "name": "agentspace",
+        "repo": "agentspace-so/skills",
+        "installs": 369039,
+        "rank": 20
+      }
+    ]
   }
 ]
