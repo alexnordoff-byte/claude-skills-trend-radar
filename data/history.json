@@ -1022,7 +1022,7 @@
     "name": "brainstorming",
     "repo": "obra/superpowers",
     "lane": "dev",
-    "value": 297552,
+    "value": 297554,
     "unit": "stars",
     "rank": 1
    },
@@ -1031,7 +1031,7 @@
     "name": "systematic-debugging",
     "repo": "obra/superpowers",
     "lane": "dev",
-    "value": 297552,
+    "value": 297554,
     "unit": "stars",
     "rank": 2
    },
@@ -1040,7 +1040,7 @@
     "name": "grill-me",
     "repo": "mattpocock/skills",
     "lane": "dev",
-    "value": 285933,
+    "value": 285936,
     "unit": "stars",
     "rank": 3
    },
@@ -1049,7 +1049,7 @@
     "name": "tdd",
     "repo": "mattpocock/skills",
     "lane": "dev",
-    "value": 285933,
+    "value": 285936,
     "unit": "stars",
     "rank": 4
    },
@@ -1112,7 +1112,7 @@
     "name": "design-taste-frontend",
     "repo": "leonxlnx/taste-skill",
     "lane": "dev",
-    "value": 94674,
+    "value": 94675,
     "unit": "stars",
     "rank": 11
    },
@@ -1139,7 +1139,7 @@
     "name": "emil-design-eng",
     "repo": "emilkowalski/skills",
     "lane": "dev",
-    "value": 45314,
+    "value": 45316,
     "unit": "stars",
     "rank": 14
    },
