@@ -1,131 +1,89 @@
 # Weekly Claude Code Skills Trend Radar — Agent Instructions
 
-Run this end-to-end, unattended. Produce one outcome: a commit pushed to
-this repository that updates `index.html` and `data/history.json` with this
-week's data. GitHub Pages serves `index.html`; the push is the publish.
+Run end-to-end, unattended. One outcome: a commit pushed to `master` of
+`alexnordoff-byte/claude-skills-trend-radar`. GitHub Pages serves
+`index.html` from `master`; the push is the publish.
 
-The page is written **in Russian** — see step 4. These instructions stay in
-English; the output does not.
+`build.js` renders the page. You refresh the data it reads and run it —
+do NOT hand-edit `index.html`, it is generated and your edits are lost.
 
-## 1. Collect
+## 1. Refresh live star counts
 
-Single source of truth: `https://claudemarketplaces.com/api/skills`
+The repos to track are the `repo` values in `data/skills.json` (`dev` lane).
+Fetch all of them in ONE GitHub Search request — `repo:` qualifiers OR
+together, so a single call covers every repo:
 
-It returns a JSON array of ~23,000+ objects, one per individual skill (not
-per repository). Fields used here:
+```bash
+curl -sS "https://api.github.com/search/repositories?per_page=100&q=repo:obra/superpowers+repo:mattpocock/skills+..."
+```
 
-- `id` — stable skill identifier, e.g. `vercel-labs/skills/find-skills`
-- `name` — the skill's own name
-- `repo` — owner/repo it lives in
-- `description` — the skill's own description (English)
-- `installs` — integer, cumulative installs (this is the ranking metric)
-- `stars` — integer, GitHub stars of the PARENT REPO (context only, never
-  the ranking metric — a 20-skill monorepo reports the same star count on
-  all 20 of its skills, so stars say nothing about an individual skill)
-- `installCommand` — the exact command a user runs to install it
+Build the query from `data/skills.json` rather than typing it out. Write the
+result to `data/stars.json`:
 
-**This payload is ~18MB and has no pagination — query parameters like
-`?limit=` are ignored and always return the full array.** Fetch and reduce
-it PROGRAMMATICALLY (`curl` into a file, then a Python or Node script). Do
-NOT try to read it through a summarizing fetch: the ranking depends on
-exact integers, and a summarized or truncated read will silently invent
-numbers. Print only the reduced shortlist — never load the full array into
-your own context.
+```json
+{ "fetchedAt": "YYYY-MM-DD", "source": "github search api, repo: qualifiers",
+  "repos": { "owner/name": 12345, "...": 0 } }
+```
 
-**If you cannot fetch and parse this endpoint exactly** — network blocked,
-malformed response — then STOP the run, commit nothing, and say why. Do not
-fall back to estimating or to GitHub star counts. A missed week is
-recoverable; a page full of fabricated numbers is worse than no update.
+Notes:
+- Use today's UTC date for `fetchedAt`. `build.js` warns on the page if this
+  date is not today, so never copy an old value forward.
+- GitHub's search index occasionally omits a repo. For any repo the search
+  misses, fetch it singly (`https://api.github.com/repos/<owner>/<name>`,
+  field `stargazers_count`). Unauthenticated REST allows 60 requests/hour —
+  fine for a handful.
+- **If GitHub is unreachable or returns no usable numbers, STOP. Commit
+  nothing.** Do not reuse last week's `stars.json` as if it were fresh and
+  do not estimate. A missed week is recoverable; a page that silently shows
+  stale numbers as current is the exact failure this radar had for five
+  weeks in September.
 
-## 2. Rank
+## 2. Keep the skill list current (light touch)
 
-- Rank by `installs`, descending. This is the only ranking metric.
-- Keep only skills whose PRIMARY purpose is one of the two categories
-  below. Being built as "an agent" or "an automation" does NOT by itself
-  qualify anything — every Claude Code skill fits that description
-  trivially, so it is not a useful filter on its own:
-  - **dev** (`разработка`): the skill's main use case is writing, running,
-    or debugging software — code generation, mini-app/CLI/API/SDK
-    scaffolding, bot construction, developer tooling.
-  - **video** (`видео`): the skill's main use case is producing or editing
-    video — rendering, cutting, subtitling, transcript-to-video, video
-    pipelines.
-  - If the skill's main use case is something else — marketing, ads, SEO,
-    note-taking, social-media content, finance, image-only generation,
-    general productivity — drop it, even if it is packaged as an "agent"
-    or "automation" skill.
-- Judge the category from `name` + `description`. Do not keep an item
-  merely because a keyword appears somewhere in its text.
-- **At most 2 skills per parent repo.** Keep that repo's two
-  highest-install qualifying skills and drop the rest. Without this the
-  board fills with a single publisher's pack — `microsoft/azure-skills`
-  alone ships ~25 skills sitting within a few thousand installs of each
-  other, and `mattpocock/skills` and `larksuite/cli` do the same.
-- Take the top 15-20 that pass the category filter and the per-repo cap.
-  If fewer than 15 qualify, publish what qualifies — never pad the list
-  with items that failed the category test.
-- **Inflation flag:** compute `installs / stars` for each kept item. If the
-  ratio exceeds 10,000 (implausibly many installs for how few people
-  starred the repo), mark that row `⚠`. Items with `stars` of 0 get the
-  flag automatically. Do not drop flagged items — show them flagged and
-  let the reader judge.
+`data/skills.json` is curated, not auto-generated. Most weeks it needs no
+change. Review it only when something obvious has shifted:
 
-## 3. Diff against last week
+- A tracked repo has been renamed, archived, or deleted — remove or update
+  its rows.
+- A skills repo has clearly broken out (search
+  `topic:claude-code-skill`, `topic:claude-skill`, `topic:claude-code-plugin`
+  sorted by stars) and now out-ranks something on the board — add its best
+  one or two skills, drop the weakest rows to stay at ~15 in the `dev` lane.
 
-- Read `data/history.json` from the repository working copy. It is an array
-  of up to 8 weekly snapshots, newest last:
-  `{ "week": "YYYY-MM-DD", "items": [{ "id", "name", "repo", "installs", "rank" }, ...] }`
-- If the file is missing or unparseable, STOP and commit nothing rather
-  than overwriting it — git has every previous version, and a corrupted
-  history is a real loss. Say what you found.
-- Use the UTC calendar date of THIS run as this week's `"week"` value. If
-  the newest stored snapshot already carries that same date (a re-run on
-  the same day), REPLACE it rather than appending a duplicate.
-- For each item in this week's top list, compare against the most recent
-  prior snapshot **by `id`**:
-  - Not present before → `НОВОЕ`
-  - Rank improved (lower number) → `↑N` with the rank delta
-  - Rank worsened → `↓N` with the rank delta
-  - Unchanged rank → `=`
-- Also compute each item's **install delta** versus that prior snapshot
-  (`installs` now minus `installs` then). A skill can hold its rank while
-  gaining 40,000 installs — that is the week's real growth signal. Items
-  that are `НОВОЕ` have no delta.
-- Append this week's snapshot; if the array then exceeds 8 entries, drop
-  the oldest.
+Rules when editing it:
+- **At most 2 skills per repo.** Stars belong to the repo, so every skill in
+  a monorepo carries the same number; without the cap one publisher's pack
+  fills the board.
+- `dev` means the skill's main use is writing, running or debugging
+  software. Being "an agent" or "an automation" qualifies nothing — every
+  Claude Code skill is that. Marketing, SEO, ads, social, note-taking and
+  finance skills do not belong here.
+- Descriptions are **in Russian**, one plain sentence saying what the skill
+  does. Not a translation of marketing copy. Skill names, repo paths and
+  commands stay in Latin.
 
-## 4. Rebuild `index.html` (in Russian)
+Do not touch the `video` lane. Its five rows are ranked by
+claudemarketplaces install counts, which froze on 2026-08-21; `build.js`
+labels them as frozen on the page. Change them only when a live source of
+per-skill usage data exists again — then revisit this whole section.
 
-Keep the existing page's structure, design tokens, fonts, and CSS — edit
-the data, not the design. Preserve: the light/dark token blocks, the
-`<title>Тренд-радар скиллов Claude Code</title>`, the emoji favicon, the
-stat rail, the table, the notes block, and the copy-to-clipboard script.
+## 3. Build
 
-- **All prose is in Russian**: headings, the standfirst, column headers,
-  category chips (`разработка` / `видео`), badges (`НОВОЕ`), the notes.
-  Skill names, repo paths, and install commands stay verbatim in Latin.
-- Write each skill's one-sentence description **in Russian**, derived from
-  its English `description` — a plain explanation of what it does, not a
-  translation of marketing copy.
-- Update the eyebrow date and the stat rail counts (total, разработка,
-  видео, skills scanned, flagged).
-- Render movement badges and install deltas as **static text in each row**,
-  computed in step 3 — never hardcode a value, never leave a stub function,
-  and never re-derive them in client-side JavaScript at page load. A page
-  whose visible values depend on script logic staying correct is exactly
-  how this silently drifts wrong.
-- Update the notes block: the source line with the current date and skill
-  count, the per-repo cap note, the `⚠` explanation if any row is flagged,
-  and — only while it is still true — the note that everything reads
-  `НОВОЕ` because there is no comparable prior week. Delete that last note
-  once real movement exists.
+```bash
+node build.js
+```
 
-## 5. Commit and push
+It reads `data/skills.json`, `data/stars.json` and `data/history.json`,
+writes `index.html`, appends this week's snapshot to the history (keeping
+the last 8), and prints any freshness warnings it put on the page. Read its
+output. If it reports something unexpected, fix the data and run it again
+rather than editing the page by hand.
 
-**Publish to `master` and nothing else.** GitHub Pages serves this site
-from `master`, so a commit on any other branch changes nothing a reader can
-see. The routine may drop you on a generated branch such as
-`claude/<something>` — check first and move if so:
+## 4. Commit and push
+
+**Publish to `master` and nothing else** — Pages serves from there, so a
+commit on another branch changes nothing a reader sees. This routine may
+drop you on a generated branch such as `claude/<something>`:
 
 ```bash
 git rev-parse --abbrev-ref HEAD          # if this is not "master":
@@ -135,17 +93,14 @@ git stash && git checkout master && git stash pop
 Then:
 
 ```bash
-git add index.html data/history.json
+git add index.html data/
 git commit -m "Weekly trend radar: <YYYY-MM-DD>"
 git push origin master
 ```
 
-The push is the publish — GitHub Pages redeploys within about a minute.
-Do not open a pull request; commit straight to `master`.
-
 If the push is rejected because the remote moved ahead, `git pull --rebase`
-and push again. Never force-push: the history in this repo is the only copy
-of every prior weekly snapshot.
+and push again. Never force-push: this history is the only copy of every
+prior weekly snapshot.
 
 ## Output
 

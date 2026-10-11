@@ -1,1017 +1,1202 @@
 [
-  {
-    "week": "2026-08-31",
-    "items": [
-      {
-        "id": "vercel-labs/skills/find-skills",
-        "name": "find-skills",
-        "repo": "vercel-labs/skills",
-        "installs": 3020072,
-        "rank": 1
-      },
-      {
-        "id": "inference-sh/skills/ai-video-generation",
-        "name": "ai-video-generation",
-        "repo": "inference-sh/skills",
-        "installs": 1675869,
-        "rank": 2
-      },
-      {
-        "id": "inference-sh/skills/ai-avatar-video",
-        "name": "ai-avatar-video",
-        "repo": "inference-sh/skills",
-        "installs": 1672086,
-        "rank": 3
-      },
-      {
-        "id": "anthropics/skills/frontend-design",
-        "name": "frontend-design",
-        "repo": "anthropics/skills",
-        "installs": 791993,
-        "rank": 4
-      },
-      {
-        "id": "mattpocock/skills/improve-codebase-architecture",
-        "name": "improve-codebase-architecture",
-        "repo": "mattpocock/skills",
-        "installs": 735221,
-        "rank": 5
-      },
-      {
-        "id": "mattpocock/skills/tdd",
-        "name": "tdd",
-        "repo": "mattpocock/skills",
-        "installs": 709927,
-        "rank": 6
-      },
-      {
-        "id": "vercel-labs/agent-browser/agent-browser",
-        "name": "agent-browser",
-        "repo": "vercel-labs/agent-browser",
-        "installs": 626865,
-        "rank": 7
-      },
-      {
-        "id": "vercel-labs/agent-skills/web-design-guidelines",
-        "name": "web-design-guidelines",
-        "repo": "vercel-labs/agent-skills",
-        "installs": 554194,
-        "rank": 8
-      },
-      {
-        "id": "vercel-labs/agent-skills/vercel-react-best-practices",
-        "name": "vercel-react-best-practices",
-        "repo": "vercel-labs/agent-skills",
-        "installs": 550100,
-        "rank": 9
-      },
-      {
-        "id": "microsoft/azure-skills/microsoft-foundry",
-        "name": "microsoft-foundry",
-        "repo": "microsoft/azure-skills",
-        "installs": 537643,
-        "rank": 10
-      },
-      {
-        "id": "microsoft/azure-skills/azure-diagnostics",
-        "name": "azure-diagnostics",
-        "repo": "microsoft/azure-skills",
-        "installs": 531581,
-        "rank": 11
-      },
-      {
-        "id": "remotion-dev/skills/remotion-best-practices",
-        "name": "remotion-best-practices",
-        "repo": "remotion-dev/skills",
-        "installs": 484819,
-        "rank": 12
-      },
-      {
-        "id": "xixu-me/skills/github-actions-docs",
-        "name": "github-actions-docs",
-        "repo": "xixu-me/skills",
-        "installs": 470260,
-        "rank": 13
-      },
-      {
-        "id": "xixu-me/skills/skills-cli",
-        "name": "skills-cli",
-        "repo": "xixu-me/skills",
-        "installs": 464094,
-        "rank": 14
-      },
-      {
-        "id": "heygen-com/hyperframes/hyperframes-cli",
-        "name": "hyperframes-cli",
-        "repo": "heygen-com/hyperframes",
-        "installs": 406625,
-        "rank": 15
-      },
-      {
-        "id": "runcomfy-com/skills/image-to-video",
-        "name": "image-to-video",
-        "repo": "runcomfy-com/skills",
-        "installs": 403822,
-        "rank": 16
-      },
-      {
-        "id": "runcomfy-com/skills/video-edit",
-        "name": "video-edit",
-        "repo": "runcomfy-com/skills",
-        "installs": 403785,
-        "rank": 17
-      },
-      {
-        "id": "heygen-com/hyperframes/hyperframes",
-        "name": "hyperframes",
-        "repo": "heygen-com/hyperframes",
-        "installs": 394105,
-        "rank": 18
-      },
-      {
-        "id": "leonxlnx/taste-skill/design-taste-frontend",
-        "name": "design-taste-frontend",
-        "repo": "leonxlnx/taste-skill",
-        "installs": 373988,
-        "rank": 19
-      },
-      {
-        "id": "agentspace-so/skills/agentspace",
-        "name": "agentspace",
-        "repo": "agentspace-so/skills",
-        "installs": 369039,
-        "rank": 20
-      }
-    ]
-  },
-  {
-    "week": "2026-09-02",
-    "items": [
-      {
-        "id": "vercel-labs/skills/find-skills",
-        "name": "find-skills",
-        "repo": "vercel-labs/skills",
-        "installs": 3020072,
-        "rank": 1
-      },
-      {
-        "id": "inference-sh/skills/ai-video-generation",
-        "name": "ai-video-generation",
-        "repo": "inference-sh/skills",
-        "installs": 1675869,
-        "rank": 2
-      },
-      {
-        "id": "inference-sh/skills/ai-avatar-video",
-        "name": "ai-avatar-video",
-        "repo": "inference-sh/skills",
-        "installs": 1672086,
-        "rank": 3
-      },
-      {
-        "id": "anthropics/skills/frontend-design",
-        "name": "frontend-design",
-        "repo": "anthropics/skills",
-        "installs": 791993,
-        "rank": 4
-      },
-      {
-        "id": "mattpocock/skills/improve-codebase-architecture",
-        "name": "improve-codebase-architecture",
-        "repo": "mattpocock/skills",
-        "installs": 735221,
-        "rank": 5
-      },
-      {
-        "id": "mattpocock/skills/tdd",
-        "name": "tdd",
-        "repo": "mattpocock/skills",
-        "installs": 709927,
-        "rank": 6
-      },
-      {
-        "id": "vercel-labs/agent-browser/agent-browser",
-        "name": "agent-browser",
-        "repo": "vercel-labs/agent-browser",
-        "installs": 626865,
-        "rank": 7
-      },
-      {
-        "id": "vercel-labs/agent-skills/web-design-guidelines",
-        "name": "web-design-guidelines",
-        "repo": "vercel-labs/agent-skills",
-        "installs": 554194,
-        "rank": 8
-      },
-      {
-        "id": "vercel-labs/agent-skills/vercel-react-best-practices",
-        "name": "vercel-react-best-practices",
-        "repo": "vercel-labs/agent-skills",
-        "installs": 550100,
-        "rank": 9
-      },
-      {
-        "id": "microsoft/azure-skills/microsoft-foundry",
-        "name": "microsoft-foundry",
-        "repo": "microsoft/azure-skills",
-        "installs": 537643,
-        "rank": 10
-      },
-      {
-        "id": "microsoft/azure-skills/azure-diagnostics",
-        "name": "azure-diagnostics",
-        "repo": "microsoft/azure-skills",
-        "installs": 531581,
-        "rank": 11
-      },
-      {
-        "id": "remotion-dev/skills/remotion-best-practices",
-        "name": "remotion-best-practices",
-        "repo": "remotion-dev/skills",
-        "installs": 484819,
-        "rank": 12
-      },
-      {
-        "id": "xixu-me/skills/github-actions-docs",
-        "name": "github-actions-docs",
-        "repo": "xixu-me/skills",
-        "installs": 470260,
-        "rank": 13
-      },
-      {
-        "id": "xixu-me/skills/skills-cli",
-        "name": "skills-cli",
-        "repo": "xixu-me/skills",
-        "installs": 464094,
-        "rank": 14
-      },
-      {
-        "id": "heygen-com/hyperframes/hyperframes-cli",
-        "name": "hyperframes-cli",
-        "repo": "heygen-com/hyperframes",
-        "installs": 406625,
-        "rank": 15
-      },
-      {
-        "id": "runcomfy-com/skills/image-to-video",
-        "name": "image-to-video",
-        "repo": "runcomfy-com/skills",
-        "installs": 403822,
-        "rank": 16
-      },
-      {
-        "id": "runcomfy-com/skills/video-edit",
-        "name": "video-edit",
-        "repo": "runcomfy-com/skills",
-        "installs": 403785,
-        "rank": 17
-      },
-      {
-        "id": "heygen-com/hyperframes/hyperframes",
-        "name": "hyperframes",
-        "repo": "heygen-com/hyperframes",
-        "installs": 394105,
-        "rank": 18
-      },
-      {
-        "id": "leonxlnx/taste-skill/design-taste-frontend",
-        "name": "design-taste-frontend",
-        "repo": "leonxlnx/taste-skill",
-        "installs": 373988,
-        "rank": 19
-      },
-      {
-        "id": "agentspace-so/skills/agentspace",
-        "name": "agentspace",
-        "repo": "agentspace-so/skills",
-        "installs": 369039,
-        "rank": 20
-      }
-    ]
-  },
-  {
-    "week": "2026-09-08",
-    "items": [
-      {
-        "id": "vercel-labs/skills/find-skills",
-        "name": "find-skills",
-        "repo": "vercel-labs/skills",
-        "installs": 3020072,
-        "rank": 1
-      },
-      {
-        "id": "inference-sh/skills/ai-video-generation",
-        "name": "ai-video-generation",
-        "repo": "inference-sh/skills",
-        "installs": 1675869,
-        "rank": 2
-      },
-      {
-        "id": "inference-sh/skills/ai-avatar-video",
-        "name": "ai-avatar-video",
-        "repo": "inference-sh/skills",
-        "installs": 1672086,
-        "rank": 3
-      },
-      {
-        "id": "anthropics/skills/frontend-design",
-        "name": "frontend-design",
-        "repo": "anthropics/skills",
-        "installs": 791993,
-        "rank": 4
-      },
-      {
-        "id": "mattpocock/skills/improve-codebase-architecture",
-        "name": "improve-codebase-architecture",
-        "repo": "mattpocock/skills",
-        "installs": 735221,
-        "rank": 5
-      },
-      {
-        "id": "mattpocock/skills/tdd",
-        "name": "tdd",
-        "repo": "mattpocock/skills",
-        "installs": 709927,
-        "rank": 6
-      },
-      {
-        "id": "vercel-labs/agent-browser/agent-browser",
-        "name": "agent-browser",
-        "repo": "vercel-labs/agent-browser",
-        "installs": 626865,
-        "rank": 7
-      },
-      {
-        "id": "vercel-labs/agent-skills/web-design-guidelines",
-        "name": "web-design-guidelines",
-        "repo": "vercel-labs/agent-skills",
-        "installs": 554194,
-        "rank": 8
-      },
-      {
-        "id": "vercel-labs/agent-skills/vercel-react-best-practices",
-        "name": "vercel-react-best-practices",
-        "repo": "vercel-labs/agent-skills",
-        "installs": 550100,
-        "rank": 9
-      },
-      {
-        "id": "microsoft/azure-skills/microsoft-foundry",
-        "name": "microsoft-foundry",
-        "repo": "microsoft/azure-skills",
-        "installs": 537643,
-        "rank": 10
-      },
-      {
-        "id": "microsoft/azure-skills/azure-diagnostics",
-        "name": "azure-diagnostics",
-        "repo": "microsoft/azure-skills",
-        "installs": 531581,
-        "rank": 11
-      },
-      {
-        "id": "remotion-dev/skills/remotion-best-practices",
-        "name": "remotion-best-practices",
-        "repo": "remotion-dev/skills",
-        "installs": 484819,
-        "rank": 12
-      },
-      {
-        "id": "xixu-me/skills/github-actions-docs",
-        "name": "github-actions-docs",
-        "repo": "xixu-me/skills",
-        "installs": 470260,
-        "rank": 13
-      },
-      {
-        "id": "xixu-me/skills/skills-cli",
-        "name": "skills-cli",
-        "repo": "xixu-me/skills",
-        "installs": 464094,
-        "rank": 14
-      },
-      {
-        "id": "heygen-com/hyperframes/hyperframes-cli",
-        "name": "hyperframes-cli",
-        "repo": "heygen-com/hyperframes",
-        "installs": 406625,
-        "rank": 15
-      },
-      {
-        "id": "runcomfy-com/skills/image-to-video",
-        "name": "image-to-video",
-        "repo": "runcomfy-com/skills",
-        "installs": 403822,
-        "rank": 16
-      },
-      {
-        "id": "runcomfy-com/skills/video-edit",
-        "name": "video-edit",
-        "repo": "runcomfy-com/skills",
-        "installs": 403785,
-        "rank": 17
-      },
-      {
-        "id": "heygen-com/hyperframes/hyperframes",
-        "name": "hyperframes",
-        "repo": "heygen-com/hyperframes",
-        "installs": 394105,
-        "rank": 18
-      },
-      {
-        "id": "leonxlnx/taste-skill/design-taste-frontend",
-        "name": "design-taste-frontend",
-        "repo": "leonxlnx/taste-skill",
-        "installs": 373988,
-        "rank": 19
-      },
-      {
-        "id": "agentspace-so/skills/agentspace",
-        "name": "agentspace",
-        "repo": "agentspace-so/skills",
-        "installs": 369039,
-        "rank": 20
-      }
-    ]
-  },
-  {
-    "week": "2026-09-15",
-    "items": [
-      {
-        "id": "vercel-labs/skills/find-skills",
-        "name": "find-skills",
-        "repo": "vercel-labs/skills",
-        "installs": 3020072,
-        "rank": 1
-      },
-      {
-        "id": "inference-sh/skills/ai-video-generation",
-        "name": "ai-video-generation",
-        "repo": "inference-sh/skills",
-        "installs": 1675869,
-        "rank": 2
-      },
-      {
-        "id": "inference-sh/skills/ai-avatar-video",
-        "name": "ai-avatar-video",
-        "repo": "inference-sh/skills",
-        "installs": 1672086,
-        "rank": 3
-      },
-      {
-        "id": "anthropics/skills/frontend-design",
-        "name": "frontend-design",
-        "repo": "anthropics/skills",
-        "installs": 791993,
-        "rank": 4
-      },
-      {
-        "id": "mattpocock/skills/improve-codebase-architecture",
-        "name": "improve-codebase-architecture",
-        "repo": "mattpocock/skills",
-        "installs": 735221,
-        "rank": 5
-      },
-      {
-        "id": "mattpocock/skills/tdd",
-        "name": "tdd",
-        "repo": "mattpocock/skills",
-        "installs": 709927,
-        "rank": 6
-      },
-      {
-        "id": "vercel-labs/agent-browser/agent-browser",
-        "name": "agent-browser",
-        "repo": "vercel-labs/agent-browser",
-        "installs": 626865,
-        "rank": 7
-      },
-      {
-        "id": "vercel-labs/agent-skills/web-design-guidelines",
-        "name": "web-design-guidelines",
-        "repo": "vercel-labs/agent-skills",
-        "installs": 554194,
-        "rank": 8
-      },
-      {
-        "id": "vercel-labs/agent-skills/vercel-react-best-practices",
-        "name": "vercel-react-best-practices",
-        "repo": "vercel-labs/agent-skills",
-        "installs": 550100,
-        "rank": 9
-      },
-      {
-        "id": "microsoft/azure-skills/microsoft-foundry",
-        "name": "microsoft-foundry",
-        "repo": "microsoft/azure-skills",
-        "installs": 537643,
-        "rank": 10
-      },
-      {
-        "id": "microsoft/azure-skills/azure-diagnostics",
-        "name": "azure-diagnostics",
-        "repo": "microsoft/azure-skills",
-        "installs": 531581,
-        "rank": 11
-      },
-      {
-        "id": "remotion-dev/skills/remotion-best-practices",
-        "name": "remotion-best-practices",
-        "repo": "remotion-dev/skills",
-        "installs": 484819,
-        "rank": 12
-      },
-      {
-        "id": "xixu-me/skills/github-actions-docs",
-        "name": "github-actions-docs",
-        "repo": "xixu-me/skills",
-        "installs": 470260,
-        "rank": 13
-      },
-      {
-        "id": "xixu-me/skills/skills-cli",
-        "name": "skills-cli",
-        "repo": "xixu-me/skills",
-        "installs": 464094,
-        "rank": 14
-      },
-      {
-        "id": "heygen-com/hyperframes/hyperframes-cli",
-        "name": "hyperframes-cli",
-        "repo": "heygen-com/hyperframes",
-        "installs": 406625,
-        "rank": 15
-      },
-      {
-        "id": "runcomfy-com/skills/image-to-video",
-        "name": "image-to-video",
-        "repo": "runcomfy-com/skills",
-        "installs": 403822,
-        "rank": 16
-      },
-      {
-        "id": "runcomfy-com/skills/video-edit",
-        "name": "video-edit",
-        "repo": "runcomfy-com/skills",
-        "installs": 403785,
-        "rank": 17
-      },
-      {
-        "id": "heygen-com/hyperframes/hyperframes",
-        "name": "hyperframes",
-        "repo": "heygen-com/hyperframes",
-        "installs": 394105,
-        "rank": 18
-      },
-      {
-        "id": "leonxlnx/taste-skill/design-taste-frontend",
-        "name": "design-taste-frontend",
-        "repo": "leonxlnx/taste-skill",
-        "installs": 373988,
-        "rank": 19
-      },
-      {
-        "id": "agentspace-so/skills/agentspace",
-        "name": "agentspace",
-        "repo": "agentspace-so/skills",
-        "installs": 369039,
-        "rank": 20
-      }
-    ]
-  },
-  {
-    "week": "2026-09-22",
-    "items": [
-      {
-        "id": "vercel-labs/skills/find-skills",
-        "name": "find-skills",
-        "repo": "vercel-labs/skills",
-        "installs": 3020072,
-        "rank": 1
-      },
-      {
-        "id": "inference-sh/skills/ai-video-generation",
-        "name": "ai-video-generation",
-        "repo": "inference-sh/skills",
-        "installs": 1675869,
-        "rank": 2
-      },
-      {
-        "id": "inference-sh/skills/ai-avatar-video",
-        "name": "ai-avatar-video",
-        "repo": "inference-sh/skills",
-        "installs": 1672086,
-        "rank": 3
-      },
-      {
-        "id": "anthropics/skills/frontend-design",
-        "name": "frontend-design",
-        "repo": "anthropics/skills",
-        "installs": 791993,
-        "rank": 4
-      },
-      {
-        "id": "mattpocock/skills/improve-codebase-architecture",
-        "name": "improve-codebase-architecture",
-        "repo": "mattpocock/skills",
-        "installs": 735221,
-        "rank": 5
-      },
-      {
-        "id": "mattpocock/skills/tdd",
-        "name": "tdd",
-        "repo": "mattpocock/skills",
-        "installs": 709927,
-        "rank": 6
-      },
-      {
-        "id": "vercel-labs/agent-browser/agent-browser",
-        "name": "agent-browser",
-        "repo": "vercel-labs/agent-browser",
-        "installs": 626865,
-        "rank": 7
-      },
-      {
-        "id": "vercel-labs/agent-skills/web-design-guidelines",
-        "name": "web-design-guidelines",
-        "repo": "vercel-labs/agent-skills",
-        "installs": 554194,
-        "rank": 8
-      },
-      {
-        "id": "vercel-labs/agent-skills/vercel-react-best-practices",
-        "name": "vercel-react-best-practices",
-        "repo": "vercel-labs/agent-skills",
-        "installs": 550100,
-        "rank": 9
-      },
-      {
-        "id": "microsoft/azure-skills/microsoft-foundry",
-        "name": "microsoft-foundry",
-        "repo": "microsoft/azure-skills",
-        "installs": 537643,
-        "rank": 10
-      },
-      {
-        "id": "microsoft/azure-skills/azure-diagnostics",
-        "name": "azure-diagnostics",
-        "repo": "microsoft/azure-skills",
-        "installs": 531581,
-        "rank": 11
-      },
-      {
-        "id": "remotion-dev/skills/remotion-best-practices",
-        "name": "remotion-best-practices",
-        "repo": "remotion-dev/skills",
-        "installs": 484819,
-        "rank": 12
-      },
-      {
-        "id": "xixu-me/skills/github-actions-docs",
-        "name": "github-actions-docs",
-        "repo": "xixu-me/skills",
-        "installs": 470260,
-        "rank": 13
-      },
-      {
-        "id": "xixu-me/skills/skills-cli",
-        "name": "skills-cli",
-        "repo": "xixu-me/skills",
-        "installs": 464094,
-        "rank": 14
-      },
-      {
-        "id": "heygen-com/hyperframes/hyperframes-cli",
-        "name": "hyperframes-cli",
-        "repo": "heygen-com/hyperframes",
-        "installs": 406625,
-        "rank": 15
-      },
-      {
-        "id": "runcomfy-com/skills/image-to-video",
-        "name": "image-to-video",
-        "repo": "runcomfy-com/skills",
-        "installs": 403822,
-        "rank": 16
-      },
-      {
-        "id": "runcomfy-com/skills/video-edit",
-        "name": "video-edit",
-        "repo": "runcomfy-com/skills",
-        "installs": 403785,
-        "rank": 17
-      },
-      {
-        "id": "heygen-com/hyperframes/hyperframes",
-        "name": "hyperframes",
-        "repo": "heygen-com/hyperframes",
-        "installs": 394105,
-        "rank": 18
-      },
-      {
-        "id": "leonxlnx/taste-skill/design-taste-frontend",
-        "name": "design-taste-frontend",
-        "repo": "leonxlnx/taste-skill",
-        "installs": 373988,
-        "rank": 19
-      },
-      {
-        "id": "agentspace-so/skills/agentspace",
-        "name": "agentspace",
-        "repo": "agentspace-so/skills",
-        "installs": 369039,
-        "rank": 20
-      }
-    ]
-  },
-  {
-    "week": "2026-09-29",
-    "items": [
-      {
-        "id": "vercel-labs/skills/find-skills",
-        "name": "find-skills",
-        "repo": "vercel-labs/skills",
-        "installs": 3020072,
-        "rank": 1
-      },
-      {
-        "id": "inference-sh/skills/ai-video-generation",
-        "name": "ai-video-generation",
-        "repo": "inference-sh/skills",
-        "installs": 1675869,
-        "rank": 2
-      },
-      {
-        "id": "inference-sh/skills/ai-avatar-video",
-        "name": "ai-avatar-video",
-        "repo": "inference-sh/skills",
-        "installs": 1672086,
-        "rank": 3
-      },
-      {
-        "id": "anthropics/skills/frontend-design",
-        "name": "frontend-design",
-        "repo": "anthropics/skills",
-        "installs": 791993,
-        "rank": 4
-      },
-      {
-        "id": "mattpocock/skills/improve-codebase-architecture",
-        "name": "improve-codebase-architecture",
-        "repo": "mattpocock/skills",
-        "installs": 735221,
-        "rank": 5
-      },
-      {
-        "id": "mattpocock/skills/tdd",
-        "name": "tdd",
-        "repo": "mattpocock/skills",
-        "installs": 709927,
-        "rank": 6
-      },
-      {
-        "id": "vercel-labs/agent-browser/agent-browser",
-        "name": "agent-browser",
-        "repo": "vercel-labs/agent-browser",
-        "installs": 626865,
-        "rank": 7
-      },
-      {
-        "id": "vercel-labs/agent-skills/web-design-guidelines",
-        "name": "web-design-guidelines",
-        "repo": "vercel-labs/agent-skills",
-        "installs": 554194,
-        "rank": 8
-      },
-      {
-        "id": "vercel-labs/agent-skills/vercel-react-best-practices",
-        "name": "vercel-react-best-practices",
-        "repo": "vercel-labs/agent-skills",
-        "installs": 550100,
-        "rank": 9
-      },
-      {
-        "id": "microsoft/azure-skills/microsoft-foundry",
-        "name": "microsoft-foundry",
-        "repo": "microsoft/azure-skills",
-        "installs": 537643,
-        "rank": 10
-      },
-      {
-        "id": "microsoft/azure-skills/azure-diagnostics",
-        "name": "azure-diagnostics",
-        "repo": "microsoft/azure-skills",
-        "installs": 531581,
-        "rank": 11
-      },
-      {
-        "id": "remotion-dev/skills/remotion-best-practices",
-        "name": "remotion-best-practices",
-        "repo": "remotion-dev/skills",
-        "installs": 484819,
-        "rank": 12
-      },
-      {
-        "id": "xixu-me/skills/github-actions-docs",
-        "name": "github-actions-docs",
-        "repo": "xixu-me/skills",
-        "installs": 470260,
-        "rank": 13
-      },
-      {
-        "id": "xixu-me/skills/skills-cli",
-        "name": "skills-cli",
-        "repo": "xixu-me/skills",
-        "installs": 464094,
-        "rank": 14
-      },
-      {
-        "id": "heygen-com/hyperframes/hyperframes-cli",
-        "name": "hyperframes-cli",
-        "repo": "heygen-com/hyperframes",
-        "installs": 406625,
-        "rank": 15
-      },
-      {
-        "id": "runcomfy-com/skills/image-to-video",
-        "name": "image-to-video",
-        "repo": "runcomfy-com/skills",
-        "installs": 403822,
-        "rank": 16
-      },
-      {
-        "id": "runcomfy-com/skills/video-edit",
-        "name": "video-edit",
-        "repo": "runcomfy-com/skills",
-        "installs": 403785,
-        "rank": 17
-      },
-      {
-        "id": "heygen-com/hyperframes/hyperframes",
-        "name": "hyperframes",
-        "repo": "heygen-com/hyperframes",
-        "installs": 394105,
-        "rank": 18
-      },
-      {
-        "id": "leonxlnx/taste-skill/design-taste-frontend",
-        "name": "design-taste-frontend",
-        "repo": "leonxlnx/taste-skill",
-        "installs": 373988,
-        "rank": 19
-      },
-      {
-        "id": "agentspace-so/skills/agentspace",
-        "name": "agentspace",
-        "repo": "agentspace-so/skills",
-        "installs": 369039,
-        "rank": 20
-      }
-    ]
-  },
-  {
-    "week": "2026-10-06",
-    "items": [
-      {
-        "id": "vercel-labs/skills/find-skills",
-        "name": "find-skills",
-        "repo": "vercel-labs/skills",
-        "installs": 3020072,
-        "rank": 1
-      },
-      {
-        "id": "inference-sh/skills/ai-video-generation",
-        "name": "ai-video-generation",
-        "repo": "inference-sh/skills",
-        "installs": 1675869,
-        "rank": 2
-      },
-      {
-        "id": "inference-sh/skills/ai-avatar-video",
-        "name": "ai-avatar-video",
-        "repo": "inference-sh/skills",
-        "installs": 1672086,
-        "rank": 3
-      },
-      {
-        "id": "anthropics/skills/frontend-design",
-        "name": "frontend-design",
-        "repo": "anthropics/skills",
-        "installs": 791993,
-        "rank": 4
-      },
-      {
-        "id": "mattpocock/skills/improve-codebase-architecture",
-        "name": "improve-codebase-architecture",
-        "repo": "mattpocock/skills",
-        "installs": 735221,
-        "rank": 5
-      },
-      {
-        "id": "mattpocock/skills/tdd",
-        "name": "tdd",
-        "repo": "mattpocock/skills",
-        "installs": 709927,
-        "rank": 6
-      },
-      {
-        "id": "vercel-labs/agent-browser/agent-browser",
-        "name": "agent-browser",
-        "repo": "vercel-labs/agent-browser",
-        "installs": 626865,
-        "rank": 7
-      },
-      {
-        "id": "vercel-labs/agent-skills/web-design-guidelines",
-        "name": "web-design-guidelines",
-        "repo": "vercel-labs/agent-skills",
-        "installs": 554194,
-        "rank": 8
-      },
-      {
-        "id": "vercel-labs/agent-skills/vercel-react-best-practices",
-        "name": "vercel-react-best-practices",
-        "repo": "vercel-labs/agent-skills",
-        "installs": 550100,
-        "rank": 9
-      },
-      {
-        "id": "microsoft/azure-skills/microsoft-foundry",
-        "name": "microsoft-foundry",
-        "repo": "microsoft/azure-skills",
-        "installs": 537643,
-        "rank": 10
-      },
-      {
-        "id": "microsoft/azure-skills/azure-diagnostics",
-        "name": "azure-diagnostics",
-        "repo": "microsoft/azure-skills",
-        "installs": 531581,
-        "rank": 11
-      },
-      {
-        "id": "remotion-dev/skills/remotion-best-practices",
-        "name": "remotion-best-practices",
-        "repo": "remotion-dev/skills",
-        "installs": 484819,
-        "rank": 12
-      },
-      {
-        "id": "xixu-me/skills/github-actions-docs",
-        "name": "github-actions-docs",
-        "repo": "xixu-me/skills",
-        "installs": 470260,
-        "rank": 13
-      },
-      {
-        "id": "xixu-me/skills/skills-cli",
-        "name": "skills-cli",
-        "repo": "xixu-me/skills",
-        "installs": 464094,
-        "rank": 14
-      },
-      {
-        "id": "heygen-com/hyperframes/hyperframes-cli",
-        "name": "hyperframes-cli",
-        "repo": "heygen-com/hyperframes",
-        "installs": 406625,
-        "rank": 15
-      },
-      {
-        "id": "runcomfy-com/skills/image-to-video",
-        "name": "image-to-video",
-        "repo": "runcomfy-com/skills",
-        "installs": 403822,
-        "rank": 16
-      },
-      {
-        "id": "runcomfy-com/skills/video-edit",
-        "name": "video-edit",
-        "repo": "runcomfy-com/skills",
-        "installs": 403785,
-        "rank": 17
-      },
-      {
-        "id": "heygen-com/hyperframes/hyperframes",
-        "name": "hyperframes",
-        "repo": "heygen-com/hyperframes",
-        "installs": 394105,
-        "rank": 18
-      },
-      {
-        "id": "leonxlnx/taste-skill/design-taste-frontend",
-        "name": "design-taste-frontend",
-        "repo": "leonxlnx/taste-skill",
-        "installs": 373988,
-        "rank": 19
-      },
-      {
-        "id": "agentspace-so/skills/agentspace",
-        "name": "agentspace",
-        "repo": "agentspace-so/skills",
-        "installs": 369039,
-        "rank": 20
-      }
-    ]
-  }
+ {
+  "week": "2026-08-31",
+  "items": [
+   {
+    "id": "vercel-labs/skills/find-skills",
+    "name": "find-skills",
+    "repo": "vercel-labs/skills",
+    "installs": 3020072,
+    "rank": 1
+   },
+   {
+    "id": "inference-sh/skills/ai-video-generation",
+    "name": "ai-video-generation",
+    "repo": "inference-sh/skills",
+    "installs": 1675869,
+    "rank": 2
+   },
+   {
+    "id": "inference-sh/skills/ai-avatar-video",
+    "name": "ai-avatar-video",
+    "repo": "inference-sh/skills",
+    "installs": 1672086,
+    "rank": 3
+   },
+   {
+    "id": "anthropics/skills/frontend-design",
+    "name": "frontend-design",
+    "repo": "anthropics/skills",
+    "installs": 791993,
+    "rank": 4
+   },
+   {
+    "id": "mattpocock/skills/improve-codebase-architecture",
+    "name": "improve-codebase-architecture",
+    "repo": "mattpocock/skills",
+    "installs": 735221,
+    "rank": 5
+   },
+   {
+    "id": "mattpocock/skills/tdd",
+    "name": "tdd",
+    "repo": "mattpocock/skills",
+    "installs": 709927,
+    "rank": 6
+   },
+   {
+    "id": "vercel-labs/agent-browser/agent-browser",
+    "name": "agent-browser",
+    "repo": "vercel-labs/agent-browser",
+    "installs": 626865,
+    "rank": 7
+   },
+   {
+    "id": "vercel-labs/agent-skills/web-design-guidelines",
+    "name": "web-design-guidelines",
+    "repo": "vercel-labs/agent-skills",
+    "installs": 554194,
+    "rank": 8
+   },
+   {
+    "id": "vercel-labs/agent-skills/vercel-react-best-practices",
+    "name": "vercel-react-best-practices",
+    "repo": "vercel-labs/agent-skills",
+    "installs": 550100,
+    "rank": 9
+   },
+   {
+    "id": "microsoft/azure-skills/microsoft-foundry",
+    "name": "microsoft-foundry",
+    "repo": "microsoft/azure-skills",
+    "installs": 537643,
+    "rank": 10
+   },
+   {
+    "id": "microsoft/azure-skills/azure-diagnostics",
+    "name": "azure-diagnostics",
+    "repo": "microsoft/azure-skills",
+    "installs": 531581,
+    "rank": 11
+   },
+   {
+    "id": "remotion-dev/skills/remotion-best-practices",
+    "name": "remotion-best-practices",
+    "repo": "remotion-dev/skills",
+    "installs": 484819,
+    "rank": 12
+   },
+   {
+    "id": "xixu-me/skills/github-actions-docs",
+    "name": "github-actions-docs",
+    "repo": "xixu-me/skills",
+    "installs": 470260,
+    "rank": 13
+   },
+   {
+    "id": "xixu-me/skills/skills-cli",
+    "name": "skills-cli",
+    "repo": "xixu-me/skills",
+    "installs": 464094,
+    "rank": 14
+   },
+   {
+    "id": "heygen-com/hyperframes/hyperframes-cli",
+    "name": "hyperframes-cli",
+    "repo": "heygen-com/hyperframes",
+    "installs": 406625,
+    "rank": 15
+   },
+   {
+    "id": "runcomfy-com/skills/image-to-video",
+    "name": "image-to-video",
+    "repo": "runcomfy-com/skills",
+    "installs": 403822,
+    "rank": 16
+   },
+   {
+    "id": "runcomfy-com/skills/video-edit",
+    "name": "video-edit",
+    "repo": "runcomfy-com/skills",
+    "installs": 403785,
+    "rank": 17
+   },
+   {
+    "id": "heygen-com/hyperframes/hyperframes",
+    "name": "hyperframes",
+    "repo": "heygen-com/hyperframes",
+    "installs": 394105,
+    "rank": 18
+   },
+   {
+    "id": "leonxlnx/taste-skill/design-taste-frontend",
+    "name": "design-taste-frontend",
+    "repo": "leonxlnx/taste-skill",
+    "installs": 373988,
+    "rank": 19
+   },
+   {
+    "id": "agentspace-so/skills/agentspace",
+    "name": "agentspace",
+    "repo": "agentspace-so/skills",
+    "installs": 369039,
+    "rank": 20
+   }
+  ]
+ },
+ {
+  "week": "2026-09-02",
+  "items": [
+   {
+    "id": "vercel-labs/skills/find-skills",
+    "name": "find-skills",
+    "repo": "vercel-labs/skills",
+    "installs": 3020072,
+    "rank": 1
+   },
+   {
+    "id": "inference-sh/skills/ai-video-generation",
+    "name": "ai-video-generation",
+    "repo": "inference-sh/skills",
+    "installs": 1675869,
+    "rank": 2
+   },
+   {
+    "id": "inference-sh/skills/ai-avatar-video",
+    "name": "ai-avatar-video",
+    "repo": "inference-sh/skills",
+    "installs": 1672086,
+    "rank": 3
+   },
+   {
+    "id": "anthropics/skills/frontend-design",
+    "name": "frontend-design",
+    "repo": "anthropics/skills",
+    "installs": 791993,
+    "rank": 4
+   },
+   {
+    "id": "mattpocock/skills/improve-codebase-architecture",
+    "name": "improve-codebase-architecture",
+    "repo": "mattpocock/skills",
+    "installs": 735221,
+    "rank": 5
+   },
+   {
+    "id": "mattpocock/skills/tdd",
+    "name": "tdd",
+    "repo": "mattpocock/skills",
+    "installs": 709927,
+    "rank": 6
+   },
+   {
+    "id": "vercel-labs/agent-browser/agent-browser",
+    "name": "agent-browser",
+    "repo": "vercel-labs/agent-browser",
+    "installs": 626865,
+    "rank": 7
+   },
+   {
+    "id": "vercel-labs/agent-skills/web-design-guidelines",
+    "name": "web-design-guidelines",
+    "repo": "vercel-labs/agent-skills",
+    "installs": 554194,
+    "rank": 8
+   },
+   {
+    "id": "vercel-labs/agent-skills/vercel-react-best-practices",
+    "name": "vercel-react-best-practices",
+    "repo": "vercel-labs/agent-skills",
+    "installs": 550100,
+    "rank": 9
+   },
+   {
+    "id": "microsoft/azure-skills/microsoft-foundry",
+    "name": "microsoft-foundry",
+    "repo": "microsoft/azure-skills",
+    "installs": 537643,
+    "rank": 10
+   },
+   {
+    "id": "microsoft/azure-skills/azure-diagnostics",
+    "name": "azure-diagnostics",
+    "repo": "microsoft/azure-skills",
+    "installs": 531581,
+    "rank": 11
+   },
+   {
+    "id": "remotion-dev/skills/remotion-best-practices",
+    "name": "remotion-best-practices",
+    "repo": "remotion-dev/skills",
+    "installs": 484819,
+    "rank": 12
+   },
+   {
+    "id": "xixu-me/skills/github-actions-docs",
+    "name": "github-actions-docs",
+    "repo": "xixu-me/skills",
+    "installs": 470260,
+    "rank": 13
+   },
+   {
+    "id": "xixu-me/skills/skills-cli",
+    "name": "skills-cli",
+    "repo": "xixu-me/skills",
+    "installs": 464094,
+    "rank": 14
+   },
+   {
+    "id": "heygen-com/hyperframes/hyperframes-cli",
+    "name": "hyperframes-cli",
+    "repo": "heygen-com/hyperframes",
+    "installs": 406625,
+    "rank": 15
+   },
+   {
+    "id": "runcomfy-com/skills/image-to-video",
+    "name": "image-to-video",
+    "repo": "runcomfy-com/skills",
+    "installs": 403822,
+    "rank": 16
+   },
+   {
+    "id": "runcomfy-com/skills/video-edit",
+    "name": "video-edit",
+    "repo": "runcomfy-com/skills",
+    "installs": 403785,
+    "rank": 17
+   },
+   {
+    "id": "heygen-com/hyperframes/hyperframes",
+    "name": "hyperframes",
+    "repo": "heygen-com/hyperframes",
+    "installs": 394105,
+    "rank": 18
+   },
+   {
+    "id": "leonxlnx/taste-skill/design-taste-frontend",
+    "name": "design-taste-frontend",
+    "repo": "leonxlnx/taste-skill",
+    "installs": 373988,
+    "rank": 19
+   },
+   {
+    "id": "agentspace-so/skills/agentspace",
+    "name": "agentspace",
+    "repo": "agentspace-so/skills",
+    "installs": 369039,
+    "rank": 20
+   }
+  ]
+ },
+ {
+  "week": "2026-09-08",
+  "items": [
+   {
+    "id": "vercel-labs/skills/find-skills",
+    "name": "find-skills",
+    "repo": "vercel-labs/skills",
+    "installs": 3020072,
+    "rank": 1
+   },
+   {
+    "id": "inference-sh/skills/ai-video-generation",
+    "name": "ai-video-generation",
+    "repo": "inference-sh/skills",
+    "installs": 1675869,
+    "rank": 2
+   },
+   {
+    "id": "inference-sh/skills/ai-avatar-video",
+    "name": "ai-avatar-video",
+    "repo": "inference-sh/skills",
+    "installs": 1672086,
+    "rank": 3
+   },
+   {
+    "id": "anthropics/skills/frontend-design",
+    "name": "frontend-design",
+    "repo": "anthropics/skills",
+    "installs": 791993,
+    "rank": 4
+   },
+   {
+    "id": "mattpocock/skills/improve-codebase-architecture",
+    "name": "improve-codebase-architecture",
+    "repo": "mattpocock/skills",
+    "installs": 735221,
+    "rank": 5
+   },
+   {
+    "id": "mattpocock/skills/tdd",
+    "name": "tdd",
+    "repo": "mattpocock/skills",
+    "installs": 709927,
+    "rank": 6
+   },
+   {
+    "id": "vercel-labs/agent-browser/agent-browser",
+    "name": "agent-browser",
+    "repo": "vercel-labs/agent-browser",
+    "installs": 626865,
+    "rank": 7
+   },
+   {
+    "id": "vercel-labs/agent-skills/web-design-guidelines",
+    "name": "web-design-guidelines",
+    "repo": "vercel-labs/agent-skills",
+    "installs": 554194,
+    "rank": 8
+   },
+   {
+    "id": "vercel-labs/agent-skills/vercel-react-best-practices",
+    "name": "vercel-react-best-practices",
+    "repo": "vercel-labs/agent-skills",
+    "installs": 550100,
+    "rank": 9
+   },
+   {
+    "id": "microsoft/azure-skills/microsoft-foundry",
+    "name": "microsoft-foundry",
+    "repo": "microsoft/azure-skills",
+    "installs": 537643,
+    "rank": 10
+   },
+   {
+    "id": "microsoft/azure-skills/azure-diagnostics",
+    "name": "azure-diagnostics",
+    "repo": "microsoft/azure-skills",
+    "installs": 531581,
+    "rank": 11
+   },
+   {
+    "id": "remotion-dev/skills/remotion-best-practices",
+    "name": "remotion-best-practices",
+    "repo": "remotion-dev/skills",
+    "installs": 484819,
+    "rank": 12
+   },
+   {
+    "id": "xixu-me/skills/github-actions-docs",
+    "name": "github-actions-docs",
+    "repo": "xixu-me/skills",
+    "installs": 470260,
+    "rank": 13
+   },
+   {
+    "id": "xixu-me/skills/skills-cli",
+    "name": "skills-cli",
+    "repo": "xixu-me/skills",
+    "installs": 464094,
+    "rank": 14
+   },
+   {
+    "id": "heygen-com/hyperframes/hyperframes-cli",
+    "name": "hyperframes-cli",
+    "repo": "heygen-com/hyperframes",
+    "installs": 406625,
+    "rank": 15
+   },
+   {
+    "id": "runcomfy-com/skills/image-to-video",
+    "name": "image-to-video",
+    "repo": "runcomfy-com/skills",
+    "installs": 403822,
+    "rank": 16
+   },
+   {
+    "id": "runcomfy-com/skills/video-edit",
+    "name": "video-edit",
+    "repo": "runcomfy-com/skills",
+    "installs": 403785,
+    "rank": 17
+   },
+   {
+    "id": "heygen-com/hyperframes/hyperframes",
+    "name": "hyperframes",
+    "repo": "heygen-com/hyperframes",
+    "installs": 394105,
+    "rank": 18
+   },
+   {
+    "id": "leonxlnx/taste-skill/design-taste-frontend",
+    "name": "design-taste-frontend",
+    "repo": "leonxlnx/taste-skill",
+    "installs": 373988,
+    "rank": 19
+   },
+   {
+    "id": "agentspace-so/skills/agentspace",
+    "name": "agentspace",
+    "repo": "agentspace-so/skills",
+    "installs": 369039,
+    "rank": 20
+   }
+  ]
+ },
+ {
+  "week": "2026-09-15",
+  "items": [
+   {
+    "id": "vercel-labs/skills/find-skills",
+    "name": "find-skills",
+    "repo": "vercel-labs/skills",
+    "installs": 3020072,
+    "rank": 1
+   },
+   {
+    "id": "inference-sh/skills/ai-video-generation",
+    "name": "ai-video-generation",
+    "repo": "inference-sh/skills",
+    "installs": 1675869,
+    "rank": 2
+   },
+   {
+    "id": "inference-sh/skills/ai-avatar-video",
+    "name": "ai-avatar-video",
+    "repo": "inference-sh/skills",
+    "installs": 1672086,
+    "rank": 3
+   },
+   {
+    "id": "anthropics/skills/frontend-design",
+    "name": "frontend-design",
+    "repo": "anthropics/skills",
+    "installs": 791993,
+    "rank": 4
+   },
+   {
+    "id": "mattpocock/skills/improve-codebase-architecture",
+    "name": "improve-codebase-architecture",
+    "repo": "mattpocock/skills",
+    "installs": 735221,
+    "rank": 5
+   },
+   {
+    "id": "mattpocock/skills/tdd",
+    "name": "tdd",
+    "repo": "mattpocock/skills",
+    "installs": 709927,
+    "rank": 6
+   },
+   {
+    "id": "vercel-labs/agent-browser/agent-browser",
+    "name": "agent-browser",
+    "repo": "vercel-labs/agent-browser",
+    "installs": 626865,
+    "rank": 7
+   },
+   {
+    "id": "vercel-labs/agent-skills/web-design-guidelines",
+    "name": "web-design-guidelines",
+    "repo": "vercel-labs/agent-skills",
+    "installs": 554194,
+    "rank": 8
+   },
+   {
+    "id": "vercel-labs/agent-skills/vercel-react-best-practices",
+    "name": "vercel-react-best-practices",
+    "repo": "vercel-labs/agent-skills",
+    "installs": 550100,
+    "rank": 9
+   },
+   {
+    "id": "microsoft/azure-skills/microsoft-foundry",
+    "name": "microsoft-foundry",
+    "repo": "microsoft/azure-skills",
+    "installs": 537643,
+    "rank": 10
+   },
+   {
+    "id": "microsoft/azure-skills/azure-diagnostics",
+    "name": "azure-diagnostics",
+    "repo": "microsoft/azure-skills",
+    "installs": 531581,
+    "rank": 11
+   },
+   {
+    "id": "remotion-dev/skills/remotion-best-practices",
+    "name": "remotion-best-practices",
+    "repo": "remotion-dev/skills",
+    "installs": 484819,
+    "rank": 12
+   },
+   {
+    "id": "xixu-me/skills/github-actions-docs",
+    "name": "github-actions-docs",
+    "repo": "xixu-me/skills",
+    "installs": 470260,
+    "rank": 13
+   },
+   {
+    "id": "xixu-me/skills/skills-cli",
+    "name": "skills-cli",
+    "repo": "xixu-me/skills",
+    "installs": 464094,
+    "rank": 14
+   },
+   {
+    "id": "heygen-com/hyperframes/hyperframes-cli",
+    "name": "hyperframes-cli",
+    "repo": "heygen-com/hyperframes",
+    "installs": 406625,
+    "rank": 15
+   },
+   {
+    "id": "runcomfy-com/skills/image-to-video",
+    "name": "image-to-video",
+    "repo": "runcomfy-com/skills",
+    "installs": 403822,
+    "rank": 16
+   },
+   {
+    "id": "runcomfy-com/skills/video-edit",
+    "name": "video-edit",
+    "repo": "runcomfy-com/skills",
+    "installs": 403785,
+    "rank": 17
+   },
+   {
+    "id": "heygen-com/hyperframes/hyperframes",
+    "name": "hyperframes",
+    "repo": "heygen-com/hyperframes",
+    "installs": 394105,
+    "rank": 18
+   },
+   {
+    "id": "leonxlnx/taste-skill/design-taste-frontend",
+    "name": "design-taste-frontend",
+    "repo": "leonxlnx/taste-skill",
+    "installs": 373988,
+    "rank": 19
+   },
+   {
+    "id": "agentspace-so/skills/agentspace",
+    "name": "agentspace",
+    "repo": "agentspace-so/skills",
+    "installs": 369039,
+    "rank": 20
+   }
+  ]
+ },
+ {
+  "week": "2026-09-22",
+  "items": [
+   {
+    "id": "vercel-labs/skills/find-skills",
+    "name": "find-skills",
+    "repo": "vercel-labs/skills",
+    "installs": 3020072,
+    "rank": 1
+   },
+   {
+    "id": "inference-sh/skills/ai-video-generation",
+    "name": "ai-video-generation",
+    "repo": "inference-sh/skills",
+    "installs": 1675869,
+    "rank": 2
+   },
+   {
+    "id": "inference-sh/skills/ai-avatar-video",
+    "name": "ai-avatar-video",
+    "repo": "inference-sh/skills",
+    "installs": 1672086,
+    "rank": 3
+   },
+   {
+    "id": "anthropics/skills/frontend-design",
+    "name": "frontend-design",
+    "repo": "anthropics/skills",
+    "installs": 791993,
+    "rank": 4
+   },
+   {
+    "id": "mattpocock/skills/improve-codebase-architecture",
+    "name": "improve-codebase-architecture",
+    "repo": "mattpocock/skills",
+    "installs": 735221,
+    "rank": 5
+   },
+   {
+    "id": "mattpocock/skills/tdd",
+    "name": "tdd",
+    "repo": "mattpocock/skills",
+    "installs": 709927,
+    "rank": 6
+   },
+   {
+    "id": "vercel-labs/agent-browser/agent-browser",
+    "name": "agent-browser",
+    "repo": "vercel-labs/agent-browser",
+    "installs": 626865,
+    "rank": 7
+   },
+   {
+    "id": "vercel-labs/agent-skills/web-design-guidelines",
+    "name": "web-design-guidelines",
+    "repo": "vercel-labs/agent-skills",
+    "installs": 554194,
+    "rank": 8
+   },
+   {
+    "id": "vercel-labs/agent-skills/vercel-react-best-practices",
+    "name": "vercel-react-best-practices",
+    "repo": "vercel-labs/agent-skills",
+    "installs": 550100,
+    "rank": 9
+   },
+   {
+    "id": "microsoft/azure-skills/microsoft-foundry",
+    "name": "microsoft-foundry",
+    "repo": "microsoft/azure-skills",
+    "installs": 537643,
+    "rank": 10
+   },
+   {
+    "id": "microsoft/azure-skills/azure-diagnostics",
+    "name": "azure-diagnostics",
+    "repo": "microsoft/azure-skills",
+    "installs": 531581,
+    "rank": 11
+   },
+   {
+    "id": "remotion-dev/skills/remotion-best-practices",
+    "name": "remotion-best-practices",
+    "repo": "remotion-dev/skills",
+    "installs": 484819,
+    "rank": 12
+   },
+   {
+    "id": "xixu-me/skills/github-actions-docs",
+    "name": "github-actions-docs",
+    "repo": "xixu-me/skills",
+    "installs": 470260,
+    "rank": 13
+   },
+   {
+    "id": "xixu-me/skills/skills-cli",
+    "name": "skills-cli",
+    "repo": "xixu-me/skills",
+    "installs": 464094,
+    "rank": 14
+   },
+   {
+    "id": "heygen-com/hyperframes/hyperframes-cli",
+    "name": "hyperframes-cli",
+    "repo": "heygen-com/hyperframes",
+    "installs": 406625,
+    "rank": 15
+   },
+   {
+    "id": "runcomfy-com/skills/image-to-video",
+    "name": "image-to-video",
+    "repo": "runcomfy-com/skills",
+    "installs": 403822,
+    "rank": 16
+   },
+   {
+    "id": "runcomfy-com/skills/video-edit",
+    "name": "video-edit",
+    "repo": "runcomfy-com/skills",
+    "installs": 403785,
+    "rank": 17
+   },
+   {
+    "id": "heygen-com/hyperframes/hyperframes",
+    "name": "hyperframes",
+    "repo": "heygen-com/hyperframes",
+    "installs": 394105,
+    "rank": 18
+   },
+   {
+    "id": "leonxlnx/taste-skill/design-taste-frontend",
+    "name": "design-taste-frontend",
+    "repo": "leonxlnx/taste-skill",
+    "installs": 373988,
+    "rank": 19
+   },
+   {
+    "id": "agentspace-so/skills/agentspace",
+    "name": "agentspace",
+    "repo": "agentspace-so/skills",
+    "installs": 369039,
+    "rank": 20
+   }
+  ]
+ },
+ {
+  "week": "2026-09-29",
+  "items": [
+   {
+    "id": "vercel-labs/skills/find-skills",
+    "name": "find-skills",
+    "repo": "vercel-labs/skills",
+    "installs": 3020072,
+    "rank": 1
+   },
+   {
+    "id": "inference-sh/skills/ai-video-generation",
+    "name": "ai-video-generation",
+    "repo": "inference-sh/skills",
+    "installs": 1675869,
+    "rank": 2
+   },
+   {
+    "id": "inference-sh/skills/ai-avatar-video",
+    "name": "ai-avatar-video",
+    "repo": "inference-sh/skills",
+    "installs": 1672086,
+    "rank": 3
+   },
+   {
+    "id": "anthropics/skills/frontend-design",
+    "name": "frontend-design",
+    "repo": "anthropics/skills",
+    "installs": 791993,
+    "rank": 4
+   },
+   {
+    "id": "mattpocock/skills/improve-codebase-architecture",
+    "name": "improve-codebase-architecture",
+    "repo": "mattpocock/skills",
+    "installs": 735221,
+    "rank": 5
+   },
+   {
+    "id": "mattpocock/skills/tdd",
+    "name": "tdd",
+    "repo": "mattpocock/skills",
+    "installs": 709927,
+    "rank": 6
+   },
+   {
+    "id": "vercel-labs/agent-browser/agent-browser",
+    "name": "agent-browser",
+    "repo": "vercel-labs/agent-browser",
+    "installs": 626865,
+    "rank": 7
+   },
+   {
+    "id": "vercel-labs/agent-skills/web-design-guidelines",
+    "name": "web-design-guidelines",
+    "repo": "vercel-labs/agent-skills",
+    "installs": 554194,
+    "rank": 8
+   },
+   {
+    "id": "vercel-labs/agent-skills/vercel-react-best-practices",
+    "name": "vercel-react-best-practices",
+    "repo": "vercel-labs/agent-skills",
+    "installs": 550100,
+    "rank": 9
+   },
+   {
+    "id": "microsoft/azure-skills/microsoft-foundry",
+    "name": "microsoft-foundry",
+    "repo": "microsoft/azure-skills",
+    "installs": 537643,
+    "rank": 10
+   },
+   {
+    "id": "microsoft/azure-skills/azure-diagnostics",
+    "name": "azure-diagnostics",
+    "repo": "microsoft/azure-skills",
+    "installs": 531581,
+    "rank": 11
+   },
+   {
+    "id": "remotion-dev/skills/remotion-best-practices",
+    "name": "remotion-best-practices",
+    "repo": "remotion-dev/skills",
+    "installs": 484819,
+    "rank": 12
+   },
+   {
+    "id": "xixu-me/skills/github-actions-docs",
+    "name": "github-actions-docs",
+    "repo": "xixu-me/skills",
+    "installs": 470260,
+    "rank": 13
+   },
+   {
+    "id": "xixu-me/skills/skills-cli",
+    "name": "skills-cli",
+    "repo": "xixu-me/skills",
+    "installs": 464094,
+    "rank": 14
+   },
+   {
+    "id": "heygen-com/hyperframes/hyperframes-cli",
+    "name": "hyperframes-cli",
+    "repo": "heygen-com/hyperframes",
+    "installs": 406625,
+    "rank": 15
+   },
+   {
+    "id": "runcomfy-com/skills/image-to-video",
+    "name": "image-to-video",
+    "repo": "runcomfy-com/skills",
+    "installs": 403822,
+    "rank": 16
+   },
+   {
+    "id": "runcomfy-com/skills/video-edit",
+    "name": "video-edit",
+    "repo": "runcomfy-com/skills",
+    "installs": 403785,
+    "rank": 17
+   },
+   {
+    "id": "heygen-com/hyperframes/hyperframes",
+    "name": "hyperframes",
+    "repo": "heygen-com/hyperframes",
+    "installs": 394105,
+    "rank": 18
+   },
+   {
+    "id": "leonxlnx/taste-skill/design-taste-frontend",
+    "name": "design-taste-frontend",
+    "repo": "leonxlnx/taste-skill",
+    "installs": 373988,
+    "rank": 19
+   },
+   {
+    "id": "agentspace-so/skills/agentspace",
+    "name": "agentspace",
+    "repo": "agentspace-so/skills",
+    "installs": 369039,
+    "rank": 20
+   }
+  ]
+ },
+ {
+  "week": "2026-10-06",
+  "items": [
+   {
+    "id": "vercel-labs/skills/find-skills",
+    "name": "find-skills",
+    "repo": "vercel-labs/skills",
+    "installs": 3020072,
+    "rank": 1
+   },
+   {
+    "id": "inference-sh/skills/ai-video-generation",
+    "name": "ai-video-generation",
+    "repo": "inference-sh/skills",
+    "installs": 1675869,
+    "rank": 2
+   },
+   {
+    "id": "inference-sh/skills/ai-avatar-video",
+    "name": "ai-avatar-video",
+    "repo": "inference-sh/skills",
+    "installs": 1672086,
+    "rank": 3
+   },
+   {
+    "id": "anthropics/skills/frontend-design",
+    "name": "frontend-design",
+    "repo": "anthropics/skills",
+    "installs": 791993,
+    "rank": 4
+   },
+   {
+    "id": "mattpocock/skills/improve-codebase-architecture",
+    "name": "improve-codebase-architecture",
+    "repo": "mattpocock/skills",
+    "installs": 735221,
+    "rank": 5
+   },
+   {
+    "id": "mattpocock/skills/tdd",
+    "name": "tdd",
+    "repo": "mattpocock/skills",
+    "installs": 709927,
+    "rank": 6
+   },
+   {
+    "id": "vercel-labs/agent-browser/agent-browser",
+    "name": "agent-browser",
+    "repo": "vercel-labs/agent-browser",
+    "installs": 626865,
+    "rank": 7
+   },
+   {
+    "id": "vercel-labs/agent-skills/web-design-guidelines",
+    "name": "web-design-guidelines",
+    "repo": "vercel-labs/agent-skills",
+    "installs": 554194,
+    "rank": 8
+   },
+   {
+    "id": "vercel-labs/agent-skills/vercel-react-best-practices",
+    "name": "vercel-react-best-practices",
+    "repo": "vercel-labs/agent-skills",
+    "installs": 550100,
+    "rank": 9
+   },
+   {
+    "id": "microsoft/azure-skills/microsoft-foundry",
+    "name": "microsoft-foundry",
+    "repo": "microsoft/azure-skills",
+    "installs": 537643,
+    "rank": 10
+   },
+   {
+    "id": "microsoft/azure-skills/azure-diagnostics",
+    "name": "azure-diagnostics",
+    "repo": "microsoft/azure-skills",
+    "installs": 531581,
+    "rank": 11
+   },
+   {
+    "id": "remotion-dev/skills/remotion-best-practices",
+    "name": "remotion-best-practices",
+    "repo": "remotion-dev/skills",
+    "installs": 484819,
+    "rank": 12
+   },
+   {
+    "id": "xixu-me/skills/github-actions-docs",
+    "name": "github-actions-docs",
+    "repo": "xixu-me/skills",
+    "installs": 470260,
+    "rank": 13
+   },
+   {
+    "id": "xixu-me/skills/skills-cli",
+    "name": "skills-cli",
+    "repo": "xixu-me/skills",
+    "installs": 464094,
+    "rank": 14
+   },
+   {
+    "id": "heygen-com/hyperframes/hyperframes-cli",
+    "name": "hyperframes-cli",
+    "repo": "heygen-com/hyperframes",
+    "installs": 406625,
+    "rank": 15
+   },
+   {
+    "id": "runcomfy-com/skills/image-to-video",
+    "name": "image-to-video",
+    "repo": "runcomfy-com/skills",
+    "installs": 403822,
+    "rank": 16
+   },
+   {
+    "id": "runcomfy-com/skills/video-edit",
+    "name": "video-edit",
+    "repo": "runcomfy-com/skills",
+    "installs": 403785,
+    "rank": 17
+   },
+   {
+    "id": "heygen-com/hyperframes/hyperframes",
+    "name": "hyperframes",
+    "repo": "heygen-com/hyperframes",
+    "installs": 394105,
+    "rank": 18
+   },
+   {
+    "id": "leonxlnx/taste-skill/design-taste-frontend",
+    "name": "design-taste-frontend",
+    "repo": "leonxlnx/taste-skill",
+    "installs": 373988,
+    "rank": 19
+   },
+   {
+    "id": "agentspace-so/skills/agentspace",
+    "name": "agentspace",
+    "repo": "agentspace-so/skills",
+    "installs": 369039,
+    "rank": 20
+   }
+  ]
+ },
+ {
+  "week": "2026-10-11",
+  "items": [
+   {
+    "id": "obra/superpowers/brainstorming",
+    "name": "brainstorming",
+    "repo": "obra/superpowers",
+    "lane": "dev",
+    "value": 297528,
+    "unit": "stars",
+    "rank": 1
+   },
+   {
+    "id": "obra/superpowers/systematic-debugging",
+    "name": "systematic-debugging",
+    "repo": "obra/superpowers",
+    "lane": "dev",
+    "value": 297528,
+    "unit": "stars",
+    "rank": 2
+   },
+   {
+    "id": "mattpocock/skills/grill-me",
+    "name": "grill-me",
+    "repo": "mattpocock/skills",
+    "lane": "dev",
+    "value": 285888,
+    "unit": "stars",
+    "rank": 3
+   },
+   {
+    "id": "mattpocock/skills/tdd",
+    "name": "tdd",
+    "repo": "mattpocock/skills",
+    "lane": "dev",
+    "value": 285888,
+    "unit": "stars",
+    "rank": 4
+   },
+   {
+    "id": "anthropics/skills/frontend-design",
+    "name": "frontend-design",
+    "repo": "anthropics/skills",
+    "lane": "dev",
+    "value": 180474,
+    "unit": "stars",
+    "rank": 5
+   },
+   {
+    "id": "anthropics/skills/skill-creator",
+    "name": "skill-creator",
+    "repo": "anthropics/skills",
+    "lane": "dev",
+    "value": 180474,
+    "unit": "stars",
+    "rank": 6
+   },
+   {
+    "id": "nextlevelbuilder/ui-ux-pro-max-skill/ui-ux-pro-max",
+    "name": "ui-ux-pro-max",
+    "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+    "lane": "dev",
+    "value": 134762,
+    "unit": "stars",
+    "rank": 7
+   },
+   {
+    "id": "nextlevelbuilder/ui-ux-pro-max-skill/design-system",
+    "name": "design-system",
+    "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+    "lane": "dev",
+    "value": 134762,
+    "unit": "stars",
+    "rank": 8
+   },
+   {
+    "id": "shadcn/ui/shadcn",
+    "name": "shadcn",
+    "repo": "shadcn/ui",
+    "lane": "dev",
+    "value": 125344,
+    "unit": "stars",
+    "rank": 9
+   },
+   {
+    "id": "juliusbrussee/caveman/caveman",
+    "name": "caveman",
+    "repo": "juliusbrussee/caveman",
+    "lane": "dev",
+    "value": 111022,
+    "unit": "stars",
+    "rank": 10
+   },
+   {
+    "id": "leonxlnx/taste-skill/design-taste-frontend",
+    "name": "design-taste-frontend",
+    "repo": "leonxlnx/taste-skill",
+    "lane": "dev",
+    "value": 94662,
+    "unit": "stars",
+    "rank": 11
+   },
+   {
+    "id": "stablyai/orca/orca-cli",
+    "name": "orca-cli",
+    "repo": "stablyai/orca",
+    "lane": "dev",
+    "value": 89626,
+    "unit": "stars",
+    "rank": 12
+   },
+   {
+    "id": "pbakaus/impeccable/impeccable",
+    "name": "impeccable",
+    "repo": "pbakaus/impeccable",
+    "lane": "dev",
+    "value": 79790,
+    "unit": "stars",
+    "rank": 13
+   },
+   {
+    "id": "emilkowalski/skills/emil-design-eng",
+    "name": "emil-design-eng",
+    "repo": "emilkowalski/skills",
+    "lane": "dev",
+    "value": 45286,
+    "unit": "stars",
+    "rank": 14
+   },
+   {
+    "id": "vercel-labs/agent-browser/agent-browser",
+    "name": "agent-browser",
+    "repo": "vercel-labs/agent-browser",
+    "lane": "dev",
+    "value": 43809,
+    "unit": "stars",
+    "rank": 15
+   },
+   {
+    "id": "inference-sh/skills/ai-video-generation",
+    "name": "ai-video-generation",
+    "repo": "inference-sh/skills",
+    "lane": "video",
+    "value": 1675869,
+    "unit": "installs",
+    "rank": 16
+   },
+   {
+    "id": "inference-sh/skills/ai-avatar-video",
+    "name": "ai-avatar-video",
+    "repo": "inference-sh/skills",
+    "lane": "video",
+    "value": 1672086,
+    "unit": "installs",
+    "rank": 17
+   },
+   {
+    "id": "remotion-dev/skills/remotion-best-practices",
+    "name": "remotion-best-practices",
+    "repo": "remotion-dev/skills",
+    "lane": "video",
+    "value": 484819,
+    "unit": "installs",
+    "rank": 18
+   },
+   {
+    "id": "heygen-com/hyperframes/hyperframes-cli",
+    "name": "hyperframes-cli",
+    "repo": "heygen-com/hyperframes",
+    "lane": "video",
+    "value": 406625,
+    "unit": "installs",
+    "rank": 19
+   },
+   {
+    "id": "runcomfy-com/skills/video-edit",
+    "name": "video-edit",
+    "repo": "runcomfy-com/skills",
+    "lane": "video",
+    "value": 403785,
+    "unit": "installs",
+    "rank": 20
+   }
+  ]
+ }
 ]

@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Тренд-радар скиллов Claude Code</title>
+<meta name="description" content="Самые заметные скиллы Claude Code для разработки и видеопродакшена. Обновляется каждый вторник.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;450;600&display=swap">
+<style>
+:root{
+  --bg:#F5F7F7; --surface:#FFFFFF; --surface-2:#EDF1F1;
+  --ink:#141C20; --ink-2:#3D4C52; --muted:#68787E;
+  --line:#DCE3E4; --line-strong:#C4CFD1;
+  --signal:#0E7C7B; --signal-soft:#DCEFEE;
+  --video:#6B4FA0; --video-soft:#EBE5F5;
+  --warn:#96540A; --warn-soft:#F7EBD9;
+  --up:#0E7C7B; --up-soft:#DCEFEE;
+  --down:#A34438; --down-soft:#F8E7E4;
+  --same:#68787E; --same-soft:#EDF1F1;
+  --shadow:0 1px 2px rgba(20,28,32,.05),0 8px 24px -16px rgba(20,28,32,.28);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1417; --surface:#151E22; --surface-2:#1C282D;
+    --ink:#E7EDEE; --ink-2:#B6C4C8; --muted:#8A9BA1;
+    --line:#243239; --line-strong:#33454D;
+    --signal:#45B8B3; --signal-soft:#123033;
+    --video:#A88BDC; --video-soft:#241C36;
+    --warn:#E3A44A; --warn-soft:#33260F;
+    --up:#45B8B3; --up-soft:#123033;
+    --down:#E3897A; --down-soft:#331C17;
+    --same:#8A9BA1; --same-soft:#1C282D;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 28px -18px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1417; --surface:#151E22; --surface-2:#1C282D;
+  --ink:#E7EDEE; --ink-2:#B6C4C8; --muted:#8A9BA1;
+  --line:#243239; --line-strong:#33454D;
+  --signal:#45B8B3; --signal-soft:#123033;
+  --video:#A88BDC; --video-soft:#241C36;
+  --warn:#E3A44A; --warn-soft:#33260F;
+  --up:#45B8B3; --up-soft:#123033;
+  --down:#E3897A; --down-soft:#331C17;
+  --same:#8A9BA1; --same-soft:#1C282D;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 28px -18px rgba(0,0,0,.8);
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"IBM Plex Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:44px 24px 72px;display:flex;flex-direction:column;gap:30px}
+
+.masthead{display:flex;flex-direction:column;gap:14px}
+.eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--signal);margin:0}
+h1{font-family:Archivo,"IBM Plex Sans",sans-serif;font-weight:700;font-size:clamp(28px,5vw,44px);letter-spacing:-.021em;line-height:1.06;text-wrap:balance;margin:0}
+.standfirst{margin:0;max-width:66ch;color:var(--ink-2);font-size:16px}
+.standfirst b{color:var(--ink);font-weight:600}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.stat{background:var(--surface);padding:14px 16px;display:flex;flex-direction:column;gap:3px}
+.stat dt{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0}
+.stat dd{margin:0;font-family:Archivo,sans-serif;font-weight:600;font-size:24px;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+
+.alerts{display:flex;flex-direction:column;gap:9px}
+.warn{margin:0;background:var(--warn-soft);border:1px solid var(--warn);border-radius:9px;padding:11px 14px;color:var(--ink-2);font-size:13px;line-height:1.5}
+
+.tablecard{background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);overflow:hidden}
+.scroller{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:900px}
+thead th{position:sticky;top:0;background:var(--surface-2);font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);text-align:left;padding:11px 14px;border-bottom:1px solid var(--line-strong);white-space:nowrap}
+th.num,td.num{text-align:right}
+tbody tr{border-bottom:1px solid var(--line)}
+tbody tr:last-child{border-bottom:0}
+tbody tr:hover{background:var(--surface-2)}
+td{padding:13px 14px;vertical-align:top}
+
+.rank{font-family:"IBM Plex Mono",monospace;font-size:13px;font-variant-numeric:tabular-nums;color:var(--muted);width:46px;padding-top:15px}
+.rank.top{color:var(--signal);font-weight:600}
+.skill{min-width:200px}
+.skill a{font-weight:600;font-size:14.5px;color:var(--ink);text-decoration:none;border-bottom:1px solid transparent}
+.skill a:hover,.skill a:focus-visible{color:var(--signal);border-bottom-color:var(--signal)}
+.repo{display:block;font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--muted);margin-top:3px;word-break:break-word}
+.desc{color:var(--ink-2);font-size:13.5px;max-width:44ch;line-height:1.5}
+
+.chip{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;white-space:nowrap}
+.chip.dev{background:var(--signal-soft);color:var(--signal)}
+.chip.video{background:var(--video-soft);color:var(--video)}
+
+.val{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;font-weight:600;font-size:15px;white-space:nowrap}
+.unit{display:block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:400;color:var(--muted);margin-top:2px;letter-spacing:.04em}
+.delta{display:block;font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;color:var(--muted);margin-top:3px;white-space:nowrap}
+.delta.pos{color:var(--up)}
+
+.badge{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.06em;padding:3px 8px;border-radius:4px;white-space:nowrap;background:var(--signal-soft);color:var(--signal)}
+.badge.up{background:var(--up-soft);color:var(--up)}
+.badge.down{background:var(--down-soft);color:var(--down)}
+.badge.same{background:var(--same-soft);color:var(--same)}
+
+.copy{font-family:"IBM Plex Mono",monospace;font-size:11px;padding:5px 10px;border:1px solid var(--line-strong);border-radius:6px;background:var(--surface);color:var(--ink-2);cursor:pointer;white-space:nowrap;transition:background .12s,color .12s,border-color .12s}
+.copy:hover{border-color:var(--signal);color:var(--signal)}
+.copy:focus-visible{outline:2px solid var(--signal);outline-offset:2px}
+.copy[data-done="1"]{background:var(--signal-soft);color:var(--signal);border-color:var(--signal)}
+
+.notes{display:flex;flex-direction:column;gap:11px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:20px}
+.notes p{margin:0;max-width:80ch}
+.notes b{color:var(--ink-2);font-weight:600}
+.notes code{font-family:"IBM Plex Mono",monospace;font-size:12px;background:var(--surface-2);padding:1px 5px;border-radius:4px}
+.notes a{color:var(--signal)}
+
+@media (max-width:640px){.wrap{padding:30px 15px 56px;gap:24px}.desc{max-width:34ch}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Замер за неделю · {{DATE}}</p>
+    <h1>Тренд-радар скиллов Claude&nbsp;Code</h1>
+    <p class="standfirst">Самые заметные скиллы для <b>разработки</b> и <b>видеопродакшена</b>. Разработка ранжируется по звёздам родительского репозитория на GitHub — живые числа, движение считается за неделю. Видео идёт отдельной дорожкой: его репозитории слишком малы по звёздам, и для них это не метрика.</p>
+  </header>
+
+  <dl class="stats">
+    <div class="stat"><dt>В списке</dt><dd>{{TOTAL}}</dd></div>
+    <div class="stat"><dt>Разработка</dt><dd>{{DEV}}</dd></div>
+    <div class="stat"><dt>Видео</dt><dd>{{VIDEO}}</dd></div>
+  </dl>
+
+  <div class="alerts">
+{{WARNINGS}}
+  </div>
+
+  <div class="tablecard">
+    <div class="scroller">
+      <table>
+        <thead>
+          <tr>
+            <th>№</th>
+            <th>Скилл</th>
+            <th>Что делает</th>
+            <th>Тема</th>
+            <th class="num">Показатель</th>
+            <th>Движение</th>
+            <th>Установить</th>
+          </tr>
+        </thead>
+        <tbody>
+
+{{ROWS}}
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="notes">
+    <p><b>Чем меряем.</b> Строка — отдельный скилл, но звёзды принадлежат <i>репозиторию</i>: у всех скиллов из одного монорепо число будет одинаковым. Поэтому стоит ограничение — не больше двух скиллов на репозиторий, иначе доска забивается паком одного автора.</p>
+    <p><b>Почему не установки.</b> До октября радар ранжировал по реальным установкам с claudemarketplaces.com — это была честная метрика использования, а не популярности. Ресурс перестал обновлять данные 21 августа, и пять недель подряд радар показывал замороженные числа, не замечая этого. Теперь расхождение источника с календарём видно на самой странице.</p>
+    <p>Обновляется автоматически каждый вторник в 12:00 по Москве. Исходники, скрипт сборки и вся история замеров — <a href="https://github.com/alexnordoff-byte/claude-skills-trend-radar">на GitHub</a>.</p>
+  </div>
+
+</div>
+
+<script>
+document.querySelectorAll(".copy").forEach(function(btn){
+  btn.addEventListener("click", function(){
+    var cmd = btn.getAttribute("data-cmd");
+    var done = function(){
+      btn.textContent = "скопировано";
+      btn.setAttribute("data-done","1");
+      setTimeout(function(){ btn.textContent = "копировать"; btn.removeAttribute("data-done"); }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(cmd).then(done).catch(function(){ fallback(cmd, done); });
+    } else { fallback(cmd, done); }
+  });
+});
+function fallback(text, cb){
+  try{
+    var ta = document.createElement("textarea");
+    ta.value = text; ta.setAttribute("readonly","");
+    ta.style.position = "absolute"; ta.style.left = "-9999px";
+    document.body.appendChild(ta); ta.select();
+    document.execCommand("copy"); document.body.removeChild(ta); cb();
+  }catch(e){}
+}
+</script>
+
+</body>
+</html>

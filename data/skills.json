@@ -1,0 +1,27 @@
+{
+  "comment": "Curated rows. 'dev' lane is ranked by live GitHub stars of the parent repo; 'video' lane is ranked by claudemarketplaces install counts, which have been frozen since 2026-08-21 and are labelled as such on the page.",
+  "dev": [
+    { "name": "brainstorming", "repo": "obra/superpowers", "desc": "Заставляет проговорить замысел до первой строки кода: цель, ограничения, критерии готовности." },
+    { "name": "systematic-debugging", "repo": "obra/superpowers", "desc": "Разбор бага по шагам от симптома к причине, без догадок и правок наугад." },
+    { "name": "grill-me", "repo": "mattpocock/skills", "desc": "Допрашивает план или проект, пока слабые места не вылезут сами." },
+    { "name": "tdd", "repo": "mattpocock/skills", "desc": "Разработка через тесты: сначала падающий тест, потом код, который его чинит." },
+    { "name": "frontend-design", "repo": "anthropics/skills", "desc": "Гайд Anthropic: как задать интерфейсу осмысленный визуальный курс вместо шаблонного." },
+    { "name": "skill-creator", "repo": "anthropics/skills", "desc": "Создаёт и улучшает сами скиллы, измеряет, насколько они работают." },
+    { "name": "ui-ux-pro-max", "repo": "nextlevelbuilder/ui-ux-pro-max-skill", "desc": "База знаний по UI и UX: 84 стиля, 192 палитры, подбор под веб и мобильные." },
+    { "name": "design-system", "repo": "nextlevelbuilder/ui-ux-pro-max-skill", "desc": "Архитектура токенов и спецификации компонентов — три слоя от примитивов к семантике." },
+    { "name": "shadcn", "repo": "shadcn/ui", "desc": "Управление компонентами shadcn/ui: добавить, найти, починить, собрать композицию." },
+    { "name": "caveman", "repo": "juliusbrussee/caveman", "desc": "Режим предельно сжатых ответов — срезает около 65% токенов вывода, смысл сохраняет." },
+    { "name": "design-taste-frontend", "repo": "leonxlnx/taste-skill", "desc": "Фронтенд-скилл с характером для лендингов и редизайнов — против генеричного результата." },
+    { "name": "orca-cli", "repo": "stablyai/orca", "desc": "Командная строка Orca: рабочие копии, контексты папок, терминалы, автоматизации." },
+    { "name": "impeccable", "repo": "pbakaus/impeccable", "desc": "Разбирает и доводит интерфейс: критика, аудит, вычистка мелочей до блеска." },
+    { "name": "emil-design-eng", "repo": "emilkowalski/skills", "desc": "Подход Эмиля Ковальски к доводке интерфейса, компонентам и решениям про анимацию." },
+    { "name": "agent-browser", "repo": "vercel-labs/agent-browser", "desc": "Браузерная автоматизация из командной строки, рассчитанная на агентов." }
+  ],
+  "video": [
+    { "name": "ai-video-generation", "repo": "inference-sh/skills", "installs": 1675869, "desc": "Генерирует видео через inference.sh: Veo, Seedance, Wan, Grok и ещё сорок с лишним моделей." },
+    { "name": "ai-avatar-video", "repo": "inference-sh/skills", "installs": 1672086, "desc": "Делает говорящие головы и аватар-видео из командной строки inference.sh." },
+    { "name": "remotion-best-practices", "repo": "remotion-dev/skills", "installs": 484819, "desc": "Точка входа в скиллы Remotion — видео, собранное из React-компонентов кодом." },
+    { "name": "hyperframes-cli", "repo": "heygen-com/hyperframes", "installs": 406625, "desc": "Командная строка HeyGen для сборки и рендера видео-композиций HyperFrames." },
+    { "name": "video-edit", "repo": "runcomfy-com/skills", "installs": 403785, "desc": "Монтирует готовое видео на RunComfy через роутер моделей." }
+  ]
+}
