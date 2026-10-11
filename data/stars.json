@@ -1,17 +1,17 @@
 {
  "fetchedAt": "2026-10-11",
- "source": "github search api, repo: qualifiers",
+ "source": "github api (anonymous)",
  "repos": {
-  "obra/superpowers": 297528,
-  "mattpocock/skills": 285888,
-  "anthropics/skills": 180474,
-  "nextlevelbuilder/ui-ux-pro-max-skill": 134762,
-  "shadcn/ui": 125344,
-  "juliusbrussee/caveman": 111022,
-  "leonxlnx/taste-skill": 94662,
-  "stablyai/orca": 89626,
-  "pbakaus/impeccable": 79790,
-  "emilkowalski/skills": 45286,
-  "vercel-labs/agent-browser": 43809
+  "obra/superpowers": 297552,
+  "mattpocock/skills": 285933,
+  "anthropics/skills": 180478,
+  "nextlevelbuilder/ui-ux-pro-max-skill": 134775,
+  "shadcn/ui": 125345,
+  "juliusbrussee/caveman": 111029,
+  "leonxlnx/taste-skill": 94674,
+  "stablyai/orca": 89646,
+  "pbakaus/impeccable": 79812,
+  "emilkowalski/skills": 45314,
+  "vercel-labs/agent-browser": 43812
  }
 }

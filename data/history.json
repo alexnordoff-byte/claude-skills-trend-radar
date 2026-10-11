@@ -1022,7 +1022,7 @@
     "name": "brainstorming",
     "repo": "obra/superpowers",
     "lane": "dev",
-    "value": 297528,
+    "value": 297552,
     "unit": "stars",
     "rank": 1
    },
@@ -1031,7 +1031,7 @@
     "name": "systematic-debugging",
     "repo": "obra/superpowers",
     "lane": "dev",
-    "value": 297528,
+    "value": 297552,
     "unit": "stars",
     "rank": 2
    },
@@ -1040,7 +1040,7 @@
     "name": "grill-me",
     "repo": "mattpocock/skills",
     "lane": "dev",
-    "value": 285888,
+    "value": 285933,
     "unit": "stars",
     "rank": 3
    },
@@ -1049,7 +1049,7 @@
     "name": "tdd",
     "repo": "mattpocock/skills",
     "lane": "dev",
-    "value": 285888,
+    "value": 285933,
     "unit": "stars",
     "rank": 4
    },
@@ -1058,7 +1058,7 @@
     "name": "frontend-design",
     "repo": "anthropics/skills",
     "lane": "dev",
-    "value": 180474,
+    "value": 180478,
     "unit": "stars",
     "rank": 5
    },
@@ -1067,7 +1067,7 @@
     "name": "skill-creator",
     "repo": "anthropics/skills",
     "lane": "dev",
-    "value": 180474,
+    "value": 180478,
     "unit": "stars",
     "rank": 6
    },
@@ -1076,7 +1076,7 @@
     "name": "ui-ux-pro-max",
     "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
     "lane": "dev",
-    "value": 134762,
+    "value": 134775,
     "unit": "stars",
     "rank": 7
    },
@@ -1085,7 +1085,7 @@
     "name": "design-system",
     "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
     "lane": "dev",
-    "value": 134762,
+    "value": 134775,
     "unit": "stars",
     "rank": 8
    },
@@ -1094,7 +1094,7 @@
     "name": "shadcn",
     "repo": "shadcn/ui",
     "lane": "dev",
-    "value": 125344,
+    "value": 125345,
     "unit": "stars",
     "rank": 9
    },
@@ -1103,7 +1103,7 @@
     "name": "caveman",
     "repo": "juliusbrussee/caveman",
     "lane": "dev",
-    "value": 111022,
+    "value": 111029,
     "unit": "stars",
     "rank": 10
    },
@@ -1112,7 +1112,7 @@
     "name": "design-taste-frontend",
     "repo": "leonxlnx/taste-skill",
     "lane": "dev",
-    "value": 94662,
+    "value": 94674,
     "unit": "stars",
     "rank": 11
    },
@@ -1121,7 +1121,7 @@
     "name": "orca-cli",
     "repo": "stablyai/orca",
     "lane": "dev",
-    "value": 89626,
+    "value": 89646,
     "unit": "stars",
     "rank": 12
    },
@@ -1130,7 +1130,7 @@
     "name": "impeccable",
     "repo": "pbakaus/impeccable",
     "lane": "dev",
-    "value": 79790,
+    "value": 79812,
     "unit": "stars",
     "rank": 13
    },
@@ -1139,7 +1139,7 @@
     "name": "emil-design-eng",
     "repo": "emilkowalski/skills",
     "lane": "dev",
-    "value": 45286,
+    "value": 45314,
     "unit": "stars",
     "rank": 14
    },
@@ -1148,7 +1148,7 @@
     "name": "agent-browser",
     "repo": "vercel-labs/agent-browser",
     "lane": "dev",
-    "value": 43809,
+    "value": 43812,
     "unit": "stars",
     "rank": 15
    },
