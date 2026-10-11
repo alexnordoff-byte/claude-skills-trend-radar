@@ -48,6 +48,7 @@ workflow**. Локально — `node scripts/fetch-stars.js && node build.js`.
 | `data/stars.json` | Звёзды с GitHub и дата сбора |
 | `data/history.json` | Снимки по неделям, до восьми последних |
 | `scripts/fetch-stars.js` | Сбор живых звёзд с GitHub → `data/stars.json` |
+| `scripts/discover.js` | Разведка новичков: кто поднялся выше нижней границы доски. Только печатает, ничего не меняет |
 | `.github/workflows/weekly-radar.yml` | Еженедельный запуск, вторник 09:00 UTC |
 | `prompts/weekly-trend-radar.md` | Когда и как курировать список скиллов (руками, изредка) |
 | `docs/superpowers/` | Проектное решение и план |

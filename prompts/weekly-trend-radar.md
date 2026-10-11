@@ -13,11 +13,23 @@ judgement call and happens occasionally, not weekly.
 
 - A tracked repo was renamed, archived or deleted — the weekly job will
   fail loudly on a missing repo. Fix the entry.
-- A skills repo has clearly broken out and now out-ranks something on the
-  board. Look for it with:
-  `topic:claude-code-skill`, `topic:claude-skill`, `topic:claude-code-plugin`
-  sorted by stars, and compare against the current `dev` lane.
+- Roughly monthly, look for newcomers:
+
+  ```bash
+  node scripts/discover.js
+  ```
+
+  It scans the skill topics plus the whole claudemarketplaces catalog,
+  fetches live stars, and prints every repo above the board's current floor
+  that is not already on it. Read-only — it decides nothing.
+
 - A description has gone stale or reads like marketing copy.
+
+**Why the script and not a memory.** The first star-based board was curated
+from repos that were popular in the frozen August catalog, so anything that
+grew later could never become a candidate — the board quietly became "top
+of August". Running `discover.js` on 11 October surfaced seven repos above
+the floor that were missing, one of which belonged at number five.
 
 ## Rules
 
@@ -31,6 +43,12 @@ judgement call and happens occasionally, not weekly.
 - **Descriptions in Russian**, one plain sentence saying what the skill
   does, derived from its real description rather than its marketing copy.
   Skill names, repo paths and commands stay in Latin.
+- **Stars alone never earn a place.** Check each candidate and reject it if:
+  it republishes other people's skills under its own name; its stars belong
+  to a product that merely ships a stub skill; its descriptions are
+  machine-generated boilerplate. Record every rejection and its reason in
+  the `rejected` block of `data/skills.json`, so the next pass does not
+  re-litigate the same repos.
 - **Do not touch the `video` lane.** Its five rows are ranked by
   claudemarketplaces install counts, frozen since 2026-08-21 and labelled
   as frozen on the page. Revisit the whole lane only when a live source of
