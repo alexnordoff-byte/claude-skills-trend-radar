@@ -1,20 +1,20 @@
 {
- "fetchedAt": "2026-10-13",
+ "fetchedAt": "2026-10-20",
  "source": "github api (authenticated)",
  "repos": {
-  "obra/superpowers": 298543,
-  "mattpocock/skills": 289193,
-  "affaan-m/ECC": 278391,
-  "anthropics/skills": 180877,
-  "nextlevelbuilder/ui-ux-pro-max-skill": 135428,
-  "shadcn/ui": 125503,
-  "thedotmack/claude-mem": 100341,
-  "leonxlnx/taste-skill": 95465,
-  "stablyai/orca": 91397,
-  "bytedance/deer-flow": 83803,
-  "pbakaus/impeccable": 80658,
-  "hugohe3/ppt-master": 61611,
-  "emilkowalski/skills": 45907,
-  "vercel-labs/agent-browser": 43906
+  "obra/superpowers": 302435,
+  "mattpocock/skills": 298221,
+  "affaan-m/ECC": 284527,
+  "anthropics/skills": 182405,
+  "nextlevelbuilder/ui-ux-pro-max-skill": 137847,
+  "shadcn/ui": 126039,
+  "thedotmack/claude-mem": 101908,
+  "leonxlnx/taste-skill": 99682,
+  "stablyai/orca": 99190,
+  "bytedance/deer-flow": 84197,
+  "pbakaus/impeccable": 83580,
+  "hugohe3/ppt-master": 64334,
+  "emilkowalski/skills": 47893,
+  "vercel-labs/agent-browser": 44324
  }
 }
