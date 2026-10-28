@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Writes data/stars.json with live GitHub star counts for every repo in the
-// dev lane of data/skills.json. Run inside GitHub Actions, where GITHUB_TOKEN
+// star-ranked lanes (dev, bots, slides, creative) of data/skills.json. Run inside GitHub Actions, where GITHUB_TOKEN
 // gives 5000 requests/hour; works unauthenticated too, just rate-limited.
 //
 // Exits non-zero if any repo could not be read, so the workflow fails loudly
@@ -15,7 +15,9 @@ const headers = {
   ...(token ? { authorization: `Bearer ${token}` } : {}),
 };
 
-const repos = [...new Set(JSON.parse(fs.readFileSync("data/skills.json", "utf8")).dev.map((s) => s.repo))];
+const skillsData = JSON.parse(fs.readFileSync("data/skills.json", "utf8"));
+const STAR_LANES = ["dev", "bots", "slides", "creative"];
+const repos = [...new Set(STAR_LANES.flatMap((l) => skillsData[l].map((s) => s.repo)))];
 const stars = {};
 
 async function viaSearch() {

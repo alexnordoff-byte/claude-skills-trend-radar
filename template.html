@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Тренд-радар скиллов Claude Code</title>
-<meta name="description" content="Самые заметные скиллы Claude Code для разработки и видеопродакшена. Обновляется каждый вторник.">
+<meta name="description" content="Самые заметные скиллы Claude Code: разработка, видео, боты, презентации, креатив. Обновляется каждый вторник.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📡</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +16,9 @@
   --line:#DCE3E4; --line-strong:#C4CFD1;
   --signal:#0E7C7B; --signal-soft:#DCEFEE;
   --video:#6B4FA0; --video-soft:#EBE5F5;
+  --bots:#2B63B0; --bots-soft:#E2EBF8;
+  --slides:#A8386B; --slides-soft:#F6E4EC;
+  --creative:#3F7D2B; --creative-soft:#E5F1DE;
   --warn:#96540A; --warn-soft:#F7EBD9;
   --up:#0E7C7B; --up-soft:#DCEFEE;
   --down:#A34438; --down-soft:#F8E7E4;
@@ -29,6 +32,9 @@
     --line:#243239; --line-strong:#33454D;
     --signal:#45B8B3; --signal-soft:#123033;
     --video:#A88BDC; --video-soft:#241C36;
+    --bots:#7FB0EE; --bots-soft:#16263C;
+    --slides:#E58BB3; --slides-soft:#36202B;
+    --creative:#8FCB74; --creative-soft:#1F2E19;
     --warn:#E3A44A; --warn-soft:#33260F;
     --up:#45B8B3; --up-soft:#123033;
     --down:#E3897A; --down-soft:#331C17;
@@ -42,6 +48,9 @@
   --line:#243239; --line-strong:#33454D;
   --signal:#45B8B3; --signal-soft:#123033;
   --video:#A88BDC; --video-soft:#241C36;
+  --bots:#7FB0EE; --bots-soft:#16263C;
+  --slides:#E58BB3; --slides-soft:#36202B;
+  --creative:#8FCB74; --creative-soft:#1F2E19;
   --warn:#E3A44A; --warn-soft:#33260F;
   --up:#45B8B3; --up-soft:#123033;
   --down:#E3897A; --down-soft:#331C17;
@@ -91,6 +100,9 @@ td{padding:13px 14px;vertical-align:top}
 .chip{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;white-space:nowrap}
 .chip.dev{background:var(--signal-soft);color:var(--signal)}
 .chip.video{background:var(--video-soft);color:var(--video)}
+.chip.bots{background:var(--bots-soft);color:var(--bots)}
+.chip.slides{background:var(--slides-soft);color:var(--slides)}
+.chip.creative{background:var(--creative-soft);color:var(--creative)}
 
 .val{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;font-weight:600;font-size:15px;white-space:nowrap}
 .unit{display:block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:400;color:var(--muted);margin-top:2px;letter-spacing:.04em}
@@ -124,13 +136,16 @@ td{padding:13px 14px;vertical-align:top}
   <header class="masthead">
     <p class="eyebrow">Замер за неделю · {{DATE}}</p>
     <h1>Тренд-радар скиллов Claude&nbsp;Code</h1>
-    <p class="standfirst">Самые заметные скиллы для <b>разработки</b> и <b>видеопродакшена</b>. Разработка ранжируется по звёздам родительского репозитория на GitHub — живые числа, движение считается за неделю. Видео идёт отдельной дорожкой: его репозитории слишком малы по звёздам, и для них это не метрика.</p>
+    <p class="standfirst">Самые заметные скиллы для <b>разработки</b>, <b>видеопродакшена</b>, <b>ботов</b>, <b>презентаций</b> и <b>креатива</b>. Разработка, боты, презентации и креатив ранжируются по звёздам родительского репозитория на GitHub — живые числа, движение считается за неделю. Внутри каждой темы строки идут по убыванию звёзд, номер сквозной по таблице. Видео идёт отдельной дорожкой: его репозитории слишком малы по звёздам, и для них это не метрика.</p>
   </header>
 
   <dl class="stats">
     <div class="stat"><dt>В списке</dt><dd>{{TOTAL}}</dd></div>
     <div class="stat"><dt>Разработка</dt><dd>{{DEV}}</dd></div>
     <div class="stat"><dt>Видео</dt><dd>{{VIDEO}}</dd></div>
+    <div class="stat"><dt>Боты</dt><dd>{{BOTS}}</dd></div>
+    <div class="stat"><dt>Презентации</dt><dd>{{SLIDES}}</dd></div>
+    <div class="stat"><dt>Креатив</dt><dd>{{CREATIVE}}</dd></div>
   </dl>
 
   <div class="alerts">
@@ -162,6 +177,7 @@ td{padding:13px 14px;vertical-align:top}
 
   <div class="notes">
     <p><b>Чем меряем.</b> Строка — отдельный скилл, но звёзды принадлежат <i>репозиторию</i>: у всех скиллов из одного монорепо число будет одинаковым. Поэтому стоит ограничение — не больше двух скиллов на репозиторий, иначе доска забивается паком одного автора.</p>
+    <p><b>Новые темы.</b> «Боты», «презентации» и «креатив» добавлены 29 октября 2026. Ниша ботов молодая: кроме одного скилла-моста до Telegram и мессенджеров, звёзды там исчисляются единицами — это честный размер ниши, а не ошибка.</p>
     <p><b>Почему не установки.</b> До октября радар ранжировал по реальным установкам с claudemarketplaces.com — это была честная метрика использования, а не популярности. Ресурс перестал обновлять данные 21 августа, и пять недель подряд радар показывал замороженные числа, не замечая этого. Теперь расхождение источника с календарём видно на самой странице.</p>
     <p>Обновляется автоматически каждый вторник в 12:00 по Москве. Исходники, скрипт сборки и вся история замеров — <a href="https://github.com/alexnordoff-byte/claude-skills-trend-radar">на GitHub</a>.</p>
   </div>

@@ -22,7 +22,8 @@ const headers = {
 const skills = JSON.parse(fs.readFileSync("data/skills.json", "utf8"));
 const stars = JSON.parse(fs.readFileSync("data/stars.json", "utf8"));
 const onBoard = new Set(skills.dev.map((s) => s.repo));
-const floor = Math.min(...Object.values(stars.repos));
+// Floor of the dev lane only — the newer lanes hold tiny repos and would drag it to ~0.
+const floor = Math.min(...skills.dev.map((s) => stars.repos[s.repo]));
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 

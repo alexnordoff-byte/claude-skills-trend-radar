@@ -36,6 +36,13 @@ the floor that were missing, one of which belonged at number five.
 - **At most 2 skills per repo.** Stars belong to the repo, so every skill
   in a monorepo carries the same number; without the cap one publisher's
   pack fills the board. Keep the `dev` lane at about 15 rows.
+- **`bots`, `slides`, `creative`** are ranked by stars like `dev`, same
+  rules (max 2 skills per repo, Russian descriptions, rejections recorded in
+  `rejected`). `bots` = building Telegram/Discord bots and Mini Apps;
+  `slides` = generating presentations; `creative` = writing, images and
+  social content, not marketing/SEO. `scripts/discover.js` still scans only
+  for `dev` — for the other lanes search GitHub by hand (e.g. "claude skill
+  telegram bot") and check that the repo really holds a `SKILL.md`.
 - **`dev`** means the skill's main use is writing, running or debugging
   software. Being "an agent" or "an automation" qualifies nothing — every
   Claude Code skill is that. Marketing, SEO, ads, social, note-taking and

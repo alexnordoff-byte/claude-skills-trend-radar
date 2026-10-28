@@ -1,150 +1,5 @@
 [
  {
-  "week": "2026-09-15",
-  "items": [
-   {
-    "id": "vercel-labs/skills/find-skills",
-    "name": "find-skills",
-    "repo": "vercel-labs/skills",
-    "installs": 3020072,
-    "rank": 1
-   },
-   {
-    "id": "inference-sh/skills/ai-video-generation",
-    "name": "ai-video-generation",
-    "repo": "inference-sh/skills",
-    "installs": 1675869,
-    "rank": 2
-   },
-   {
-    "id": "inference-sh/skills/ai-avatar-video",
-    "name": "ai-avatar-video",
-    "repo": "inference-sh/skills",
-    "installs": 1672086,
-    "rank": 3
-   },
-   {
-    "id": "anthropics/skills/frontend-design",
-    "name": "frontend-design",
-    "repo": "anthropics/skills",
-    "installs": 791993,
-    "rank": 4
-   },
-   {
-    "id": "mattpocock/skills/improve-codebase-architecture",
-    "name": "improve-codebase-architecture",
-    "repo": "mattpocock/skills",
-    "installs": 735221,
-    "rank": 5
-   },
-   {
-    "id": "mattpocock/skills/tdd",
-    "name": "tdd",
-    "repo": "mattpocock/skills",
-    "installs": 709927,
-    "rank": 6
-   },
-   {
-    "id": "vercel-labs/agent-browser/agent-browser",
-    "name": "agent-browser",
-    "repo": "vercel-labs/agent-browser",
-    "installs": 626865,
-    "rank": 7
-   },
-   {
-    "id": "vercel-labs/agent-skills/web-design-guidelines",
-    "name": "web-design-guidelines",
-    "repo": "vercel-labs/agent-skills",
-    "installs": 554194,
-    "rank": 8
-   },
-   {
-    "id": "vercel-labs/agent-skills/vercel-react-best-practices",
-    "name": "vercel-react-best-practices",
-    "repo": "vercel-labs/agent-skills",
-    "installs": 550100,
-    "rank": 9
-   },
-   {
-    "id": "microsoft/azure-skills/microsoft-foundry",
-    "name": "microsoft-foundry",
-    "repo": "microsoft/azure-skills",
-    "installs": 537643,
-    "rank": 10
-   },
-   {
-    "id": "microsoft/azure-skills/azure-diagnostics",
-    "name": "azure-diagnostics",
-    "repo": "microsoft/azure-skills",
-    "installs": 531581,
-    "rank": 11
-   },
-   {
-    "id": "remotion-dev/skills/remotion-best-practices",
-    "name": "remotion-best-practices",
-    "repo": "remotion-dev/skills",
-    "installs": 484819,
-    "rank": 12
-   },
-   {
-    "id": "xixu-me/skills/github-actions-docs",
-    "name": "github-actions-docs",
-    "repo": "xixu-me/skills",
-    "installs": 470260,
-    "rank": 13
-   },
-   {
-    "id": "xixu-me/skills/skills-cli",
-    "name": "skills-cli",
-    "repo": "xixu-me/skills",
-    "installs": 464094,
-    "rank": 14
-   },
-   {
-    "id": "heygen-com/hyperframes/hyperframes-cli",
-    "name": "hyperframes-cli",
-    "repo": "heygen-com/hyperframes",
-    "installs": 406625,
-    "rank": 15
-   },
-   {
-    "id": "runcomfy-com/skills/image-to-video",
-    "name": "image-to-video",
-    "repo": "runcomfy-com/skills",
-    "installs": 403822,
-    "rank": 16
-   },
-   {
-    "id": "runcomfy-com/skills/video-edit",
-    "name": "video-edit",
-    "repo": "runcomfy-com/skills",
-    "installs": 403785,
-    "rank": 17
-   },
-   {
-    "id": "heygen-com/hyperframes/hyperframes",
-    "name": "hyperframes",
-    "repo": "heygen-com/hyperframes",
-    "installs": 394105,
-    "rank": 18
-   },
-   {
-    "id": "leonxlnx/taste-skill/design-taste-frontend",
-    "name": "design-taste-frontend",
-    "repo": "leonxlnx/taste-skill",
-    "installs": 373988,
-    "rank": 19
-   },
-   {
-    "id": "agentspace-so/skills/agentspace",
-    "name": "agentspace",
-    "repo": "agentspace-so/skills",
-    "installs": 369039,
-    "rank": 20
-   }
-  ]
- },
- {
   "week": "2026-09-22",
   "items": [
    {
@@ -1460,6 +1315,371 @@
     "value": 403785,
     "unit": "installs",
     "rank": 24
+   }
+  ]
+ },
+ {
+  "week": "2026-10-28",
+  "items": [
+   {
+    "id": "obra/superpowers/brainstorming",
+    "name": "brainstorming",
+    "repo": "obra/superpowers",
+    "lane": "dev",
+    "value": 307348,
+    "unit": "stars",
+    "rank": 1
+   },
+   {
+    "id": "obra/superpowers/systematic-debugging",
+    "name": "systematic-debugging",
+    "repo": "obra/superpowers",
+    "lane": "dev",
+    "value": 307348,
+    "unit": "stars",
+    "rank": 2
+   },
+   {
+    "id": "mattpocock/skills/grill-me",
+    "name": "grill-me",
+    "repo": "mattpocock/skills",
+    "lane": "dev",
+    "value": 305693,
+    "unit": "stars",
+    "rank": 3
+   },
+   {
+    "id": "mattpocock/skills/tdd",
+    "name": "tdd",
+    "repo": "mattpocock/skills",
+    "lane": "dev",
+    "value": 305693,
+    "unit": "stars",
+    "rank": 4
+   },
+   {
+    "id": "affaan-m/ECC/frontend-patterns",
+    "name": "frontend-patterns",
+    "repo": "affaan-m/ECC",
+    "lane": "dev",
+    "value": 291676,
+    "unit": "stars",
+    "rank": 5
+   },
+   {
+    "id": "affaan-m/ECC/backend-patterns",
+    "name": "backend-patterns",
+    "repo": "affaan-m/ECC",
+    "lane": "dev",
+    "value": 291676,
+    "unit": "stars",
+    "rank": 6
+   },
+   {
+    "id": "anthropics/skills/frontend-design",
+    "name": "frontend-design",
+    "repo": "anthropics/skills",
+    "lane": "dev",
+    "value": 184498,
+    "unit": "stars",
+    "rank": 7
+   },
+   {
+    "id": "anthropics/skills/skill-creator",
+    "name": "skill-creator",
+    "repo": "anthropics/skills",
+    "lane": "dev",
+    "value": 184498,
+    "unit": "stars",
+    "rank": 8
+   },
+   {
+    "id": "nextlevelbuilder/ui-ux-pro-max-skill/ui-ux-pro-max",
+    "name": "ui-ux-pro-max",
+    "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+    "lane": "dev",
+    "value": 142042,
+    "unit": "stars",
+    "rank": 9
+   },
+   {
+    "id": "shadcn/ui/shadcn",
+    "name": "shadcn",
+    "repo": "shadcn/ui",
+    "lane": "dev",
+    "value": 126827,
+    "unit": "stars",
+    "rank": 10
+   },
+   {
+    "id": "stablyai/orca/orca-cli",
+    "name": "orca-cli",
+    "repo": "stablyai/orca",
+    "lane": "dev",
+    "value": 108932,
+    "unit": "stars",
+    "rank": 11
+   },
+   {
+    "id": "leonxlnx/taste-skill/design-taste-frontend",
+    "name": "design-taste-frontend",
+    "repo": "leonxlnx/taste-skill",
+    "lane": "dev",
+    "value": 104327,
+    "unit": "stars",
+    "rank": 12
+   },
+   {
+    "id": "thedotmack/claude-mem/mem-search",
+    "name": "mem-search",
+    "repo": "thedotmack/claude-mem",
+    "lane": "dev",
+    "value": 104003,
+    "unit": "stars",
+    "rank": 13
+   },
+   {
+    "id": "thedotmack/claude-mem/smart-explore",
+    "name": "smart-explore",
+    "repo": "thedotmack/claude-mem",
+    "lane": "dev",
+    "value": 104003,
+    "unit": "stars",
+    "rank": 14
+   },
+   {
+    "id": "pbakaus/impeccable/impeccable",
+    "name": "impeccable",
+    "repo": "pbakaus/impeccable",
+    "lane": "dev",
+    "value": 92420,
+    "unit": "stars",
+    "rank": 15
+   },
+   {
+    "id": "bytedance/deer-flow/ppt-generation",
+    "name": "ppt-generation",
+    "repo": "bytedance/deer-flow",
+    "lane": "dev",
+    "value": 84580,
+    "unit": "stars",
+    "rank": 16
+   },
+   {
+    "id": "hugohe3/ppt-master/ppt-master",
+    "name": "ppt-master",
+    "repo": "hugohe3/ppt-master",
+    "lane": "dev",
+    "value": 70200,
+    "unit": "stars",
+    "rank": 17
+   },
+   {
+    "id": "emilkowalski/skills/emil-design-eng",
+    "name": "emil-design-eng",
+    "repo": "emilkowalski/skills",
+    "lane": "dev",
+    "value": 51067,
+    "unit": "stars",
+    "rank": 18
+   },
+   {
+    "id": "vercel-labs/agent-browser/agent-browser",
+    "name": "agent-browser",
+    "repo": "vercel-labs/agent-browser",
+    "lane": "dev",
+    "value": 44774,
+    "unit": "stars",
+    "rank": 19
+   },
+   {
+    "id": "inference-sh/skills/ai-video-generation",
+    "name": "ai-video-generation",
+    "repo": "inference-sh/skills",
+    "lane": "video",
+    "value": 1675869,
+    "unit": "installs",
+    "rank": 20
+   },
+   {
+    "id": "inference-sh/skills/ai-avatar-video",
+    "name": "ai-avatar-video",
+    "repo": "inference-sh/skills",
+    "lane": "video",
+    "value": 1672086,
+    "unit": "installs",
+    "rank": 21
+   },
+   {
+    "id": "remotion-dev/skills/remotion-best-practices",
+    "name": "remotion-best-practices",
+    "repo": "remotion-dev/skills",
+    "lane": "video",
+    "value": 484819,
+    "unit": "installs",
+    "rank": 22
+   },
+   {
+    "id": "heygen-com/hyperframes/hyperframes-cli",
+    "name": "hyperframes-cli",
+    "repo": "heygen-com/hyperframes",
+    "lane": "video",
+    "value": 406625,
+    "unit": "installs",
+    "rank": 23
+   },
+   {
+    "id": "runcomfy-com/skills/video-edit",
+    "name": "video-edit",
+    "repo": "runcomfy-com/skills",
+    "lane": "video",
+    "value": 403785,
+    "unit": "installs",
+    "rank": 24
+   },
+   {
+    "id": "op7418/Claude-to-IM-skill/claude-to-im",
+    "name": "claude-to-im",
+    "repo": "op7418/Claude-to-IM-skill",
+    "lane": "bots",
+    "value": 2895,
+    "unit": "stars",
+    "rank": 25
+   },
+   {
+    "id": "nyxandro/telegram-bot-development-skill/telegram-bot-development",
+    "name": "telegram-bot-development",
+    "repo": "nyxandro/telegram-bot-development-skill",
+    "lane": "bots",
+    "value": 11,
+    "unit": "stars",
+    "rank": 26
+   },
+   {
+    "id": "qwwiwi/agentos-skills/telegram-bot-builder",
+    "name": "telegram-bot-builder",
+    "repo": "qwwiwi/agentos-skills",
+    "lane": "bots",
+    "value": 6,
+    "unit": "stars",
+    "rank": 27
+   },
+   {
+    "id": "orihomie/aiobot-skill/aiobot",
+    "name": "aiobot",
+    "repo": "orihomie/aiobot-skill",
+    "lane": "bots",
+    "value": 3,
+    "unit": "stars",
+    "rank": 28
+   },
+   {
+    "id": "Aztech-1729/telegram-skills/telegram-bot-aiogram",
+    "name": "telegram-bot-aiogram",
+    "repo": "Aztech-1729/telegram-skills",
+    "lane": "bots",
+    "value": 1,
+    "unit": "stars",
+    "rank": 29
+   },
+   {
+    "id": "zarazhangrui/frontend-slides/frontend-slides",
+    "name": "frontend-slides",
+    "repo": "zarazhangrui/frontend-slides",
+    "lane": "slides",
+    "value": 31490,
+    "unit": "stars",
+    "rank": 30
+   },
+   {
+    "id": "chuspeeism/dashi-ppt-skill/dashi-ppt",
+    "name": "dashi-ppt",
+    "repo": "chuspeeism/dashi-ppt-skill",
+    "lane": "slides",
+    "value": 10132,
+    "unit": "stars",
+    "rank": 31
+   },
+   {
+    "id": "Gabberflast/academic-pptx-skill/academic-pptx",
+    "name": "academic-pptx",
+    "repo": "Gabberflast/academic-pptx-skill",
+    "lane": "slides",
+    "value": 1387,
+    "unit": "stars",
+    "rank": 32
+   },
+   {
+    "id": "addsumtech/slides_maker/slide-maker",
+    "name": "slide-maker",
+    "repo": "addsumtech/slides_maker",
+    "lane": "slides",
+    "value": 640,
+    "unit": "stars",
+    "rank": 33
+   },
+   {
+    "id": "ConardLi/garden-skills/gpt-image-2",
+    "name": "gpt-image-2",
+    "repo": "ConardLi/garden-skills",
+    "lane": "creative",
+    "value": 13370,
+    "unit": "stars",
+    "rank": 34
+   },
+   {
+    "id": "ConardLi/garden-skills/beautiful-article",
+    "name": "beautiful-article",
+    "repo": "ConardLi/garden-skills",
+    "lane": "creative",
+    "value": 13370,
+    "unit": "stars",
+    "rank": 35
+   },
+   {
+    "id": "blacktwist/social-media-skills/hook-writer-sms",
+    "name": "hook-writer-sms",
+    "repo": "blacktwist/social-media-skills",
+    "lane": "creative",
+    "value": 603,
+    "unit": "stars",
+    "rank": 36
+   },
+   {
+    "id": "blacktwist/social-media-skills/caption-writer-sms",
+    "name": "caption-writer-sms",
+    "repo": "blacktwist/social-media-skills",
+    "lane": "creative",
+    "value": 603,
+    "unit": "stars",
+    "rank": 37
+   },
+   {
+    "id": "haowjy/creative-writing-skills/creative-writing-craft",
+    "name": "creative-writing-craft",
+    "repo": "haowjy/creative-writing-skills",
+    "lane": "creative",
+    "value": 549,
+    "unit": "stars",
+    "rank": 38
+   },
+   {
+    "id": "haowjy/creative-writing-skills/creative-writing-muse",
+    "name": "creative-writing-muse",
+    "repo": "haowjy/creative-writing-skills",
+    "lane": "creative",
+    "value": 549,
+    "unit": "stars",
+    "rank": 39
+   },
+   {
+    "id": "hassancs91/claude-image-generation/story-illustrator",
+    "name": "story-illustrator",
+    "repo": "hassancs91/claude-image-generation",
+    "lane": "creative",
+    "value": 110,
+    "unit": "stars",
+    "rank": 40
    }
   ]
  }

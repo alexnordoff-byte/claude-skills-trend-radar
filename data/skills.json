@@ -1,5 +1,5 @@
 {
-  "comment": "Curated rows. 'dev' lane is ranked by live GitHub stars of the parent repo; 'video' lane is ranked by claudemarketplaces install counts, which have been frozen since 2026-08-21 and are labelled as such on the page.",
+  "comment": "Curated rows. 'dev' lane is ranked by live GitHub stars of the parent repo; 'bots', 'slides' and 'creative' lanes are ranked the same way, by stars of the parent repo; 'video' lane is ranked by claudemarketplaces install counts, which have been frozen since 2026-08-21 and are labelled as such on the page. Lanes bots/slides/creative were added 2026-10-29; star counts in 'bots' are small outside one outlier because the niche is young.",
   "dev": [
     { "name": "brainstorming", "repo": "obra/superpowers", "desc": "Заставляет проговорить замысел до первой строки кода: цель, ограничения, критерии готовности." },
     { "name": "systematic-debugging", "repo": "obra/superpowers", "desc": "Разбор бага по шагам от симптома к причине, без догадок и правок наугад." },
@@ -28,8 +28,33 @@
     "ruvnet/ruflo": "236 skills with machine-generated descriptions of the form 'Agent skill for X - invoke with $agent-X'",
     "K-Dense-AI/scientific-agent-skills": "academic writing and figures — outside the dev and video lanes",
     "Yuan1z0825/nature-skills": "academic papers for Nature-family journals — outside the dev and video lanes",
-    "coreyhaines31/marketingskills": "marketing and growth — explicitly excluded from the dev lane"
+    "coreyhaines31/marketingskills": "marketing and growth — explicitly excluded from the dev lane",
+    "genspark-ai/genoffice": "stars belong to an office-suite product, not to a skill (slides lane)",
+    "earlyaidopters/claudeclaw": "an application (Claude Code as a Telegram assistant); its skills are Gmail, Calendar, Slack — not bot-building (bots lane)",
+    "zubair-trabzada/ai-marketing-claude": "marketing suite — marketing is excluded from the creative lane too, as from dev"
   },
+  "bots": [
+    { "name": "claude-to-im", "repo": "op7418/Claude-to-IM-skill", "desc": "Связывает сессию Claude Code с Telegram, Discord, Feishu, QQ или WeChat: пишешь агенту с телефона." },
+    { "name": "telegram-bot-development", "repo": "nyxandro/telegram-bot-development-skill", "desc": "Telegram-боты и Mini Apps по живой документации Bot API: клавиатуры, вебхуки, платежи Stars, лимиты." },
+    { "name": "telegram-bot-builder", "repo": "qwwiwi/agentos-skills", "desc": "Собирает Telegram-бота с нуля: архитектура, код, база данных, деплой, монетизация. aiogram или grammY." },
+    { "name": "aiobot", "repo": "orihomie/aiobot-skill", "desc": "Дизайн-система интерфейса Telegram-бота на aiogram 3: навигация, списки, формы, обработка ошибок." },
+    { "name": "telegram-bot-aiogram", "repo": "Aztech-1729/telegram-skills", "desc": "Бот на aiogram 3: роутеры, типизированные колбэк-меню, middleware и диалоги на FSM." }
+  ],
+  "slides": [
+    { "name": "frontend-slides", "repo": "zarazhangrui/frontend-slides", "desc": "Анимированные HTML-презентации с нуля или из PowerPoint; помогает подобрать стиль тем, кто не дизайнер." },
+    { "name": "dashi-ppt", "repo": "chuspeeism/dashi-ppt-skill", "desc": "Презентации на готовых визуальных темах: открываются офлайн, правятся в браузере, экспорт в PPTX и PDF." },
+    { "name": "academic-pptx", "repo": "Gabberflast/academic-pptx-skill", "desc": "Презентации для науки: доклады на конференциях, защиты диссертаций, семинары, где оценивают доказательства." },
+    { "name": "slide-maker", "repo": "addsumtech/slides_maker", "desc": "Собирает, переделывает и критикует PPTX-колоды для любой аудитории — от отчёта до лекции." }
+  ],
+  "creative": [
+    { "name": "gpt-image-2", "repo": "ConardLi/garden-skills", "desc": "Генерация и правка картинок через GPT Image 2: больше 80 шаблонов — постеры, инфографика, комиксы, раскадровки." },
+    { "name": "beautiful-article", "repo": "ConardLi/garden-skills", "desc": "Превращает ссылку, PDF или заметки в красивую статью одним HTML-файлом, который открывается офлайн." },
+    { "name": "creative-writing-craft", "repo": "haowjy/creative-writing-skills", "desc": "Ремесло художественного текста: черновик, правка, сцены, стиль и жанровые приёмы." },
+    { "name": "creative-writing-muse", "repo": "haowjy/creative-writing-skills", "desc": "Партнёр для сюжета: обсуждает историю, пишет в твоём голосе, критикует и помнит проект." },
+    { "name": "hook-writer-sms", "repo": "blacktwist/social-media-skills", "desc": "Цепляющие первые строки, заголовки и тексты на превью для постов и видео." },
+    { "name": "caption-writer-sms", "repo": "blacktwist/social-media-skills", "desc": "Подписи к постам для Instagram, TikTok, Pinterest, Facebook и YouTube." },
+    { "name": "story-illustrator", "repo": "hassancs91/claude-image-generation", "desc": "Иллюстрирует историю по сценам, сохраняя героев и стиль одинаковыми от картинки к картинке." }
+  ],
   "video": [
     { "name": "ai-video-generation", "repo": "inference-sh/skills", "installs": 1675869, "desc": "Генерирует видео через inference.sh: Veo, Seedance, Wan, Grok и ещё сорок с лишним моделей." },
     { "name": "ai-avatar-video", "repo": "inference-sh/skills", "installs": 1672086, "desc": "Делает говорящие головы и аватар-видео из командной строки inference.sh." },

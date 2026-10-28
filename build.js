@@ -27,15 +27,29 @@ const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, 
 
 // ---- assemble rows -------------------------------------------------------
 const rows = [];
-for (const s of skills.dev) {
-  const value = stars.repos[s.repo];
-  if (value === undefined) continue; // no live number this week — skip, never guess
-  rows.push({ id: `${s.repo}/${s.name}`, ...s, lane: "dev", value, unit: "stars" });
+// Table order: dev, video, then the newer lanes. Video stays right after dev so its
+// row numbers (and therefore its week-over-week movement) are unchanged.
+const LANES = {
+  dev: "разработка",
+  video: "видео",
+  bots: "боты",
+  slides: "презентации",
+  creative: "креатив",
+};
+function starLane(lane) {
+  const part = [];
+  for (const s of skills[lane]) {
+    const value = stars.repos[s.repo];
+    if (value === undefined) continue; // no live number this week — skip, never guess
+    part.push({ id: `${s.repo}/${s.name}`, ...s, lane, value, unit: "stars" });
+  }
+  rows.push(...part.sort((a, b) => b.value - a.value));
 }
-rows.sort((a, b) => b.value - a.value);
+starLane("dev");
 for (const s of skills.video) {
   rows.push({ id: `${s.repo}/${s.name}`, ...s, lane: "video", value: s.installs, unit: "installs" });
 }
+for (const lane of ["bots", "slides", "creative"]) starLane(lane);
 
 // ---- movement vs previous snapshot --------------------------------------
 let rank = 0;
@@ -61,15 +75,14 @@ warnings.push(
   `(${staleDays} дн.). Эти пять строк заморожены и движение по ним не считается, пока не появится живой источник.`
 );
 
-const devCount = rows.filter((r) => r.lane === "dev").length;
-const vidCount = rows.filter((r) => r.lane === "video").length;
+const count = (lane) => String(rows.filter((r) => r.lane === lane).length);
 
 // ---- render -------------------------------------------------------------
 const row = (r) => `          <tr>
             <td class="rank${r.rank <= 3 ? " top" : ""}">${String(r.rank).padStart(2, "0")}</td>
             <td class="skill"><a href="https://github.com/${r.repo}">${esc(r.name)}</a><span class="repo">${esc(r.repo)}</span></td>
             <td class="desc">${esc(r.desc)}</td>
-            <td><span class="chip ${r.lane}">${r.lane === "dev" ? "разработка" : "видео"}</span></td>
+            <td><span class="chip ${r.lane}">${LANES[r.lane]}</span></td>
             <td class="num val">${nbsp(r.value)}<span class="unit">${r.unit === "stars" ? "звёзд" : "установок"}</span>${
               r.delta ? `<span class="delta${r.delta > 0 ? " pos" : ""}">${r.delta > 0 ? "+" : ""}${nbsp(r.delta)} за неделю</span>` : ""
             }</td>
@@ -81,8 +94,11 @@ const html = fs.readFileSync("template.html", "utf8")
   .replace("{{DATE}}", ruDate(today))
   .replace("{{ROWS}}", rows.map(row).join("\n\n"))
   .replace("{{TOTAL}}", String(rows.length))
-  .replace("{{DEV}}", String(devCount))
-  .replace("{{VIDEO}}", String(vidCount))
+  .replace("{{DEV}}", count("dev"))
+  .replace("{{VIDEO}}", count("video"))
+  .replace("{{BOTS}}", count("bots"))
+  .replace("{{SLIDES}}", count("slides"))
+  .replace("{{CREATIVE}}", count("creative"))
   .replace("{{WARNINGS}}", warnings.map((w) => `    <p class="warn">${w}</p>`).join("\n"));
 
 fs.writeFileSync("index.html", html);
@@ -94,6 +110,6 @@ kept.push(snapshot);
 while (kept.length > 8) kept.shift();
 fs.writeFileSync("data/history.json", JSON.stringify(kept, null, 1) + "\n");
 
-console.log(`built index.html — ${rows.length} rows (${devCount} dev, ${vidCount} video), week ${today}`);
+console.log(`built index.html — ${rows.length} rows (${Object.keys(LANES).map((l) => `${count(l)} ${l}`).join(", ")}), week ${today}`);
 console.log(`history: ${kept.map((s) => s.week).join(", ")}`);
 warnings.forEach((w) => console.log("warning: " + w));
