@@ -1,226 +1,5 @@
 [
  {
-  "week": "2026-10-11",
-  "items": [
-   {
-    "id": "obra/superpowers/brainstorming",
-    "name": "brainstorming",
-    "repo": "obra/superpowers",
-    "lane": "dev",
-    "value": 297614,
-    "unit": "stars",
-    "rank": 1
-   },
-   {
-    "id": "obra/superpowers/systematic-debugging",
-    "name": "systematic-debugging",
-    "repo": "obra/superpowers",
-    "lane": "dev",
-    "value": 297614,
-    "unit": "stars",
-    "rank": 2
-   },
-   {
-    "id": "mattpocock/skills/grill-me",
-    "name": "grill-me",
-    "repo": "mattpocock/skills",
-    "lane": "dev",
-    "value": 286042,
-    "unit": "stars",
-    "rank": 3
-   },
-   {
-    "id": "mattpocock/skills/tdd",
-    "name": "tdd",
-    "repo": "mattpocock/skills",
-    "lane": "dev",
-    "value": 286042,
-    "unit": "stars",
-    "rank": 4
-   },
-   {
-    "id": "affaan-m/ECC/frontend-patterns",
-    "name": "frontend-patterns",
-    "repo": "affaan-m/ECC",
-    "lane": "dev",
-    "value": 277121,
-    "unit": "stars",
-    "rank": 5
-   },
-   {
-    "id": "affaan-m/ECC/backend-patterns",
-    "name": "backend-patterns",
-    "repo": "affaan-m/ECC",
-    "lane": "dev",
-    "value": 277121,
-    "unit": "stars",
-    "rank": 6
-   },
-   {
-    "id": "anthropics/skills/frontend-design",
-    "name": "frontend-design",
-    "repo": "anthropics/skills",
-    "lane": "dev",
-    "value": 180481,
-    "unit": "stars",
-    "rank": 7
-   },
-   {
-    "id": "anthropics/skills/skill-creator",
-    "name": "skill-creator",
-    "repo": "anthropics/skills",
-    "lane": "dev",
-    "value": 180481,
-    "unit": "stars",
-    "rank": 8
-   },
-   {
-    "id": "nextlevelbuilder/ui-ux-pro-max-skill/ui-ux-pro-max",
-    "name": "ui-ux-pro-max",
-    "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
-    "lane": "dev",
-    "value": 134792,
-    "unit": "stars",
-    "rank": 9
-   },
-   {
-    "id": "shadcn/ui/shadcn",
-    "name": "shadcn",
-    "repo": "shadcn/ui",
-    "lane": "dev",
-    "value": 125345,
-    "unit": "stars",
-    "rank": 10
-   },
-   {
-    "id": "thedotmack/claude-mem/mem-search",
-    "name": "mem-search",
-    "repo": "thedotmack/claude-mem",
-    "lane": "dev",
-    "value": 99685,
-    "unit": "stars",
-    "rank": 11
-   },
-   {
-    "id": "thedotmack/claude-mem/smart-explore",
-    "name": "smart-explore",
-    "repo": "thedotmack/claude-mem",
-    "lane": "dev",
-    "value": 99685,
-    "unit": "stars",
-    "rank": 12
-   },
-   {
-    "id": "leonxlnx/taste-skill/design-taste-frontend",
-    "name": "design-taste-frontend",
-    "repo": "leonxlnx/taste-skill",
-    "lane": "dev",
-    "value": 94701,
-    "unit": "stars",
-    "rank": 13
-   },
-   {
-    "id": "stablyai/orca/orca-cli",
-    "name": "orca-cli",
-    "repo": "stablyai/orca",
-    "lane": "dev",
-    "value": 89680,
-    "unit": "stars",
-    "rank": 14
-   },
-   {
-    "id": "bytedance/deer-flow/ppt-generation",
-    "name": "ppt-generation",
-    "repo": "bytedance/deer-flow",
-    "lane": "dev",
-    "value": 83693,
-    "unit": "stars",
-    "rank": 15
-   },
-   {
-    "id": "pbakaus/impeccable/impeccable",
-    "name": "impeccable",
-    "repo": "pbakaus/impeccable",
-    "lane": "dev",
-    "value": 79834,
-    "unit": "stars",
-    "rank": 16
-   },
-   {
-    "id": "hugohe3/ppt-master/ppt-master",
-    "name": "ppt-master",
-    "repo": "hugohe3/ppt-master",
-    "lane": "dev",
-    "value": 60312,
-    "unit": "stars",
-    "rank": 17
-   },
-   {
-    "id": "emilkowalski/skills/emil-design-eng",
-    "name": "emil-design-eng",
-    "repo": "emilkowalski/skills",
-    "lane": "dev",
-    "value": 45338,
-    "unit": "stars",
-    "rank": 18
-   },
-   {
-    "id": "vercel-labs/agent-browser/agent-browser",
-    "name": "agent-browser",
-    "repo": "vercel-labs/agent-browser",
-    "lane": "dev",
-    "value": 43817,
-    "unit": "stars",
-    "rank": 19
-   },
-   {
-    "id": "inference-sh/skills/ai-video-generation",
-    "name": "ai-video-generation",
-    "repo": "inference-sh/skills",
-    "lane": "video",
-    "value": 1675869,
-    "unit": "installs",
-    "rank": 20
-   },
-   {
-    "id": "inference-sh/skills/ai-avatar-video",
-    "name": "ai-avatar-video",
-    "repo": "inference-sh/skills",
-    "lane": "video",
-    "value": 1672086,
-    "unit": "installs",
-    "rank": 21
-   },
-   {
-    "id": "remotion-dev/skills/remotion-best-practices",
-    "name": "remotion-best-practices",
-    "repo": "remotion-dev/skills",
-    "lane": "video",
-    "value": 484819,
-    "unit": "installs",
-    "rank": 22
-   },
-   {
-    "id": "heygen-com/hyperframes/hyperframes-cli",
-    "name": "hyperframes-cli",
-    "repo": "heygen-com/hyperframes",
-    "lane": "video",
-    "value": 406625,
-    "unit": "installs",
-    "rank": 23
-   },
-   {
-    "id": "runcomfy-com/skills/video-edit",
-    "name": "video-edit",
-    "repo": "runcomfy-com/skills",
-    "lane": "video",
-    "value": 403785,
-    "unit": "installs",
-    "rank": 24
-   }
-  ]
- },
- {
   "week": "2026-10-13",
   "items": [
    {
@@ -2338,6 +2117,371 @@
     "repo": "hassancs91/claude-image-generation",
     "lane": "creative",
     "value": 115,
+    "unit": "stars",
+    "rank": 40
+   }
+  ]
+ },
+ {
+  "week": "2026-11-24",
+  "items": [
+   {
+    "id": "mattpocock/skills/grill-me",
+    "name": "grill-me",
+    "repo": "mattpocock/skills",
+    "lane": "dev",
+    "value": 332079,
+    "unit": "stars",
+    "rank": 1
+   },
+   {
+    "id": "mattpocock/skills/tdd",
+    "name": "tdd",
+    "repo": "mattpocock/skills",
+    "lane": "dev",
+    "value": 332079,
+    "unit": "stars",
+    "rank": 2
+   },
+   {
+    "id": "obra/superpowers/brainstorming",
+    "name": "brainstorming",
+    "repo": "obra/superpowers",
+    "lane": "dev",
+    "value": 325800,
+    "unit": "stars",
+    "rank": 3
+   },
+   {
+    "id": "obra/superpowers/systematic-debugging",
+    "name": "systematic-debugging",
+    "repo": "obra/superpowers",
+    "lane": "dev",
+    "value": 325800,
+    "unit": "stars",
+    "rank": 4
+   },
+   {
+    "id": "affaan-m/ECC/frontend-patterns",
+    "name": "frontend-patterns",
+    "repo": "affaan-m/ECC",
+    "lane": "dev",
+    "value": 310113,
+    "unit": "stars",
+    "rank": 5
+   },
+   {
+    "id": "affaan-m/ECC/backend-patterns",
+    "name": "backend-patterns",
+    "repo": "affaan-m/ECC",
+    "lane": "dev",
+    "value": 310113,
+    "unit": "stars",
+    "rank": 6
+   },
+   {
+    "id": "anthropics/skills/frontend-design",
+    "name": "frontend-design",
+    "repo": "anthropics/skills",
+    "lane": "dev",
+    "value": 199872,
+    "unit": "stars",
+    "rank": 7
+   },
+   {
+    "id": "anthropics/skills/skill-creator",
+    "name": "skill-creator",
+    "repo": "anthropics/skills",
+    "lane": "dev",
+    "value": 199872,
+    "unit": "stars",
+    "rank": 8
+   },
+   {
+    "id": "nextlevelbuilder/ui-ux-pro-max-skill/ui-ux-pro-max",
+    "name": "ui-ux-pro-max",
+    "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+    "lane": "dev",
+    "value": 153705,
+    "unit": "stars",
+    "rank": 9
+   },
+   {
+    "id": "stablyai/orca/orca-cli",
+    "name": "orca-cli",
+    "repo": "stablyai/orca",
+    "lane": "dev",
+    "value": 135886,
+    "unit": "stars",
+    "rank": 10
+   },
+   {
+    "id": "shadcn/ui/shadcn",
+    "name": "shadcn",
+    "repo": "shadcn/ui",
+    "lane": "dev",
+    "value": 128976,
+    "unit": "stars",
+    "rank": 11
+   },
+   {
+    "id": "leonxlnx/taste-skill/design-taste-frontend",
+    "name": "design-taste-frontend",
+    "repo": "leonxlnx/taste-skill",
+    "lane": "dev",
+    "value": 121054,
+    "unit": "stars",
+    "rank": 12
+   },
+   {
+    "id": "thedotmack/claude-mem/mem-search",
+    "name": "mem-search",
+    "repo": "thedotmack/claude-mem",
+    "lane": "dev",
+    "value": 119518,
+    "unit": "stars",
+    "rank": 13
+   },
+   {
+    "id": "thedotmack/claude-mem/smart-explore",
+    "name": "smart-explore",
+    "repo": "thedotmack/claude-mem",
+    "lane": "dev",
+    "value": 119518,
+    "unit": "stars",
+    "rank": 14
+   },
+   {
+    "id": "pbakaus/impeccable/impeccable",
+    "name": "impeccable",
+    "repo": "pbakaus/impeccable",
+    "lane": "dev",
+    "value": 116198,
+    "unit": "stars",
+    "rank": 15
+   },
+   {
+    "id": "bytedance/deer-flow/ppt-generation",
+    "name": "ppt-generation",
+    "repo": "bytedance/deer-flow",
+    "lane": "dev",
+    "value": 85752,
+    "unit": "stars",
+    "rank": 16
+   },
+   {
+    "id": "hugohe3/ppt-master/ppt-master",
+    "name": "ppt-master",
+    "repo": "hugohe3/ppt-master",
+    "lane": "dev",
+    "value": 79867,
+    "unit": "stars",
+    "rank": 17
+   },
+   {
+    "id": "emilkowalski/skills/emil-design-eng",
+    "name": "emil-design-eng",
+    "repo": "emilkowalski/skills",
+    "lane": "dev",
+    "value": 59272,
+    "unit": "stars",
+    "rank": 18
+   },
+   {
+    "id": "vercel-labs/agent-browser/agent-browser",
+    "name": "agent-browser",
+    "repo": "vercel-labs/agent-browser",
+    "lane": "dev",
+    "value": 53766,
+    "unit": "stars",
+    "rank": 19
+   },
+   {
+    "id": "inference-sh/skills/ai-video-generation",
+    "name": "ai-video-generation",
+    "repo": "inference-sh/skills",
+    "lane": "video",
+    "value": 1675869,
+    "unit": "installs",
+    "rank": 20
+   },
+   {
+    "id": "inference-sh/skills/ai-avatar-video",
+    "name": "ai-avatar-video",
+    "repo": "inference-sh/skills",
+    "lane": "video",
+    "value": 1672086,
+    "unit": "installs",
+    "rank": 21
+   },
+   {
+    "id": "remotion-dev/skills/remotion-best-practices",
+    "name": "remotion-best-practices",
+    "repo": "remotion-dev/skills",
+    "lane": "video",
+    "value": 484819,
+    "unit": "installs",
+    "rank": 22
+   },
+   {
+    "id": "heygen-com/hyperframes/hyperframes-cli",
+    "name": "hyperframes-cli",
+    "repo": "heygen-com/hyperframes",
+    "lane": "video",
+    "value": 406625,
+    "unit": "installs",
+    "rank": 23
+   },
+   {
+    "id": "runcomfy-com/skills/video-edit",
+    "name": "video-edit",
+    "repo": "runcomfy-com/skills",
+    "lane": "video",
+    "value": 403785,
+    "unit": "installs",
+    "rank": 24
+   },
+   {
+    "id": "op7418/Claude-to-IM-skill/claude-to-im",
+    "name": "claude-to-im",
+    "repo": "op7418/Claude-to-IM-skill",
+    "lane": "bots",
+    "value": 2905,
+    "unit": "stars",
+    "rank": 25
+   },
+   {
+    "id": "nyxandro/telegram-bot-development-skill/telegram-bot-development",
+    "name": "telegram-bot-development",
+    "repo": "nyxandro/telegram-bot-development-skill",
+    "lane": "bots",
+    "value": 16,
+    "unit": "stars",
+    "rank": 26
+   },
+   {
+    "id": "qwwiwi/agentos-skills/telegram-bot-builder",
+    "name": "telegram-bot-builder",
+    "repo": "qwwiwi/agentos-skills",
+    "lane": "bots",
+    "value": 7,
+    "unit": "stars",
+    "rank": 27
+   },
+   {
+    "id": "orihomie/aiobot-skill/aiobot",
+    "name": "aiobot",
+    "repo": "orihomie/aiobot-skill",
+    "lane": "bots",
+    "value": 3,
+    "unit": "stars",
+    "rank": 28
+   },
+   {
+    "id": "Aztech-1729/telegram-skills/telegram-bot-aiogram",
+    "name": "telegram-bot-aiogram",
+    "repo": "Aztech-1729/telegram-skills",
+    "lane": "bots",
+    "value": 2,
+    "unit": "stars",
+    "rank": 29
+   },
+   {
+    "id": "zarazhangrui/frontend-slides/frontend-slides",
+    "name": "frontend-slides",
+    "repo": "zarazhangrui/frontend-slides",
+    "lane": "slides",
+    "value": 32850,
+    "unit": "stars",
+    "rank": 30
+   },
+   {
+    "id": "chuspeeism/dashi-ppt-skill/dashi-ppt",
+    "name": "dashi-ppt",
+    "repo": "chuspeeism/dashi-ppt-skill",
+    "lane": "slides",
+    "value": 11099,
+    "unit": "stars",
+    "rank": 31
+   },
+   {
+    "id": "Gabberflast/academic-pptx-skill/academic-pptx",
+    "name": "academic-pptx",
+    "repo": "Gabberflast/academic-pptx-skill",
+    "lane": "slides",
+    "value": 1678,
+    "unit": "stars",
+    "rank": 32
+   },
+   {
+    "id": "addsumtech/slides_maker/slide-maker",
+    "name": "slide-maker",
+    "repo": "addsumtech/slides_maker",
+    "lane": "slides",
+    "value": 690,
+    "unit": "stars",
+    "rank": 33
+   },
+   {
+    "id": "ConardLi/garden-skills/gpt-image-2",
+    "name": "gpt-image-2",
+    "repo": "ConardLi/garden-skills",
+    "lane": "creative",
+    "value": 15747,
+    "unit": "stars",
+    "rank": 34
+   },
+   {
+    "id": "ConardLi/garden-skills/beautiful-article",
+    "name": "beautiful-article",
+    "repo": "ConardLi/garden-skills",
+    "lane": "creative",
+    "value": 15747,
+    "unit": "stars",
+    "rank": 35
+   },
+   {
+    "id": "blacktwist/social-media-skills/hook-writer-sms",
+    "name": "hook-writer-sms",
+    "repo": "blacktwist/social-media-skills",
+    "lane": "creative",
+    "value": 679,
+    "unit": "stars",
+    "rank": 36
+   },
+   {
+    "id": "blacktwist/social-media-skills/caption-writer-sms",
+    "name": "caption-writer-sms",
+    "repo": "blacktwist/social-media-skills",
+    "lane": "creative",
+    "value": 679,
+    "unit": "stars",
+    "rank": 37
+   },
+   {
+    "id": "haowjy/creative-writing-skills/creative-writing-craft",
+    "name": "creative-writing-craft",
+    "repo": "haowjy/creative-writing-skills",
+    "lane": "creative",
+    "value": 608,
+    "unit": "stars",
+    "rank": 38
+   },
+   {
+    "id": "haowjy/creative-writing-skills/creative-writing-muse",
+    "name": "creative-writing-muse",
+    "repo": "haowjy/creative-writing-skills",
+    "lane": "creative",
+    "value": 608,
+    "unit": "stars",
+    "rank": 39
+   },
+   {
+    "id": "hassancs91/claude-image-generation/story-illustrator",
+    "name": "story-illustrator",
+    "repo": "hassancs91/claude-image-generation",
+    "lane": "creative",
+    "value": 117,
     "unit": "stars",
     "rank": 40
    }
